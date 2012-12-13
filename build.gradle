@@ -1,0 +1,10 @@
+apply plugin: 'groovy'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.5'
+    testCompile 'org.spockframework:spock-core:0.7-groovy-1.8'
+}

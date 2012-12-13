@@ -5,5 +5,10 @@ idea-spock-enhancements*.jar
 
 .idea/workspace.xml
 .idea/tasks.xml
+.idea/gradle.xml
+.idea/libraries
 
 out
+build
+
+.gradle
