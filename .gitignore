@@ -1,0 +1,9 @@
+**.DS_Store
+**~
+
+idea-spock-enhancements*.jar
+
+.idea/workspace.xml
+.idea/tasks.xml
+
+out
