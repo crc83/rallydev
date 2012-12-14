@@ -1,14 +1,20 @@
 package com.rallydev.intellij
 
-import com.intellij.tasks.impl.BaseRepositoryImpl
-import com.intellij.tasks.impl.BaseRepository
 import com.intellij.tasks.Task
+import com.intellij.tasks.impl.BaseRepository
+import com.intellij.tasks.impl.BaseRepositoryImpl
 
 class RallyRepository extends BaseRepositoryImpl {
 
+    RallyRepository() {}
+
+    RallyRepository(RallyRepositoryType type) {
+        super(type)
+    }
+
     @Override
     BaseRepository clone() {
-        return null  //To change body of implemented methods use File | Settings | File Templates.
+        return new RallyRepository()
     }
 
     @Override

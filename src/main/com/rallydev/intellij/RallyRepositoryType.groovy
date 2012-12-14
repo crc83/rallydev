@@ -1,29 +1,33 @@
 package com.rallydev.intellij
 
-import com.intellij.tasks.impl.BaseRepositoryType
-import javax.swing.Icon
+import com.intellij.openapi.util.IconLoader
 import com.intellij.tasks.TaskRepository
+import com.intellij.tasks.impl.BaseRepositoryType
+
+import javax.swing.Icon
 
 class RallyRepositoryType extends BaseRepositoryType<RallyRepository> {
+    static final Icon ICON = IconLoader.getIcon("/icon/rally.png");
 
     @Override
     String getName() {
-        return null  //To change body of implemented methods use File | Settings | File Templates.
+        return 'Rally'
     }
 
     @Override
     Icon getIcon() {
-        return null  //To change body of implemented methods use File | Settings | File Templates.
+        //test?
+        return ICON
     }
 
     @Override
     TaskRepository createRepository() {
-        return null  //To change body of implemented methods use File | Settings | File Templates.
+        return new RallyRepository(this)
     }
 
     @Override
     Class<RallyRepository> getRepositoryClass() {
-        return null  //To change body of implemented methods use File | Settings | File Templates.
+        return RallyRepository
     }
 
 }

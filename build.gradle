@@ -4,7 +4,6 @@ apply plugin: 'groovy'
 
 repositories {
     mavenCentral()
-    //mavenRepo url: 'https://www.dropbox.com/sh/u2edybmk2tfjeuy/KT3fre6o-7'
     mavenRepo url: 'file:///Users/mcholick/Dropbox/repository'
 }
 
@@ -43,7 +42,7 @@ idea.project.ipr {
 idea.module.iml {
     whenMerged { module ->
         module.dependencies.each { dependency ->
-            //flip the groovy dependency to provided
+            //gradle needs them for compile, but shouldn't duplicate for IntelliJ
             if(dependency.scope == 'COMPILE') {
                 dependency.scope = 'PROVIDED'
             }

@@ -5,10 +5,10 @@
 *.ipr
 *.iml
 .idea
-
 out
-build
-rally_intellij.jar
 
 .gradle
 .gradletasknamecache
+build
+
+rally_intellij.jar
