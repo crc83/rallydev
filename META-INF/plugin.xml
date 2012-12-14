@@ -1,10 +1,10 @@
 <idea-plugin version="2">
-    <name>Plugin name here</name>
+    <name>Rally ALM Tasks Integration</name>
     <description>short description of the plugin</description>
     <version>1.0</version>
     <vendor>Rally Software</vendor>
 
-    <depends>org.intellij.tasks</depends>
+    <depends>com.intellij.tasks</depends>
 
     <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
     <idea-version since-build="107.105"/>
