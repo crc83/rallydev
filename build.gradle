@@ -1,10 +1,41 @@
+apply plugin: 'idea'
+apply plugin: 'java'
 apply plugin: 'groovy'
 
 repositories {
     mavenCentral()
+    //mavenRepo url: 'https://www.dropbox.com/sh/u2edybmk2tfjeuy/KT3fre6o-7'
+    mavenRepo url: 'file:///Users/mcholick/Dropbox/repository'
 }
 
 dependencies {
-    testCompile group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.5'
+    groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.5'
+    compile 'org.jetbrains.idea:openapi:11.1.4'
+    compile 'org.jetbrains.idea:tasks-api:11.1.4'
     testCompile 'org.spockframework:spock-core:0.7-groovy-1.8'
+}
+
+sourceSets {
+    main {
+        groovy {
+            srcDir 'src/main'
+        }
+        resources {
+            srcDir 'resources'
+        }
+    }
+    test {
+        groovy {
+            srcDir 'src/test'
+        }
+    }
+}
+
+idea.project.ipr {
+    withXml { provider ->
+        provider.node.component.find { it.@name == 'ProjectRootManager' }.each {
+            it.parent().@'project-jdk-name'="IDEA IC-11.1"
+            it.parent().@'project-jdk-type'="IDEA JDK"
+        }
+    }
 }
