@@ -11,7 +11,7 @@ repositories {
 dependencies {
     groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.5'
     compile 'org.jetbrains.idea:tasks-api:11.1.4'
-    testCompile 'org.jetbrains.idea:openapi:11.1.4'
+    compile 'org.jetbrains.idea:openapi:11.1.4'
     testCompile 'org.spockframework:spock-core:0.7-groovy-1.8'
 }
 

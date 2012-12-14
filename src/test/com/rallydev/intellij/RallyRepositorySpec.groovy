@@ -1,6 +1,6 @@
 package com.rallydev.intellij
 
-/*
+
 import spock.lang.Specification
 
 class RallyRepositorySpec extends Specification {
@@ -17,4 +17,3 @@ class RallyRepositorySpec extends Specification {
     }
 
 }
-*/
