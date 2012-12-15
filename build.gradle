@@ -17,10 +17,10 @@ dependencies {
 sourceSets {
     main {
         groovy {
-            srcDir 'src/main'
+            srcDir 'src/main/groovy'
         }
         resources {
-            srcDir 'resources'
+            srcDir 'src/main/resources'
         }
     }
     test {

@@ -5,9 +5,18 @@ import com.intellij.tasks.TaskRepository
 import com.intellij.tasks.impl.BaseRepositoryType
 
 import javax.swing.Icon
+import javax.swing.ImageIcon
 
 class RallyRepositoryType extends BaseRepositoryType<RallyRepository> {
-    static final Icon ICON = IconLoader.getIcon("/icon/rally.png");
+    static final Icon ICON = loadIcon()
+
+    private static ImageIcon loadIcon() {
+        try {
+            new ImageIcon(RallyRepositoryType.classLoader.getResource("rally.png"), "Rally Icon")
+        } catch (Exception e) {
+            return null
+        }
+    }
 
     @Override
     String getName() {
