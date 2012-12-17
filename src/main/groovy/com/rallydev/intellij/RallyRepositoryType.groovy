@@ -1,6 +1,5 @@
 package com.rallydev.intellij
 
-import com.intellij.openapi.util.IconLoader
 import com.intellij.tasks.TaskRepository
 import com.intellij.tasks.impl.BaseRepositoryType
 
@@ -25,7 +24,6 @@ class RallyRepositoryType extends BaseRepositoryType<RallyRepository> {
 
     @Override
     Icon getIcon() {
-        //test?
         return ICON
     }
 

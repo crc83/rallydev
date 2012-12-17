@@ -9,7 +9,7 @@ class RallyRepositorySpec extends Specification {
         RallyRepository sourceRepository = new RallyRepository()
 
         when:
-        RallyRepository clonedRepository = sourceRepository.clone()
+        def clonedRepository = sourceRepository.clone()
 
         then:
         clonedRepository
