@@ -16,6 +16,7 @@ class RallyTask extends Task {
     boolean closed
     boolean issue
     String issueUrl
+    TaskType type = TaskType.BUG
 
     @Override
     Comment[] getComments() {
@@ -24,11 +25,6 @@ class RallyTask extends Task {
 
     @Override
     Icon getIcon() {
-        return null
-    }
-
-    @Override
-    TaskType getType() {
         return null
     }
 

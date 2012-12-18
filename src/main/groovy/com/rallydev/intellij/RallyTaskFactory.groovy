@@ -10,10 +10,14 @@ class RallyTaskFactory {
     public static final RALLY_DATE_FORMAT = "yyyy-MM-dd'T'hh:mm:ss.SSS'Z'"
 
     private static Date parseWsapiDate(String rawDate) {
-        return new SimpleDateFormat(RALLY_DATE_FORMAT).parse(rawDate)
+        try {
+            return new SimpleDateFormat(RALLY_DATE_FORMAT).parse(rawDate)
+        } catch (Exception e) {
+            return null
+        }
     }
 
-    static Collection<RallyTask> fromResponse(ApiResponse response) {
+    static Collection<RallyTask> tasksFromResponse(ApiResponse response) {
         Collection<RallyTask> tasks = []
         response.results.each { result ->
             tasks << fromJsonElement(result)
@@ -21,10 +25,14 @@ class RallyTaskFactory {
         return tasks
     }
 
-    static RallyTask fromJsonElement(JsonElement taskJson) {
+    static RallyTask singleTaskFromResponse(ApiResponse response) {
+        return fromJsonElement(response.json.HierarchicalRequirement)
+    }
+
+    private static RallyTask fromJsonElement(JsonElement taskJson) {
         return new RallyTask(
                 id: taskJson.ObjectID?.getAsString(),
-                summary: taskJson.Name?.getAsString(),
+                summary: taskJson.FormattedID?.getAsString() + ': ' + taskJson.Name?.getAsString(),
                 description: taskJson.Description?.getAsString(),
                 created: parseWsapiDate(taskJson.CreationDate?.getAsString()),
                 updated: parseWsapiDate(taskJson.LastUpdateDate?.getAsString()),

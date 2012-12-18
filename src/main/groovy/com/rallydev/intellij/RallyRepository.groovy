@@ -5,6 +5,7 @@ import com.intellij.tasks.impl.BaseRepository
 import com.intellij.tasks.impl.BaseRepositoryImpl
 import com.rallydev.intellij.wsapi.ConnectionTest
 import com.rallydev.intellij.wsapi.GetRequest
+import com.rallydev.intellij.wsapi.QueryBuilder
 import com.rallydev.intellij.wsapi.RallyClient
 
 class RallyRepository extends BaseRepositoryImpl {
@@ -25,13 +26,24 @@ class RallyRepository extends BaseRepositoryImpl {
     }
 
     @Override
-    Task[] getIssues(String s, int i, long l) {
-        return RallyTaskFactory.fromResponse(getRallyClient().makeRequest(GetRequest.requirementGetRequest(url.toURI())))
+    Task[] getIssues(String query, int max, long since) {
+        def request = GetRequest.requirementGetRequest(url.toURI())
+                .withFetch()
+                .withPageSize(max)
+        if (query) {
+            request.withQuery(QueryBuilder.keywordQuery(query).toString())
+        }
+
+        return RallyTaskFactory.tasksFromResponse(getRallyClient().makeRequest(request))
     }
 
     @Override
-    Task findTask(String s) {
-        return null  //To change body of implemented methods use File | Settings | File Templates.
+    Task findTask(String id) {
+        if (id.isInteger()) {
+            def request = GetRequest.requirementGetRequest(url.toURI()).withObjectId(id)
+            return RallyTaskFactory.singleTaskFromResponse(getRallyClient().makeRequest(request))
+        }
+        return null
     }
 
     @Override
