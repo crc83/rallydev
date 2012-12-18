@@ -1,11 +1,11 @@
 package com.rallydev.intellij.wsapi
 
 enum ApiObject {
-    WORKSPACE
+    WORKSPACE, HIERARCHICAL_REQUIREMENT
 
     @Override
     String toString() {
-        return super.toString().toLowerCase()
+        return super.toString().replaceAll('_', '').toLowerCase()
     }
 
 }

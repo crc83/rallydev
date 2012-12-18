@@ -25,7 +25,10 @@ sourceSets {
     }
     test {
         groovy {
-            srcDir 'src/test'
+            srcDir 'src/test/groovy'
+        }
+        resources {
+            srcDir 'src/test/resources'
         }
     }
 }
@@ -33,8 +36,8 @@ sourceSets {
 idea.project.ipr {
     withXml { provider ->
         provider.node.component.find { it.@name == 'ProjectRootManager' }.each {
-            it.parent().@'project-jdk-name'="IDEA IC-11.1"
-            it.parent().@'project-jdk-type'="IDEA JDK"
+            it.parent().@'project-jdk-name' = "IDEA IC-11.1"
+            it.parent().@'project-jdk-type' = "IDEA JDK"
         }
     }
 }
@@ -43,7 +46,7 @@ idea.module.iml {
     whenMerged { module ->
         module.dependencies.each { dependency ->
             //gradle needs them for compile, but shouldn't duplicate for IntelliJ
-            if(dependency.scope == 'COMPILE') {
+            if (dependency.scope == 'COMPILE') {
                 dependency.scope = 'PROVIDED'
             }
         }

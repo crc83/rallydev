@@ -4,6 +4,7 @@ import com.intellij.tasks.Task
 import com.intellij.tasks.impl.BaseRepository
 import com.intellij.tasks.impl.BaseRepositoryImpl
 import com.rallydev.intellij.wsapi.ConnectionTest
+import com.rallydev.intellij.wsapi.GetRequest
 import com.rallydev.intellij.wsapi.RallyClient
 
 class RallyRepository extends BaseRepositoryImpl {
@@ -14,14 +15,18 @@ class RallyRepository extends BaseRepositoryImpl {
         super(type)
     }
 
+    RallyRepository(RallyRepository other) {
+        super(other)
+    }
+
     @Override
     BaseRepository clone() {
-        return new RallyRepository()
+        return new RallyRepository(this)
     }
 
     @Override
     Task[] getIssues(String s, int i, long l) {
-        return new Task[0]  //To change body of implemented methods use File | Settings | File Templates.
+        return RallyTaskFactory.fromResponse(getRallyClient().makeRequest(GetRequest.requirementGetRequest(url.toURI())))
     }
 
     @Override
