@@ -22,6 +22,10 @@ class GetRequest {
         new GetRequest(server, ApiObject.HIERARCHICAL_REQUIREMENT).withFetch()
     }
 
+    static defectGetRequest(URI server) {
+        new GetRequest(server, ApiObject.DEFECT).withFetch()
+    }
+
     String getUrl() {
         "${baseUrl}/${endPoint}.js${queryString}"
     }

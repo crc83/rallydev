@@ -4,6 +4,24 @@ import spock.lang.Specification
 
 class GetRequestSpec extends Specification {
 
+    def "requirementGetRequest"() {
+        when:
+        GetRequest request = GetRequest.requirementGetRequest('https://rally1.rallydev.com/'.toURI())
+
+        then:
+        request.params['fetch'] == true
+        request.wsapiObject == ApiObject.HIERARCHICAL_REQUIREMENT
+    }
+
+    def "defectGetRequest"() {
+        when:
+        GetRequest request = GetRequest.defectGetRequest('https://rally1.rallydev.com/'.toURI())
+
+        then:
+        request.params['fetch'] == true
+        request.wsapiObject == ApiObject.DEFECT
+    }
+
     def "Simple object, no filter"() {
         given:
         String rallyUri = 'https://rally1.rallydev.com/'

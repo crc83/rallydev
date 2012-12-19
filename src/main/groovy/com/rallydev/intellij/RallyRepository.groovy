@@ -1,6 +1,7 @@
 package com.rallydev.intellij
 
 import com.intellij.tasks.Task
+import com.intellij.tasks.TaskType
 import com.intellij.tasks.impl.BaseRepository
 import com.intellij.tasks.impl.BaseRepositoryImpl
 import com.rallydev.intellij.wsapi.ConnectionTest
@@ -27,21 +28,26 @@ class RallyRepository extends BaseRepositoryImpl {
 
     @Override
     Task[] getIssues(String query, int max, long since) {
-        def request = GetRequest.requirementGetRequest(url.toURI())
-                .withFetch()
-                .withPageSize(max)
+        def requirementRequest = GetRequest.requirementGetRequest(url.toURI()).withPageSize(max)
+        def defectRequest = GetRequest.defectGetRequest(url.toURI()).withPageSize(max)
         if (query) {
-            request.withQuery(QueryBuilder.keywordQuery(query).toString())
+            String queryParam = QueryBuilder.keywordQuery(query).toString()
+            requirementRequest.withQuery(queryParam)
+            defectRequest.withQuery(queryParam)
         }
 
-        return RallyTaskFactory.tasksFromResponse(getRallyClient().makeRequest(request))
+        List<RallyTask> rallyTasks = []
+        rallyTasks.addAll(RallyTaskFactory.tasksFromResponse(getRallyClient().makeRequest(requirementRequest), TaskType.FEATURE))
+        rallyTasks.addAll(RallyTaskFactory.tasksFromResponse(getRallyClient().makeRequest(defectRequest), TaskType.BUG))
+
+        return rallyTasks
     }
 
     @Override
     Task findTask(String id) {
         if (id.isInteger()) {
             def request = GetRequest.requirementGetRequest(url.toURI()).withObjectId(id)
-            return RallyTaskFactory.singleTaskFromResponse(getRallyClient().makeRequest(request))
+            return RallyTaskFactory.singleTaskFromResponse(getRallyClient().makeRequest(request), TaskType.OTHER)
         }
         return null
     }

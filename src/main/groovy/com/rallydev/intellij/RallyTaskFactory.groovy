@@ -1,6 +1,7 @@
 package com.rallydev.intellij
 
 import com.google.gson.JsonElement
+import com.intellij.tasks.TaskType
 import com.rallydev.intellij.wsapi.ApiResponse
 
 import java.text.SimpleDateFormat
@@ -17,19 +18,22 @@ class RallyTaskFactory {
         }
     }
 
-    static Collection<RallyTask> tasksFromResponse(ApiResponse response) {
+    static Collection<RallyTask> tasksFromResponse(ApiResponse response, TaskType taskType) {
         Collection<RallyTask> tasks = []
         response.results.each { result ->
-            tasks << fromJsonElement(result)
+            tasks << fromJsonRequirement(result)
         }
+        tasks*.type = taskType
         return tasks
     }
 
-    static RallyTask singleTaskFromResponse(ApiResponse response) {
-        return fromJsonElement(response.json.HierarchicalRequirement)
+    static RallyTask singleTaskFromResponse(ApiResponse response, TaskType taskType) {
+        RallyTask task = fromJsonRequirement(response.json.members.values().iterator().next())
+        task.type = taskType
+        return task
     }
 
-    private static RallyTask fromJsonElement(JsonElement taskJson) {
+    private static RallyTask fromJsonRequirement(JsonElement taskJson) {
         return new RallyTask(
                 id: taskJson.ObjectID?.getAsString(),
                 summary: taskJson.FormattedID?.getAsString() + ': ' + taskJson.Name?.getAsString(),
@@ -38,7 +42,6 @@ class RallyTaskFactory {
                 updated: parseWsapiDate(taskJson.LastUpdateDate?.getAsString()),
                 issueUrl: taskJson._ref.getAsString(),
         )
-
     }
 
 }

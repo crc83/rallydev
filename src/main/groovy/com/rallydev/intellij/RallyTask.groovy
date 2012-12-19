@@ -14,9 +14,8 @@ class RallyTask extends Task {
     Date updated
     Date created
     boolean closed
-    boolean issue
     String issueUrl
-    TaskType type = TaskType.BUG
+    TaskType type = TaskType.OTHER
 
     @Override
     Comment[] getComments() {
@@ -26,6 +25,10 @@ class RallyTask extends Task {
     @Override
     Icon getIcon() {
         return null
+    }
+
+    boolean isIssue() {
+        return true
     }
 
 }

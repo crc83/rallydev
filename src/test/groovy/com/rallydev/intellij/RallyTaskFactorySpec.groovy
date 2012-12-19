@@ -1,6 +1,8 @@
 package com.rallydev.intellij
 
+import com.intellij.tasks.TaskType
 import com.rallydev.intellij.wsapi.ApiResponse
+import spock.lang.IgnoreRest
 import spock.lang.Specification
 
 import java.text.SimpleDateFormat
@@ -34,7 +36,7 @@ class RallyTaskFactorySpec extends Specification {
         ApiResponse response = new ApiResponse(requirementJson)
 
         and:
-        Collection<RallyTask> tasks = RallyTaskFactory.tasksFromResponse(response)
+        Collection<RallyTask> tasks = RallyTaskFactory.tasksFromResponse(response, TaskType.FEATURE)
 
         expect:
         tasks.size() == 3
@@ -51,7 +53,7 @@ class RallyTaskFactorySpec extends Specification {
         ApiResponse response = new ApiResponse(requirementJson)
 
         and:
-        RallyTask task = RallyTaskFactory.singleTaskFromResponse(response)
+        RallyTask task = RallyTaskFactory.singleTaskFromResponse(response, TaskType.FEATURE)
 
         expect:
         task.id == '14345'
@@ -60,7 +62,7 @@ class RallyTaskFactorySpec extends Specification {
         that task.created.time, closeTo(new GregorianCalendar(2012, 11 - 1, 21, 06, 7, 34).timeInMillis, 1000)
         that task.updated.time, closeTo(new GregorianCalendar(2012, 11 - 1, 21, 8, 0, 0).timeInMillis, 1000)
         task.issueUrl == 'http://localhost:7001/slm/webservice/1.39/hierarchicalrequirement/14345.js'
-
+        task.type == TaskType.FEATURE
     }
 
 }

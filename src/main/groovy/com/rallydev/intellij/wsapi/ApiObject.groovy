@@ -1,7 +1,7 @@
 package com.rallydev.intellij.wsapi
 
 enum ApiObject {
-    WORKSPACE, HIERARCHICAL_REQUIREMENT
+    WORKSPACE, HIERARCHICAL_REQUIREMENT, DEFECT
 
     @Override
     String toString() {
