@@ -9,19 +9,27 @@ import org.apache.commons.httpclient.auth.InvalidCredentialsException
 import org.apache.commons.httpclient.methods.GetMethod
 
 class RallyClient extends HttpClient {
-    private static final Logger log = Logger.getInstance("#${RallyClient}")
+    private static final Logger log = Logger.getInstance("#${this}")
 
+    URI server
     String username
     String password
+
+    RallyClient() { }
+
+    RallyClient(URI server, String username, String password) {
+        this.server = server
+        this.username = username
+        this.password = password
+    }
 
     ApiResponse makeRequest(GetRequest request) {
         state.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials(username, password))
 
-        def method = new GetMethod(request.encodedUrl)
-        log.info method.URI as String
-
+        def method = new GetMethod(request.getEncodedUrl(server))
+        log.debug "Client requesting: ${method.URI}"
         int code = executeMethod(method)
-        println method.responseBodyAsString
+
         switch (code) {
             case HttpStatus.SC_OK:
                 return new ApiResponse(method.responseBodyAsString)

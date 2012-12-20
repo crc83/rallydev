@@ -18,19 +18,37 @@ class RallyTaskFactory {
         }
     }
 
-    static Collection<RallyTask> tasksFromResponse(ApiResponse response, TaskType taskType) {
+    static Collection<RallyTask> tasksFromResponse(ApiResponse response) {
         Collection<RallyTask> tasks = []
         response.results.each { result ->
-            tasks << fromJsonRequirement(result)
+            RallyTask task = fromJsonRequirement(result)
+            switch (result._type?.getAsString()) {
+                case ~/(?i)hierarchicalrequirement/:
+                    task.type = TaskType.FEATURE
+                    break
+                case ~/(?i)defect/:
+                    task.type = TaskType.BUG
+                    break
+                default:
+                    task.type = TaskType.OTHER
+            }
+            tasks << task
         }
-        tasks*.type = taskType
         return tasks
     }
 
-    static RallyTask singleTaskFromResponse(ApiResponse response, TaskType taskType) {
-        RallyTask task = fromJsonRequirement(response.json.members.values().iterator().next())
-        task.type = taskType
-        return task
+    static RallyTask singleTaskFromResponse(ApiResponse response) {
+        if (response.json.HierarchicalRequirement) {
+            RallyTask task = fromJsonRequirement(response.json.HierarchicalRequirement)
+            task.type = TaskType.FEATURE
+            return task
+        }
+        if (response.json.Defect) {
+            RallyTask task = fromJsonRequirement(response.json.Defect)
+            task.type = TaskType.BUG
+            return task
+        }
+        throw new IllegalArgumentException("Un-parsable response")
     }
 
     private static RallyTask fromJsonRequirement(JsonElement taskJson) {

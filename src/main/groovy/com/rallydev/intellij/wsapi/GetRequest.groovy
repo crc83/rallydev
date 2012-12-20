@@ -7,31 +7,21 @@ class GetRequest {
     static int MAX_PAGE_SIZE = 100
     static int MIN_PAGE_SIZE = 1
 
-    URI server
     ApiObject wsapiObject
     String objectId
 
     Map<String, String> params = [:]
 
-    GetRequest(URI server, ApiObject wsapiObject) {
-        this.server = server
+    GetRequest(ApiObject wsapiObject) {
         this.wsapiObject = wsapiObject
     }
 
-    static requirementGetRequest(URI server) {
-        new GetRequest(server, ApiObject.HIERARCHICAL_REQUIREMENT).withFetch()
+    String getUrl(URI server) {
+        "${baseUrl(server)}/${endPoint}.js${queryString}"
     }
 
-    static defectGetRequest(URI server) {
-        new GetRequest(server, ApiObject.DEFECT).withFetch()
-    }
-
-    String getUrl() {
-        "${baseUrl}/${endPoint}.js${queryString}"
-    }
-
-    String getEncodedUrl() {
-        "${baseUrl}/${endPoint}.js${URIUtil.encodeQuery(queryString)}"
+    String getEncodedUrl(URI server) {
+        "${baseUrl(server)}/${endPoint}.js${URIUtil.encodeQuery(queryString)}"
     }
 
     private String getQueryString() {
@@ -62,7 +52,7 @@ class GetRequest {
         return this
     }
 
-    private getBaseUrl() {
+    private baseUrl(URI server) {
         return "${server}/slm/webservice/${WSAPI_VERSION}"
     }
 

@@ -4,13 +4,7 @@ import spock.lang.Specification
 
 class ConnectionTestSpec extends Specification {
 
-    String minimalResponseJson = """
-{
-   "QueryResult": {
-      "Results":[ { } ]
-   }
-}
-"""
+    String minimalResponseJson = '{"QueryResult": { "Results":[ { } ] }}'
 
     def "Ensure doTest tries to make connection"() {
         given:

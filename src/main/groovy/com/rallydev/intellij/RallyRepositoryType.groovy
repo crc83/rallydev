@@ -2,6 +2,8 @@ package com.rallydev.intellij
 
 import com.intellij.tasks.TaskRepository
 import com.intellij.tasks.impl.BaseRepositoryType
+import org.jetbrains.annotations.NotNull
+import org.jetbrains.annotations.Nullable
 
 import javax.swing.Icon
 import javax.swing.ImageIcon
@@ -18,16 +20,19 @@ class RallyRepositoryType extends BaseRepositoryType<RallyRepository> {
     }
 
     @Override
+    @NotNull
     String getName() {
         return 'Rally'
     }
 
     @Override
+    @Nullable
     Icon getIcon() {
         return ICON
     }
 
     @Override
+    @NotNull
     TaskRepository createRepository() {
         return new RallyRepository(this)
     }

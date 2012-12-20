@@ -9,6 +9,7 @@ repositories {
 
 dependencies {
     groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.5'
+    compile 'com.google.code.gson:gson:2.2.2'
     compile 'org.jetbrains.idea:tasks-api:11.1.4'
     compile 'org.jetbrains.idea:openapi:11.1.4'
     testCompile 'org.spockframework:spock-core:0.7-groovy-1.8'
@@ -45,7 +46,8 @@ idea.project.ipr {
 idea.module.iml {
     whenMerged { module ->
         module.dependencies.each { dependency ->
-            //gradle needs them for compile, but shouldn't duplicate for IntelliJ
+            //todo: fix gson bundling, should stay compile
+            //Gradle needs org.jetbrains.idea for compile, but shouldn't duplicate in project (part of SDK)
             if (dependency.scope == 'COMPILE') {
                 dependency.scope = 'PROVIDED'
             }

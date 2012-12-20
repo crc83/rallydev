@@ -2,7 +2,6 @@ package com.rallydev.intellij
 
 import com.intellij.tasks.TaskType
 import com.rallydev.intellij.wsapi.ApiResponse
-import spock.lang.IgnoreRest
 import spock.lang.Specification
 
 import java.text.SimpleDateFormat
@@ -27,7 +26,6 @@ class RallyTaskFactorySpec extends Specification {
         calendar.get(Calendar.HOUR) == 6
         calendar.get(Calendar.MINUTE) == 7
         calendar.get(Calendar.SECOND) == 34
-
     }
 
     def "Tasks from sample response"() {
@@ -36,15 +34,18 @@ class RallyTaskFactorySpec extends Specification {
         ApiResponse response = new ApiResponse(requirementJson)
 
         and:
-        Collection<RallyTask> tasks = RallyTaskFactory.tasksFromResponse(response, TaskType.FEATURE)
+        Collection<RallyTask> tasks = RallyTaskFactory.tasksFromResponse(response)
 
         expect:
         tasks.size() == 3
 
         and:
         tasks[0].summary == 'US1: lone story'
+        tasks[0].type == TaskType.FEATURE
         tasks[1].summary == 'US2: story with a task'
+        tasks[1].type == TaskType.FEATURE
         tasks[2].summary == 'US3: I Haz Defect'
+        tasks[2].type == TaskType.FEATURE
     }
 
     def "Single task from sample response"() {
@@ -53,7 +54,7 @@ class RallyTaskFactorySpec extends Specification {
         ApiResponse response = new ApiResponse(requirementJson)
 
         and:
-        RallyTask task = RallyTaskFactory.singleTaskFromResponse(response, TaskType.FEATURE)
+        RallyTask task = RallyTaskFactory.singleTaskFromResponse(response)
 
         expect:
         task.id == '14345'
