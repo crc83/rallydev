@@ -6,6 +6,7 @@ import static com.rallydev.intellij.wsapi.QueryBuilder.Operator.eq
 class QueryBuilder {
 
     List<Restriction> disjunctions = []
+    List<Restriction> conjunctions = []
 
     static QueryBuilder keywordQuery(String keyword) {
         QueryBuilder queryBuilder = new QueryBuilder()
@@ -25,16 +26,24 @@ class QueryBuilder {
         return this
     }
 
-    @Override
-    String toString() {
-        return toStringHelper("${disjunctions.head()}", disjunctions.tail())
+    QueryBuilder withConjunction(String attribute, Operator operator, String value) {
+        conjunctions << new Restriction(attribute: attribute, operator: operator, value: value)
+        return this
     }
 
-    private String toStringHelper(String currentString, List disjunctions) {
-        if (!disjunctions) {
-            return currentString
+    @Override
+    String toString() {
+        List<Map> expressions = disjunctions.collect { [operator: 'OR', operand: it] } +
+                conjunctions.collect { [operator: 'AND', operand: it] }
+        return toStringHelper("${expressions.head().operand}", expressions.tail())
+    }
+
+    private String toStringHelper(String currentQuery, List<Map> expressions) {
+        if (!expressions) {
+            return currentQuery
         } else {
-            return toStringHelper("(${currentString} OR ${disjunctions.head()})", disjunctions.tail())
+            Map expression = expressions.head()
+            return toStringHelper("(${currentQuery} ${expression.operator} ${expression.operand})", expressions.tail())
         }
     }
 
