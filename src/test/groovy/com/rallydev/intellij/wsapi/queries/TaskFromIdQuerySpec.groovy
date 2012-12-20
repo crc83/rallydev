@@ -6,12 +6,12 @@ import com.rallydev.intellij.wsapi.GetRequest
 import com.rallydev.intellij.wsapi.RallyClient
 import spock.lang.Specification
 
-class FilteredTasksQuerySpec extends Specification {
+class TaskFromIdQuerySpec extends Specification {
 
     def "findTasks query"() {
         given:
         GroovySpy(RallyTaskFactory, global: true)
-        2 * RallyTaskFactory.tasksFromResponse(_ as ApiResponse) >> { a -> [] }
+        1 * RallyTaskFactory.singleTaskFromResponse(_ as ApiResponse) >> { a -> [] }
 
         and: 'Mock a client that records requests'
         RallyClient client = Mock(RallyClient)
@@ -22,14 +22,14 @@ class FilteredTasksQuerySpec extends Specification {
         }
 
         and:
-        FilteredTasksQuery query = new FilteredTasksQuery(client)
+        TaskFromIdQuery query = new TaskFromIdQuery(client)
 
         when:
-        query.findTasks('someQuery', 50)
+        query.findTask('1234')
 
         then: 'Check that proper requests were made'
-        requests.contains('/slm/webservice/1.39/hierarchicalrequirement.js?fetch=true&pagesize=50&query=(Name contains "someQuery")')
-        requests.contains('/slm/webservice/1.39/defect.js?fetch=true&pagesize=50&query=(Name contains "someQuery")')
+        requests == [('/slm/webservice/1.39/artifact/1234.js?fetch=true')]
     }
+
 
 }

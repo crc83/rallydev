@@ -29,7 +29,8 @@ class FilteredTasksQuery {
         }
 
         List<RallyTask> rallyTasks = []
-        rallyTasks.addAll(RallyTaskFactory.tasksFromResponse(client.makeRequest(requirementRequest)))
+        def request = client.makeRequest(requirementRequest)
+        rallyTasks.addAll(RallyTaskFactory.tasksFromResponse(request))
         rallyTasks.addAll(RallyTaskFactory.tasksFromResponse(client.makeRequest(defectRequest)))
 
         return rallyTasks

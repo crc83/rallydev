@@ -10,7 +10,7 @@ class ConnectionTestSpec extends Specification {
         given:
         RallyClient rallyClient = Mock(RallyClient)
         1 * rallyClient.makeRequest(_) >> { new ApiResponse(minimalResponseJson) }
-        ConnectionTest connectionTest = new ConnectionTest('http://localhost:7001'.toURI(), rallyClient)
+        ConnectionTest connectionTest = new ConnectionTest(rallyClient)
 
         when:
         connectionTest.doTest()
@@ -22,7 +22,7 @@ class ConnectionTestSpec extends Specification {
     def "Ensure exception when no response results"() {
         RallyClient rallyClient = Mock(RallyClient)
         1 * rallyClient.makeRequest(_) >> { null }
-        ConnectionTest connectionTest = new ConnectionTest('http://localhost:7001'.toURI(), rallyClient)
+        ConnectionTest connectionTest = new ConnectionTest(rallyClient)
 
         when:
         connectionTest.doTest()
