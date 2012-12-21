@@ -11,23 +11,6 @@ import static spock.util.matcher.HamcrestSupport.that
 
 class RallyTaskFactorySpec extends Specification {
 
-    def "Datestring is correct"() {
-        given:
-        SimpleDateFormat dateFormat = new SimpleDateFormat(RallyTaskFactory.RALLY_DATE_FORMAT)
-
-        when:
-        Calendar calendar = new GregorianCalendar()
-        calendar.setTime(dateFormat.parse('2012-11-21T06:07:34.127Z'))
-
-        then:
-        calendar.get(Calendar.YEAR) == 2012
-        calendar.get(Calendar.MONTH) + 1 == 11 //month is 0 based
-        calendar.get(Calendar.DAY_OF_MONTH) == 21
-        calendar.get(Calendar.HOUR) == 6
-        calendar.get(Calendar.MINUTE) == 7
-        calendar.get(Calendar.SECOND) == 34
-    }
-
     def "Tasks from sample response"() {
         given:
         String requirementJson = RallyTaskFactorySpec.classLoader.getResourceAsStream('multiple_requirements.json').text

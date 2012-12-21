@@ -70,7 +70,7 @@ class QueryBuilderSpec extends Specification {
 
     def "String keyword"() {
         when:
-        QueryBuilder builder = QueryBuilder.keywordQuery('Bob')
+        QueryBuilder builder = new QueryBuilder().withKeyword('Bob')
 
         then:
         builder.toString() == '(Name contains "Bob")'
@@ -78,7 +78,7 @@ class QueryBuilderSpec extends Specification {
 
     def "Formatted id keyword"() {
         when:
-        QueryBuilder builder = QueryBuilder.keywordQuery('US3')
+        QueryBuilder builder = new QueryBuilder().withKeyword('US3')
 
         then:
         builder.toString() == '((Name contains "US3") OR (FormattedId = "US3"))'
@@ -86,7 +86,7 @@ class QueryBuilderSpec extends Specification {
 
     def "Integer keyword"() {
         when:
-        QueryBuilder builder = QueryBuilder.keywordQuery('5')
+        QueryBuilder builder = new QueryBuilder().withKeyword('5')
 
         then:
         builder.toString() == '((Name contains "5") OR (ObjectId = "5"))'

@@ -1,7 +1,9 @@
 package com.rallydev.intellij
 
+import com.intellij.openapi.project.Project
 import com.intellij.tasks.TaskRepository
 import com.intellij.tasks.impl.BaseRepositoryType
+import com.intellij.util.Consumer
 import org.jetbrains.annotations.NotNull
 import org.jetbrains.annotations.Nullable
 
@@ -40,6 +42,11 @@ class RallyRepositoryType extends BaseRepositoryType<RallyRepository> {
     @Override
     Class<RallyRepository> getRepositoryClass() {
         return RallyRepository
+    }
+
+    @Override
+    public RallyRepositoryEditorImpl createEditor(RallyRepository repository, Project project, Consumer<RallyRepository> changeListener) {
+        return new RallyRepositoryEditorImpl(project, repository, changeListener)
     }
 
 }

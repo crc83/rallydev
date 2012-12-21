@@ -2,6 +2,8 @@ package com.rallydev.intellij.wsapi
 
 import spock.lang.Specification
 
+import java.text.SimpleDateFormat
+
 class ApiResponseSpec extends Specification {
 
     String workSpaceJson = """
@@ -30,6 +32,24 @@ class ApiResponseSpec extends Specification {
    }
 }
 """
+
+    def "Date string is correct"() {
+        given:
+        SimpleDateFormat dateFormat = new SimpleDateFormat(ApiResponse.RALLY_DATE_FORMAT)
+
+        when:
+        Calendar calendar = new GregorianCalendar()
+        calendar.setTime(dateFormat.parse('2012-11-21T06:07:34.127Z'))
+
+        then:
+        calendar.get(Calendar.YEAR) == 2012
+        calendar.get(Calendar.MONTH) + 1 == 11 //month is 0 based
+        calendar.get(Calendar.DAY_OF_MONTH) == 21
+        calendar.get(Calendar.HOUR) == 6
+        calendar.get(Calendar.MINUTE) == 7
+        calendar.get(Calendar.SECOND) == 34
+    }
+
 
     def "Response correctly parses workspace from sample results"() {
         given:

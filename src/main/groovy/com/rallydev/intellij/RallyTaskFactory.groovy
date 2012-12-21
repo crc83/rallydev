@@ -8,11 +8,9 @@ import java.text.SimpleDateFormat
 
 class RallyTaskFactory {
 
-    public static final RALLY_DATE_FORMAT = "yyyy-MM-dd'T'hh:mm:ss.SSS'Z'"
-
     private static Date parseWsapiDate(String rawDate) {
         try {
-            return new SimpleDateFormat(RALLY_DATE_FORMAT).parse(rawDate)
+            return new SimpleDateFormat(ApiResponse.RALLY_DATE_FORMAT).parse(rawDate)
         } catch (Exception e) {
             return null
         }

@@ -8,19 +8,6 @@ class QueryBuilder {
     List<Restriction> disjunctions = []
     List<Restriction> conjunctions = []
 
-    static QueryBuilder keywordQuery(String keyword) {
-        QueryBuilder queryBuilder = new QueryBuilder()
-                .withDisjunction('Name', contains, keyword)
-        if (keyword ==~ /[a-zA-Z]+\d+/) {
-            queryBuilder.withDisjunction('FormattedId', eq, keyword)
-        }
-        if (keyword.isInteger()) {
-            queryBuilder.withDisjunction('ObjectId', eq, keyword)
-        }
-
-        return queryBuilder
-    }
-
     QueryBuilder withDisjunction(String attribute, Operator operator, String value) {
         disjunctions << new Restriction(attribute: attribute, operator: operator, value: value)
         return this
@@ -29,6 +16,21 @@ class QueryBuilder {
     QueryBuilder withConjunction(String attribute, Operator operator, String value) {
         conjunctions << new Restriction(attribute: attribute, operator: operator, value: value)
         return this
+    }
+
+    QueryBuilder withKeyword(String keyword) {
+        withDisjunction('Name', contains, keyword)
+        if (keyword ==~ /[a-zA-Z]+\d+/) {
+            withDisjunction('FormattedId', eq, keyword)
+        }
+        if (keyword.isInteger()) {
+            withDisjunction('ObjectId', eq, keyword)
+        }
+        return this
+    }
+
+    boolean hasConditions() {
+        return disjunctions || conjunctions
     }
 
     @Override
@@ -58,7 +60,7 @@ class QueryBuilder {
     }
 
     enum Operator {
-        eq, contains
+        eq, contains, gt
 
         @Override
         String toString() {
@@ -67,6 +69,8 @@ class QueryBuilder {
                     return '='
                 case Operator.contains:
                     return 'contains'
+                case Operator.gt:
+                    return '>'
             }
         }
     }

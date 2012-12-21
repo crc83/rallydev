@@ -4,7 +4,8 @@ apply plugin: 'groovy'
 
 repositories {
     mavenCentral()
-    mavenRepo url: 'file:///Users/mcholick/Dropbox/repository'
+    //mavenRepo url: 'file:///Users/mcholick/Dropbox/repository'
+    mavenRepo url: 'https://raw.github.com/cholick/mvn-repo/master/'
 }
 
 dependencies {

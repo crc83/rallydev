@@ -36,7 +36,7 @@ public class RallyRepository extends BaseRepositoryImpl {
 
     @Override
     public Task[] getIssues(@Nullable String query, int max, long since) throws Exception {
-        Collection<RallyTask> rallyTasks = new FilteredTasksQuery(getClient()).findTasks(query, max);
+        Collection<RallyTask> rallyTasks = new FilteredTasksQuery(getClient()).findTasks(query, max, since);
         return rallyTasks.toArray(new RallyTask[rallyTasks.size()]);
     }
 

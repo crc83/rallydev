@@ -3,9 +3,14 @@ package com.rallydev.intellij.wsapi.queries
 import com.rallydev.intellij.RallyTask
 import com.rallydev.intellij.RallyTaskFactory
 import com.rallydev.intellij.wsapi.ApiObject
+import com.rallydev.intellij.wsapi.ApiResponse
 import com.rallydev.intellij.wsapi.GetRequest
 import com.rallydev.intellij.wsapi.QueryBuilder
 import com.rallydev.intellij.wsapi.RallyClient
+
+import java.text.SimpleDateFormat
+
+import static com.rallydev.intellij.wsapi.QueryBuilder.Operator.gt
 
 class FilteredTasksQuery {
 
@@ -15,17 +20,25 @@ class FilteredTasksQuery {
         this.client = client
     }
 
-    Collection<RallyTask> findTasks(String query, int max) {
+    Collection<RallyTask> findTasks(String keyword, int max, long since) {
         def defectRequest = new GetRequest(ApiObject.DEFECT)
                 .withFetch()
                 .withPageSize(max)
         def requirementRequest = new GetRequest(ApiObject.HIERARCHICAL_REQUIREMENT)
                 .withFetch()
                 .withPageSize(max)
-        if (query) {
-            String queryParam = QueryBuilder.keywordQuery(query) as String
-            requirementRequest.withQuery(queryParam)
-            defectRequest.withQuery(queryParam)
+
+        QueryBuilder query = new QueryBuilder()
+        if (keyword) {
+            query.withKeyword(keyword)
+        }
+        if (since) {
+            String date = new SimpleDateFormat(ApiResponse.RALLY_DATE_FORMAT).format(new Date(since))
+            query.withConjunction('LastUpdateDate', gt, date)
+        }
+        if (query.hasConditions()) {
+            defectRequest.withQuery(query.toString())
+            requirementRequest.withQuery(query.toString())
         }
 
         List<RallyTask> rallyTasks = []
