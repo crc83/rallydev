@@ -1,10 +1,8 @@
-package com.rallydev.intellij
+package com.rallydev.intellij.task
 
 import com.intellij.tasks.TaskType
 import com.rallydev.intellij.wsapi.ApiResponse
 import spock.lang.Specification
-
-import java.text.SimpleDateFormat
 
 import static spock.util.matcher.HamcrestMatchers.closeTo
 import static spock.util.matcher.HamcrestSupport.that

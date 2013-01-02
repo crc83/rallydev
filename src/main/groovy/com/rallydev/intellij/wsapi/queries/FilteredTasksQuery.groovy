@@ -1,7 +1,7 @@
 package com.rallydev.intellij.wsapi.queries
 
-import com.rallydev.intellij.RallyTask
-import com.rallydev.intellij.RallyTaskFactory
+import com.rallydev.intellij.task.RallyTask
+import com.rallydev.intellij.task.RallyTaskFactory
 import com.rallydev.intellij.wsapi.ApiObject
 import com.rallydev.intellij.wsapi.ApiResponse
 import com.rallydev.intellij.wsapi.GetRequest

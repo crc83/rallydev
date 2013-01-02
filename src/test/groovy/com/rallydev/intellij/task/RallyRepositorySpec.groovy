@@ -1,5 +1,6 @@
-package com.rallydev.intellij
+package com.rallydev.intellij.task
 
+import com.rallydev.intellij.task.RallyRepository
 import spock.lang.Specification
 
 class RallyRepositorySpec extends Specification {

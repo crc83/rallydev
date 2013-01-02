@@ -10,7 +10,7 @@ class GetRequestSpec extends Specification {
         GetRequest wsapiRequest = new GetRequest(ApiObject.WORKSPACE)
 
         expect:
-        wsapiRequest.getUrl(rallyUri.toURI()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace.js"
+        wsapiRequest.getUrl(rallyUri.toURL()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace.js"
     }
 
     def "Simple object with single query param"() {
@@ -20,7 +20,7 @@ class GetRequestSpec extends Specification {
                 .withFetch()
 
         expect:
-        wsapiRequest.getUrl(rallyUri.toURI()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace.js?fetch=true"
+        wsapiRequest.getUrl(rallyUri.toURL()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace.js?fetch=true"
     }
 
     def "With objectId"() {
@@ -31,7 +31,7 @@ class GetRequestSpec extends Specification {
                 .withObjectId('5')
 
         expect:
-        wsapiRequest.getUrl(rallyUri.toURI()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace/5.js?fetch=true"
+        wsapiRequest.getUrl(rallyUri.toURL()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace/5.js?fetch=true"
     }
 
     def "With query"() {
@@ -41,7 +41,7 @@ class GetRequestSpec extends Specification {
                 .withQuery('(Name contains "Matt")')
 
         expect:
-        wsapiRequest.getUrl(rallyUri.toURI()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace.js?query=(Name contains \"Matt\")"
+        wsapiRequest.getUrl(rallyUri.toURL()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace.js?query=(Name contains \"Matt\")"
     }
 
     def "Encoded query"() {
@@ -51,7 +51,7 @@ class GetRequestSpec extends Specification {
                 .withQuery('(Name contains "Matt")')
 
         expect:
-        wsapiRequest.getEncodedUrl(rallyUri.toURI()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace.js?query=(Name%20contains%20%22Matt%22)"
+        wsapiRequest.getEncodedUrl(rallyUri.toURL()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace.js?query=(Name%20contains%20%22Matt%22)"
     }
 
     def "With fetch"() {
@@ -60,7 +60,7 @@ class GetRequestSpec extends Specification {
         GetRequest wsapiRequest = new GetRequest(ApiObject.WORKSPACE).withFetch()
 
         expect:
-        wsapiRequest.getUrl(rallyUri.toURI()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace.js?fetch=true"
+        wsapiRequest.getUrl(rallyUri.toURL()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace.js?fetch=true"
     }
 
     def "With pagesize"() {
@@ -72,19 +72,19 @@ class GetRequestSpec extends Specification {
         wsapiRequest = new GetRequest(ApiObject.WORKSPACE).withPageSize(5)
 
         then:
-        wsapiRequest.getUrl(rallyUri.toURI()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace.js?pagesize=5"
+        wsapiRequest.getUrl(rallyUri.toURL()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace.js?pagesize=5"
 
         when:
         wsapiRequest = new GetRequest(ApiObject.WORKSPACE).withPageSize(-3)
 
         then:
-        wsapiRequest.getUrl(rallyUri.toURI()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace.js?pagesize=${GetRequest.MIN_PAGE_SIZE}"
+        wsapiRequest.getUrl(rallyUri.toURL()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace.js?pagesize=${GetRequest.MIN_PAGE_SIZE}"
 
         when:
         wsapiRequest = new GetRequest(ApiObject.WORKSPACE).withPageSize(200)
 
         then:
-        wsapiRequest.getUrl(rallyUri.toURI()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace.js?pagesize=${GetRequest.MAX_PAGE_SIZE}"
+        wsapiRequest.getUrl(rallyUri.toURL()) == "${rallyUri}/slm/webservice/${GetRequest.WSAPI_VERSION}/workspace.js?pagesize=${GetRequest.MAX_PAGE_SIZE}"
     }
 
 }

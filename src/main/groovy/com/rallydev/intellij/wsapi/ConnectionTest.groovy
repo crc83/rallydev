@@ -2,7 +2,7 @@ package com.rallydev.intellij.wsapi
 
 class ConnectionTest {
 
-    URI server
+    URL server
     RallyClient rallyClient
 
     ConnectionTest(RallyClient rallyClient) {

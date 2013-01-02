@@ -1,4 +1,4 @@
-package com.rallydev.intellij;
+package com.rallydev.intellij.task;
 
 import com.intellij.tasks.Task;
 import com.intellij.tasks.impl.BaseRepository;
@@ -10,8 +10,8 @@ import com.rallydev.intellij.wsapi.queries.FilteredTasksQuery;
 import com.rallydev.intellij.wsapi.queries.TaskFromIdQuery;
 import org.jetbrains.annotations.Nullable;
 
-import java.net.URI;
-import java.net.URISyntaxException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Collection;
 
 @Tag("Rally")
@@ -48,12 +48,12 @@ public class RallyRepository extends BaseRepositoryImpl {
 
     @Override
     @SuppressWarnings("deprecation")
-    public void testConnection() throws URISyntaxException {
-        new ConnectionTest(getClient());
+    public void testConnection() throws Exception {
+        new ConnectionTest(getClient()).doTest();
     }
 
-    private RallyClient getClient() throws URISyntaxException {
-        return new RallyClient(new URI(getUrl()), getUsername(), getPassword());
+    private RallyClient getClient() throws MalformedURLException {
+        return new RallyClient(new URL(getUrl()), getUsername(), getPassword());
     }
 
 }

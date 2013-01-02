@@ -11,13 +11,13 @@ import org.apache.commons.httpclient.methods.GetMethod
 class RallyClient extends HttpClient {
     private static final Logger log = Logger.getInstance("#${this}")
 
-    URI server
+    URL server
     String username
     String password
 
     RallyClient() { }
 
-    RallyClient(URI server, String username, String password) {
+    RallyClient(URL server, String username, String password) {
         this.server = server
         this.username = username
         this.password = password
@@ -35,7 +35,7 @@ class RallyClient extends HttpClient {
                 return new ApiResponse(method.responseBodyAsString)
                 break
             case HttpStatus.SC_UNAUTHORIZED:
-                throw new InvalidCredentialsException('Invalid credentials')
+                throw new InvalidCredentialsException('The provided user name and password are not valid')
             default:
                 break
         }

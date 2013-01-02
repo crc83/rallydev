@@ -1,4 +1,4 @@
-package com.rallydev.intellij
+package com.rallydev.intellij.task
 
 import com.google.gson.JsonElement
 import com.intellij.tasks.TaskType

@@ -16,11 +16,11 @@ class GetRequest {
         this.wsapiObject = wsapiObject
     }
 
-    String getUrl(URI server) {
+    String getUrl(URL server) {
         "${baseUrl(server)}/${endPoint}.js${queryString}"
     }
 
-    String getEncodedUrl(URI server) {
+    String getEncodedUrl(URL server) {
         "${baseUrl(server)}/${endPoint}.js${URIUtil.encodeQuery(queryString)}"
     }
 
@@ -52,7 +52,7 @@ class GetRequest {
         return this
     }
 
-    private baseUrl(URI server) {
+    private baseUrl(URL server) {
         return "${server}/slm/webservice/${WSAPI_VERSION}"
     }
 

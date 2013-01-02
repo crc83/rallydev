@@ -1,9 +1,7 @@
-package com.rallydev.intellij
+package com.rallydev.intellij.task
 
 import com.intellij.openapi.project.Project
 import com.intellij.util.Consumer
-
-import javax.swing.*
 
 class RallyRepositoryEditorImpl extends RallyRepositoryEditor {
 
