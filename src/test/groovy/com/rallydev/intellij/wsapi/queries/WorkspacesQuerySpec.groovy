@@ -32,7 +32,9 @@ class WorkspacesQuerySpec extends BaseQuerySpec {
 
         then:
         workspaces.size() == 1
+        workspaces[0].objectId == '11864'
         workspaces[0].name == 'Workspace 1'
+
     }
 
 }

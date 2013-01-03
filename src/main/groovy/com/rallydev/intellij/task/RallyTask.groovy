@@ -4,7 +4,7 @@ import com.intellij.tasks.Comment
 import com.intellij.tasks.Task
 import com.intellij.tasks.TaskType
 
-import javax.swing.Icon
+import javax.swing.*
 
 class RallyTask extends Task {
 

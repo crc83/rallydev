@@ -20,11 +20,12 @@ class TypedefQuery {
         String query = new QueryBuilder()
                 .withDisjunction('ElementName', eq, Workspace.ELEMENT_NAME)
                 .toString()
-
         GetRequest request = new GetRequest(ApiObject.TYPE_DEFINITION)
                 .withFetch()
                 .withMaxPageSize()
                 .withQuery(query)
+
+        client.makeRequest(request)
     }
 
 }

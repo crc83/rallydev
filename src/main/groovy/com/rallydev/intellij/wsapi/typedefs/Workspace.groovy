@@ -8,5 +8,11 @@ class Workspace {
     static final String ELEMENT_NAME = 'WorkSpace'
 
     String name
+    String objectId
+
+    @Override
+    String toString() {
+        name
+    }
 
 }

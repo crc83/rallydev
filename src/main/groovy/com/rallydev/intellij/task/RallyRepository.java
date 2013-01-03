@@ -4,10 +4,11 @@ import com.intellij.tasks.Task;
 import com.intellij.tasks.impl.BaseRepository;
 import com.intellij.tasks.impl.BaseRepositoryImpl;
 import com.intellij.util.xmlb.annotations.Tag;
+import com.rallydev.intellij.config.RallyConfig;
 import com.rallydev.intellij.wsapi.ConnectionTest;
 import com.rallydev.intellij.wsapi.RallyClient;
-import com.rallydev.intellij.wsapi.queries.TasksFilteredQuery;
 import com.rallydev.intellij.wsapi.queries.TaskFromIdQuery;
+import com.rallydev.intellij.wsapi.queries.TasksFilteredQuery;
 import org.jetbrains.annotations.Nullable;
 
 import java.net.MalformedURLException;
@@ -17,12 +18,17 @@ import java.util.Collection;
 @Tag("Rally")
 public class RallyRepository extends BaseRepositoryImpl {
 
+    public String workspaceId;
+    public String testField;
+
     @SuppressWarnings("unused")
     public RallyRepository() {
     }
 
     public RallyRepository(RallyRepository other) {
         super(other);
+        this.testField = other.testField;
+        this.workspaceId = other.workspaceId;
     }
 
     public RallyRepository(RallyRepositoryType type) {
@@ -52,8 +58,18 @@ public class RallyRepository extends BaseRepositoryImpl {
         new ConnectionTest(getClient()).doTest();
     }
 
-    private RallyClient getClient() throws MalformedURLException {
-        return new RallyClient(new URL(getUrl()), getUsername(), getPassword());
+    public RallyClient getClient() throws MalformedURLException {
+        return new RallyClient(
+                new URL(RallyConfig.getInstance().url),
+                RallyConfig.getInstance().userName,
+                RallyConfig.getInstance().password
+        );
+    }
+
+    //Url is used in the server list, overriding to return a display name instead.
+    @Override
+    public String getUrl() {
+        return RallyConfig.getInstance().url + " (" + workspaceId + ")";
     }
 
 }

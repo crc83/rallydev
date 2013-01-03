@@ -24,7 +24,10 @@ class WorkspacesQuery {
     private Collection<Workspace> workspacesFromResponse(ApiResponse response) {
         List<Workspace> workspaces = []
         response.results.each { result ->
-            workspaces << new Workspace(name: result.Name?.getAsString())
+            workspaces << new Workspace(
+                    objectId: result.ObjectID?.getAsString(),
+                    name: result.Name?.getAsString()
+            )
         }
         return workspaces
     }
