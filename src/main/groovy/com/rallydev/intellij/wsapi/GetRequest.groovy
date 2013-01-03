@@ -4,7 +4,7 @@ import org.apache.commons.httpclient.util.URIUtil
 
 class GetRequest {
     static final String WSAPI_VERSION = '1.39'
-    static int MAX_PAGE_SIZE = 100
+    static int MAX_PAGE_SIZE = 200
     static int MIN_PAGE_SIZE = 1
 
     ApiObject wsapiObject
@@ -40,6 +40,10 @@ class GetRequest {
     GetRequest withPageSize(Integer pageSize) {
         params['pagesize'] = between(pageSize, MIN_PAGE_SIZE, MAX_PAGE_SIZE)
         return this
+    }
+
+    GetRequest withMaxPageSize() {
+        return withPageSize(MAX_PAGE_SIZE)
     }
 
     GetRequest withQuery(String query) {

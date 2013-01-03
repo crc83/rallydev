@@ -2,32 +2,17 @@ package com.rallydev.intellij.wsapi.queries
 
 import com.rallydev.intellij.task.RallyTaskFactory
 import com.rallydev.intellij.wsapi.ApiResponse
-import com.rallydev.intellij.wsapi.GetRequest
-import com.rallydev.intellij.wsapi.RallyClient
-import spock.lang.Shared
-import spock.lang.Specification
 
-class FilteredTasksQuerySpec extends Specification {
-    static String server = 'http://asdf'
-
-    @Shared
-    RallyClient client
-    List<String> requests = []
+class FilteredTasksQuerySpec extends BaseQuerySpec {
 
     def setup() {
         GroovySpy(RallyTaskFactory, global: true)
         2 * RallyTaskFactory.tasksFromResponse(_ as ApiResponse) >> { a -> [] }
-        client = Mock(RallyClient)
-        client.makeRequest(_ as GetRequest) >> { GetRequest request ->
-            requests << request.getUrl(server.toURL())
-            return new ApiResponse('')
-        }
-
     }
 
     def "findTasks with query"() {
         given:
-        FilteredTasksQuery query = new FilteredTasksQuery(client)
+        TasksFilteredQuery query = new TasksFilteredQuery(recordingClient)
 
         when:
         query.findTasks('someQuery', 50, 0)
@@ -39,7 +24,7 @@ class FilteredTasksQuerySpec extends Specification {
 
     def "findTasks with since"() {
         given:
-        FilteredTasksQuery query = new FilteredTasksQuery(client)
+        TasksFilteredQuery query = new TasksFilteredQuery(recordingClient)
 
         when:
         query.findTasks('someQuery', 50, 1356038641966L)

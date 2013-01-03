@@ -2,28 +2,16 @@ package com.rallydev.intellij.wsapi.queries
 
 import com.rallydev.intellij.task.RallyTaskFactory
 import com.rallydev.intellij.wsapi.ApiResponse
-import com.rallydev.intellij.wsapi.GetRequest
-import com.rallydev.intellij.wsapi.RallyClient
-import spock.lang.Specification
 
-class TaskFromIdQuerySpec extends Specification {
-    static String server = 'http://asdf'
+class TaskFromIdQuerySpec extends BaseQuerySpec {
 
     def "findTasks query"() {
         given:
         GroovySpy(RallyTaskFactory, global: true)
         1 * RallyTaskFactory.singleTaskFromResponse(_ as ApiResponse) >> { a -> [] }
 
-        and: 'Mock a client that records requests'
-        RallyClient client = Mock(RallyClient)
-        List<String> requests = []
-        client.makeRequest(_ as GetRequest) >> { GetRequest request ->
-            requests << request.getUrl(server.toURL())
-            return new ApiResponse('')
-        }
-
         and:
-        TaskFromIdQuery query = new TaskFromIdQuery(client)
+        TaskFromIdQuery query = new TaskFromIdQuery(recordingClient)
 
         when:
         query.findTask('1234')
@@ -31,6 +19,5 @@ class TaskFromIdQuerySpec extends Specification {
         then: 'Check that proper requests were made'
         requests == [(server + '/slm/webservice/1.39/artifact/1234.js?fetch=true')]
     }
-
 
 }

@@ -10,7 +10,7 @@ import org.jetbrains.annotations.Nullable
 import javax.swing.Icon
 import javax.swing.ImageIcon
 
-class RallyRepositoryType extends BaseRepositoryType<RallyRepository> {
+class RallyRepositoryType extends BaseRepositoryType<RallyRepository2> {
     static final Icon ICON = loadIcon()
 
     private static ImageIcon loadIcon() {
@@ -36,16 +36,24 @@ class RallyRepositoryType extends BaseRepositoryType<RallyRepository> {
     @Override
     @NotNull
     TaskRepository createRepository() {
-        return new RallyRepository(this)
+        return new RallyRepository2(this)
     }
 
     @Override
-    Class<RallyRepository> getRepositoryClass() {
-        return RallyRepository
+    Class<RallyRepository2> getRepositoryClass() {
+        return RallyRepository2
+    }
+
+    //public TaskRepositoryEditor createEditor(final T repository, Project project, final Consumer<T> changeListener) {
+
+    @Override
+    public RallyRepositoryEditorForm createEditor(RallyRepository2 repository, Project project, Consumer<RallyRepository2> changeListener) {
+        return new RallyRepositoryEditorForm()
     }
 
     @Override
-    public RallyRepositoryEditorImpl createEditor(RallyRepository repository, Project project, Consumer<RallyRepository> changeListener) {
+    @Deprecated
+    public RallyRepositoryEditorImpl _createEditor(RallyRepository2 repository, Project project, Consumer<RallyRepository2> changeListener) {
         return new RallyRepositoryEditorImpl(project, repository, changeListener)
     }
 

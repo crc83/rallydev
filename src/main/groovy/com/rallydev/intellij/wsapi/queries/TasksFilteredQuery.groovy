@@ -12,11 +12,11 @@ import java.text.SimpleDateFormat
 
 import static com.rallydev.intellij.wsapi.QueryBuilder.Operator.gt
 
-class FilteredTasksQuery {
+class TasksFilteredQuery {
 
     RallyClient client
 
-    public FilteredTasksQuery(RallyClient client) {
+    public TasksFilteredQuery(RallyClient client) {
         this.client = client
     }
 

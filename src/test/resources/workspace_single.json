@@ -1,0 +1,93 @@
+{
+    "QueryResult": {
+        "_rallyAPIMajor": "1",
+        "_rallyAPIMinor": "39",
+        "Errors": [],
+        "Warnings": [],
+        "TotalResultCount": 1,
+        "StartIndex": 1,
+        "PageSize": 20,
+        "Results": [
+            {
+                "_rallyAPIMajor": "1",
+                "_rallyAPIMinor": "39",
+                "_ref": "http://localhost:7001/slm/webservice/1.39/workspace/11864.js",
+                "_objectVersion": "2",
+                "_refObjectName": "Workspace 1",
+                "CreationDate": "2012-11-21T06:07:17.572Z",
+                "_CreatedAt": "Nov 20, 2012",
+                "ObjectID": 11864,
+                "Subscription": {
+                    "_rallyAPIMajor": "1",
+                    "_rallyAPIMinor": "39",
+                    "_ref": "http://localhost:7001/slm/webservice/1.39/subscription/11852.js",
+                    "_refObjectName": "UnlimitedSubTest",
+                    "_type": "Subscription"
+                },
+                "Description": "",
+                "Name": "Workspace 1",
+                "Notes": "",
+                "Owner": {
+                    "_rallyAPIMajor": "1",
+                    "_rallyAPIMinor": "39",
+                    "_ref": "http://localhost:7001/slm/webservice/1.39/user/11858.js",
+                    "_refObjectName": "ue",
+                    "_type": "User"
+                },
+                "Projects": [
+                    {
+                        "_rallyAPIMajor": "1",
+                        "_rallyAPIMinor": "39",
+                        "_ref": "http://localhost:7001/slm/webservice/1.39/project/15862.js",
+                        "_refObjectName": "admin project",
+                        "_type": "Project"
+                    },
+                    {
+                        "_rallyAPIMajor": "1",
+                        "_rallyAPIMinor": "39",
+                        "_ref": "http://localhost:7001/slm/webservice/1.39/project/15614.js",
+                        "_refObjectName": "child project",
+                        "_type": "Project"
+                    },
+                    {
+                        "_rallyAPIMajor": "1",
+                        "_rallyAPIMinor": "39",
+                        "_ref": "http://localhost:7001/slm/webservice/1.39/project/15700.js",
+                        "_refObjectName": "gold project",
+                        "_type": "Project"
+                    },
+                    {
+                        "_rallyAPIMajor": "1",
+                        "_rallyAPIMinor": "39",
+                        "_ref": "http://localhost:7001/slm/webservice/1.39/project/11954.js",
+                        "_refObjectName": "Sample Project",
+                        "_type": "Project"
+                    },
+                    {
+                        "_rallyAPIMajor": "1",
+                        "_rallyAPIMinor": "39",
+                        "_ref": "http://localhost:7001/slm/webservice/1.39/project/15781.js",
+                        "_refObjectName": "silver project",
+                        "_type": "Project"
+                    }
+                ],
+                "RevisionHistory": {
+                    "_rallyAPIMajor": "1",
+                    "_rallyAPIMinor": "39",
+                    "_ref": "http://localhost:7001/slm/webservice/1.39/revisionhistory/11865.js",
+                    "_type": "RevisionHistory"
+                },
+                "State": "Open",
+                "Style": "UserStory",
+                "TypeDefinitions": [],
+                "WorkspaceConfiguration": {
+                    "_rallyAPIMajor": "1",
+                    "_rallyAPIMinor": "39",
+                    "_ref": "http://localhost:7001/slm/webservice/1.39/workspaceconfiguration/11866.js",
+                    "_type": "WorkspaceConfiguration"
+                },
+                "_type": "Workspace"
+            }
+        ]
+    }
+}
