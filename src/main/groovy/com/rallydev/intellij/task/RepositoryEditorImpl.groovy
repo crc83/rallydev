@@ -6,6 +6,7 @@ import com.intellij.openapi.editor.EditorFactory
 import com.intellij.openapi.project.Project
 import com.intellij.ui.DocumentAdapter
 import com.intellij.util.Consumer
+import com.rallydev.intellij.config.RallyConfig
 import com.rallydev.intellij.wsapi.queries.WorkspacesQuery
 import com.rallydev.intellij.wsapi.typedefs.Workspace
 
@@ -19,14 +20,19 @@ class RepositoryEditorImpl extends RepositoryEditor {
     Project project
     RallyRepository repository
     Consumer<RallyRepository> changeListener
+    private RallyConfig rallyConfig;
 
     private boolean applying
     private final Document document
 
     public RepositoryEditorImpl(Project project, RallyRepository repository, Consumer<RallyRepository> changeListener) {
+        this.rallyConfig  = RallyConfig.getInstance()
         this.project = project
         this.repository = repository
         this.changeListener = changeListener
+        this.serverURLTextField.text = rallyConfig.url
+        this.loginTextField.text = rallyConfig.userName
+        this.passwordPasswordField.text = rallyConfig.password
 
         document = EditorFactory.getInstance().createDocument(repository.getCommitMessageFormat())
         document.addDocumentListener(new com.intellij.openapi.editor.event.DocumentAdapter() {
@@ -37,6 +43,18 @@ class RepositoryEditorImpl extends RepositoryEditor {
         })
 
         errorPanel.setVisible(false)
+        loadWorkspaces(repository)
+
+        selectWorkspaceFromConfig()
+
+        installListener(workspaces)
+        installListener(testField)
+
+        testField.visible = false
+    }
+
+    private void loadWorkspaces(RallyRepository repository) {
+        workspaces.clear()
         workspaces.addItem(new Workspace(name: "Select Workspace", objectId: ""))
         try {
             new WorkspacesQuery(repository.getClient()).findAllWorkspaces().each {
@@ -46,21 +64,9 @@ class RepositoryEditorImpl extends RepositoryEditor {
             e.printStackTrace()
             displayError()
         }
-
-        loadFromConfig()
-
-        installListener(workspaces)
-        installListener(testField)
-
-        testField.visible = false
     }
 
-    @Override
-    public JComponent createComponent() {
-        return editorPanel
-    }
-
-    private void loadFromConfig() {
+    private void selectWorkspaceFromConfig() {
         testField.text = repository.testField
         (0..(workspaces.itemCount - 1)).each { i ->
             if (repository.workspaceId == workspaces.getItemAt(i).objectId) {
@@ -69,16 +75,22 @@ class RepositoryEditorImpl extends RepositoryEditor {
         }
     }
 
+    @Override
+    public JComponent createComponent() {
+        return editorPanel
+    }
+
     private void displayError() {
         errorLabel.text = "Unable to connect to Rally servers"
         errorPanel.visible = true
-        successPanel.visible = false
     }
 
     public void apply() {
         repository.testField = testField.text
         repository.workspaceId = workspaces.selectedItem.objectId
-
+        rallyConfig.url = serverURLTextField.text
+        rallyConfig.userName = loginTextField.text
+        rallyConfig.password = passwordPasswordField.text
         changeListener.consume(repository)
     }
 

@@ -14,5 +14,10 @@ public abstract class RepositoryEditor extends TaskRepositoryEditor {
     protected JComboBox workspaces;
 
     protected JTextField testField;
+    protected JTextField serverURLTextField;
+    protected JTextField loginTextField;
+    protected JPasswordField passwordPasswordField;
 
+    protected JComboBox projects;
+    protected JButton testConnectionButton;
 }
