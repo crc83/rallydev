@@ -11,17 +11,6 @@
     </content>
     <orderEntry type="jdk" jdkName="IDEA IC-129.354" jdkType="IDEA JDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="" scope="RUNTIME">
-      <library>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/lib" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" scope="RUNTIME" name="groovy-1.8.9" level="application" />
     <orderEntry type="module-library" scope="PROVIDED">
       <library>
         <CLASSES>
@@ -32,6 +21,8 @@
         <jarDirectory url="file://$APPLICATION_HOME_DIR$/plugins/tasks/lib" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="org.spockframework:spock-core:0.7-groovy-2.0" level="project" />
+    <orderEntry type="library" name="groovy-1.8.9" level="application" />
   </component>
 </module>
 

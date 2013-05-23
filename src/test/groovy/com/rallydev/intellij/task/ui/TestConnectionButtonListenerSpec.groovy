@@ -1,4 +1,4 @@
-package com.rallydev.intellij.config
+package com.rallydev.intellij.task.ui
 
 import com.google.gson.JsonSyntaxException
 import com.intellij.openapi.ui.Messages
@@ -14,19 +14,17 @@ class TestConnectionButtonListenerSpec extends BaseContainerSpec {
 
     List<String> messages
     @Shared
-    RallyConfigForm mockForm
+    RepositoryEditor mockForm
     @Shared
     RallyClient mockClient
 
     def setup() {
         messages = []
-        mockForm = Mock(RallyConfigForm)
-        Messages.testDialog = new TestDialog() {
-            int show(String message) {
-                messages << message
-                return 0
-            }
-        }
+        mockForm = Mock(RepositoryEditor)
+        mockForm.showErrorDialog(_ ,_ ) >> {msg, title ->
+            messages << msg}
+        mockForm.showMessageDialog(_ ,_ ) >> {msg, title ->
+            messages << msg}
         mockClient = Mock(RallyClient)
     }
 
@@ -63,6 +61,7 @@ class TestConnectionButtonListenerSpec extends BaseContainerSpec {
     def "Message for bad response"() {
         given:
         1 * mockClient.makeRequest(_) >> { throw new JsonSyntaxException('Wrong') }
+
         mockForm.getClient() >> { mockClient }
 
         and:

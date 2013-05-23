@@ -1,4 +1,4 @@
-package com.rallydev.intellij.task
+package com.rallydev.intellij.task.ui
 
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.editor.Document
@@ -7,6 +7,9 @@ import com.intellij.openapi.project.Project
 import com.intellij.ui.DocumentAdapter
 import com.intellij.util.Consumer
 import com.rallydev.intellij.config.RallyConfig
+import com.rallydev.intellij.task.RallyRepository
+import com.rallydev.intellij.task.ui.RepositoryEditor
+import com.rallydev.intellij.wsapi.queries.ProjectsQuery
 import com.rallydev.intellij.wsapi.queries.WorkspacesQuery
 import com.rallydev.intellij.wsapi.typedefs.Workspace
 
@@ -44,13 +47,31 @@ class RepositoryEditorImpl extends RepositoryEditor {
 
         errorPanel.setVisible(false)
         loadWorkspaces(repository)
-
         selectWorkspaceFromConfig()
+
+        loadProjects(repository)
+        selectProjectFromConfig()
 
         installListener(workspaces)
         installListener(testField)
 
         testField.visible = false
+
+        testConnectionButton.addActionListener(new TestConnectionButtonListener(this));
+    }
+
+    private loadProjects(RallyRepository repository) {
+        projects.clear()
+        projects.addItem(new com.rallydev.intellij.wsapi.typedefs.Project(name: "Select project", objectId: ""))
+        try {
+            new ProjectsQuery(repository.getClient()).findAllProjects().each {
+                projects.addItem(it)
+            }
+        } catch (Exception e) {
+            e.printStackTrace()
+            displayError()
+        }
+
     }
 
     private void loadWorkspaces(RallyRepository repository) {
@@ -67,10 +88,19 @@ class RepositoryEditorImpl extends RepositoryEditor {
     }
 
     private void selectWorkspaceFromConfig() {
-        testField.text = repository.testField
         (0..(workspaces.itemCount - 1)).each { i ->
             if (repository.workspaceId == workspaces.getItemAt(i).objectId) {
                 workspaces.selectedIndex = i
+                repository.workspaceName = workspaces.getItemAt(i).name
+            }
+        }
+    }
+
+    private void selectProjectFromConfig() {
+        (0..(projects.itemCount - 1)).each { i ->
+            if (repository.projectId == projects.getItemAt(i).objectId) {
+                projects.selectedIndex = i
+                repository.projectName = projects.getItemAt(i).name
             }
         }
     }
@@ -86,8 +116,13 @@ class RepositoryEditorImpl extends RepositoryEditor {
     }
 
     public void apply() {
-        repository.testField = testField.text
         repository.workspaceId = workspaces.selectedItem.objectId
+        repository.workspaceName = workspaces.selectedItem.name
+        repository.projectId = projects.selectedItem.objectId
+        repository.projectName = projects.selectedItem.name
+        repository.filterByProject = projectCheckBox.selected
+        repository.filterByWorkspace = workspaceCheckBox.selected
+
         rallyConfig.url = serverURLTextField.text
         rallyConfig.userName = loginTextField.text
         rallyConfig.password = passwordPasswordField.text

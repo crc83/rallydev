@@ -4,6 +4,8 @@ import com.intellij.openapi.project.Project;
 import com.intellij.tasks.TaskRepository;
 import com.intellij.tasks.impl.BaseRepositoryType;
 import com.intellij.util.Consumer;
+import com.rallydev.intellij.task.ui.RepositoryEditor;
+import com.rallydev.intellij.task.ui.RepositoryEditorImpl;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

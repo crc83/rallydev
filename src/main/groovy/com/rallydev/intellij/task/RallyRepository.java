@@ -18,8 +18,14 @@ import java.util.Collection;
 @Tag("Rally")
 public class RallyRepository extends BaseRepositoryImpl {
 
+
     public String workspaceId;
+    public String workspaceName;
+    public String projectId;
+    public String projectName;
     public String testField;
+    private boolean filterByProject;
+    private boolean filterByWorkspace;
 
     @SuppressWarnings("unused")
     public RallyRepository() {
@@ -29,6 +35,9 @@ public class RallyRepository extends BaseRepositoryImpl {
         super(other);
         this.testField = other.testField;
         this.workspaceId = other.workspaceId;
+        this.workspaceName = other.workspaceName;
+        this.projectId = other.projectId;
+        this.projectName = other.projectName;
     }
 
     public RallyRepository(RallyRepositoryType type) {
@@ -69,7 +78,7 @@ public class RallyRepository extends BaseRepositoryImpl {
     //Url is used in the server list, overriding to return a display name instead.
     @Override
     public String getUrl() {
-        return RallyConfig.getInstance().url + " (" + workspaceId + ")";
+        return RallyConfig.getInstance().url + " (" + workspaceId + ":"+workspaceName+")";
     }
 
 }

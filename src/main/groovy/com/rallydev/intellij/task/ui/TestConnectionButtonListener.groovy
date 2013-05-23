@@ -1,4 +1,4 @@
-package com.rallydev.intellij.config
+package com.rallydev.intellij.task.ui
 
 import com.google.gson.JsonSyntaxException
 import com.google.gson.stream.MalformedJsonException
@@ -11,9 +11,9 @@ import java.awt.event.ActionListener
 
 class TestConnectionButtonListener implements ActionListener {
 
-    RallyConfigForm form
+    RepositoryEditorImpl form
 
-    TestConnectionButtonListener(RallyConfigForm form) {
+    TestConnectionButtonListener(RepositoryEditor form) {
         this.form = form
     }
 
@@ -26,9 +26,9 @@ class TestConnectionButtonListener implements ActionListener {
             error = messageFromException(e)
         }
         if (error) {
-            Messages.showErrorDialog(error, 'Error')
+            form.showErrorDialog(error, 'Error')
         } else {
-            Messages.showMessageDialog('Connection is successful', 'Connection', Messages.informationIcon)
+            form.showMessageDialog('Connection is successful', 'Connection')
         }
     }
 

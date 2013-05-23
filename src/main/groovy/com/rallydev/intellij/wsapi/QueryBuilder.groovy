@@ -29,6 +29,13 @@ class QueryBuilder {
         return this
     }
 
+    QueryBuilder withProjectId(String projectId) {
+        //withConjunction('ProjectId',eq, projectId)
+        withConjunction('State',Operator.noteq,'Compleated')
+        //withConjunction('Owner.Name',eq,'')
+        return this
+    }
+
     boolean hasConditions() {
         return disjunctions || conjunctions
     }
@@ -60,13 +67,15 @@ class QueryBuilder {
     }
 
     enum Operator {
-        eq, contains, gt
+        eq, contains, gt, noteq;
 
         @Override
         String toString() {
             switch (this) {
                 case Operator.eq:
                     return '='
+                case Operator.noteq:
+                    return '!='
                 case Operator.contains:
                     return 'contains'
                 case Operator.gt:

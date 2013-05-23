@@ -1,13 +1,14 @@
-package com.rallydev.intellij.config
+package com.rallydev.intellij.task.ui
 
 import com.rallydev.intellij.BaseContainerSpec
+import com.rallydev.intellij.task.ui.RepositoryEditor
 import spock.lang.Unroll
 
-class RallyConfigFormSpec extends BaseContainerSpec {
+class RepositoryEditorSpec {
 
     def "Form correctly initialized after createComponent"() {
         given:
-        RallyConfigForm form = new RallyConfigForm()
+        RepositoryEditor form = new RepositoryEditorImpl()
 
         when:
         form.createComponent()
@@ -20,7 +21,7 @@ class RallyConfigFormSpec extends BaseContainerSpec {
 
     def "isModified false when initially loaded"() {
         given:
-        RallyConfigForm form = new RallyConfigForm()
+        RepositoryEditor form = new RepositoryEditorImpl()
         form.createComponent()
 
         expect:
@@ -30,7 +31,7 @@ class RallyConfigFormSpec extends BaseContainerSpec {
     @Unroll
     def "isModified changes with field values"() {
         when:
-        RallyConfigForm form = new RallyConfigForm()
+        RepositoryEditor form = new RepositoryEditorImpl()
         form.createComponent()
         form[field].text = newValue
 
@@ -49,7 +50,7 @@ class RallyConfigFormSpec extends BaseContainerSpec {
         String password = 'newPassword'
 
         and:
-        RallyConfigForm form = new RallyConfigForm()
+        RepositoryEditor form = new RepositoryEditorImpl()
         form.createComponent()
         form.url.text = url
         form.userName.text = userName
@@ -65,7 +66,7 @@ class RallyConfigFormSpec extends BaseContainerSpec {
     }
 
     def "Reset sets to initial config values"() {
-        RallyConfigForm form = new RallyConfigForm()
+        RepositoryEditor form = new RepositoryEditorImpl()
         form.createComponent()
         form.url.text = 'http://yahoo.com'
         form.userName.text = 'newUserName'

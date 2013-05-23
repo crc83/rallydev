@@ -32,10 +32,12 @@ class TasksFilteredQuery {
         if (keyword) {
             query.withKeyword(keyword)
         }
+        query.withProjectId(0)
         if (since) {
             String date = new SimpleDateFormat(ApiResponse.RALLY_DATE_FORMAT).format(new Date(since))
             query.withConjunction('LastUpdateDate', gt, date)
         }
+
         if (query.hasConditions()) {
             defectRequest.withQuery(query.toString())
             requirementRequest.withQuery(query.toString())
