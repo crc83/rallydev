@@ -1,4 +1,4 @@
-package com.rallydev.intellij.task
+package com.rallydev.intellij.taskold
 
 import spock.lang.Shared
 import spock.lang.Specification

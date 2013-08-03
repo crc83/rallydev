@@ -1,6 +1,7 @@
 package com.rallydev.intellij.wsapi
 
 import com.intellij.openapi.diagnostic.Logger
+import com.rallydev.rest.request.QueryRequest
 import org.apache.commons.httpclient.HttpClient
 import org.apache.commons.httpclient.HttpStatus
 import org.apache.commons.httpclient.UsernamePasswordCredentials
@@ -23,10 +24,9 @@ class RallyClient extends HttpClient {
         this.password = password
     }
 
-    ApiResponse makeRequest(GetRequest request) {
+    ApiResponse makeRequest(QueryRequest request) {
         state.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials(username, password))
-
-        def method = new GetMethod(request.getEncodedUrl(server))
+        def method = new GetMethod(request.toUrl())
         log.debug "Client requesting: ${method.URI}"
         int code = executeMethod(method)
 

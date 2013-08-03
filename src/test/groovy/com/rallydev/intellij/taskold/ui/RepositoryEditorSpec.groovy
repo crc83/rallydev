@@ -1,7 +1,5 @@
-package com.rallydev.intellij.task.ui
+package com.rallydev.intellij.taskold.ui
 
-import com.rallydev.intellij.BaseContainerSpec
-import com.rallydev.intellij.task.ui.RepositoryEditor
 import spock.lang.Unroll
 
 class RepositoryEditorSpec {

@@ -1,4 +1,4 @@
-package com.rallydev.intellij.task
+package com.rallydev.intellij.taskold
 
 import com.intellij.tasks.TaskType
 import com.rallydev.intellij.wsapi.ApiResponse
@@ -23,7 +23,7 @@ class RallyTaskFactorySpec extends Specification {
         and:
         tasks[0].summary == 'US1: lone story'
         tasks[0].type == TaskType.FEATURE
-        tasks[1].summary == 'US2: story with a task'
+        tasks[1].summary == 'US2: story with a taskold'
         tasks[1].type == TaskType.FEATURE
         tasks[2].summary == 'US3: I Haz Defect'
         tasks[2].type == TaskType.FEATURE

@@ -1,8 +1,6 @@
-package com.rallydev.intellij.task.ui
+package com.rallydev.intellij.taskold.ui
 
 import com.google.gson.JsonSyntaxException
-import com.intellij.openapi.ui.Messages
-import com.intellij.openapi.ui.TestDialog
 import com.rallydev.intellij.BaseContainerSpec
 import com.rallydev.intellij.SpecUtils
 import com.rallydev.intellij.wsapi.ApiResponse

@@ -1,34 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list id="668d8361-cfb8-48b8-a595-0c8e92c78829" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_spockframework_spock_core_0_7_groovy_2_0.xml" />
+    <list id="668d8361-cfb8-48b8-a595-0c8e92c78829" name="Default" comment="" />
+    <list default="true" id="492f6825-ee8d-491f-9d37-cf166c616ccb" name="rallydev-1 Make configuration saveable" comment="gui ready&#10;rallydev-1 Make configuration saveable">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/task/RallyRepositorySpeck.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/TasksFilteredQuery.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_2_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_httpcomponents_httpcore_4_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/temp" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\main\groovy\com\rallydev\intellij\wsapi\queries\TasksFilteredQuery.groovy" afterPath="" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\main\groovy\com\rallydev\intellij\task\FilterBy.java" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/FilterBy.java" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\main\groovy\com\rallydev\intellij\task\RallyRepository.java" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/RallyRepository.java" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\main\groovy\com\rallydev\intellij\task\RallyRepositoryType.java" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/RallyRepositoryType.java" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\main\groovy\com\rallydev\intellij\task\RallyTask.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/RallyTask.groovy" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\main\groovy\com\rallydev\intellij\task\RallyTaskFactory.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/RallyTaskFactory.groovy" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\main\groovy\com\rallydev\intellij\task\ui\RepositoryEditor.form" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/ui/RepositoryEditor.form" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\main\groovy\com\rallydev\intellij\task\ui\RepositoryEditor.java" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/ui/RepositoryEditor.java" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\main\groovy\com\rallydev\intellij\task\ui\RepositoryEditorImpl.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/ui/RepositoryEditorImpl.groovy" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\main\groovy\com\rallydev\intellij\task\ui\TestConnectionButtonListener.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/ui/TestConnectionButtonListener.groovy" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\main\groovy\com\rallydev\intellij\wsapi\queries\WorkspacesQuery.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/WorkspacesQuery.java" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\test\groovy\com\rallydev\intellij\task\RallyRepositorySpec.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/taskold/RallyRepositorySpec.groovy" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\test\groovy\com\rallydev\intellij\task\RallyRepositoryTypeSpec.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/taskold/RallyRepositoryTypeSpec.groovy" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\test\groovy\com\rallydev\intellij\task\RallyTaskFactorySpec.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/taskold/RallyTaskFactorySpec.groovy" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\test\groovy\com\rallydev\intellij\task\RepositoryEditorSpec.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/taskold/RepositoryEditorSpec.groovy" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\test\groovy\com\rallydev\intellij\task\ui\RepositoryEditorSpec.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/taskold/ui/RepositoryEditorSpec.groovy" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\test\groovy\com\rallydev\intellij\task\ui\TestConnectionButtonListenerSpec.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/taskold/ui/TestConnectionButtonListenerSpec.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/ConnectionTest.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/ConnectionTest.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/wsapi/queries/FilteredTasksQuerySpec.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/wsapi/queries/FilteredTasksQuerySpec.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/typedefs/Project.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/typedefs/Project.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/ProjectsQuery.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/ProjectsQuery.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/QueryBuilder.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/QueryBuilder.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/RallyClient.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/RallyClient.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/config/RallyConfig.java" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/config/RallyConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/TaskFromIdQuery.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/TaskFromIdQuery.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/wsapi/queries/TaskFromIdQuerySpec.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/wsapi/queries/TaskFromIdQuerySpec.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/typedefs/Workspace.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/typedefs/Workspace.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/META-INF/plugin.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rallydev.iml" afterPath="$PROJECT_DIR$/rallydev.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <list default="true" id="492f6825-ee8d-491f-9d37-cf166c616ccb" name="rallydev-1 Make configuration saveable" comment="gui ready&#10;rallydev-1 Make configuration saveable" />
     <ignored path="rallydev.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369775322453" ignored="false" />
-    <file path="/plugin.xml" changelist="668d8361-cfb8-48b8-a595-0c8e92c78829" time="1369257902033" ignored="false" />
+    <file path="/Dummy.txt" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1372710267953" ignored="false" />
+    <file path="/plugin.xml" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1370099718781" ignored="false" />
     <file path="/RallyRepositoryType.groovy" changelist="668d8361-cfb8-48b8-a595-0c8e92c78829" time="1369258043470" ignored="false" />
     <file path="/RallyRepositoryType.java" changelist="668d8361-cfb8-48b8-a595-0c8e92c78829" time="1369258131642" ignored="false" />
     <file path="/RallyConfig.java" changelist="668d8361-cfb8-48b8-a595-0c8e92c78829" time="1369338515875" ignored="false" />
-    <file path="/RepositoryEditorImpl.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369691983125" ignored="false" />
-    <file path="/a.dummy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369693386921" ignored="false" />
-    <file path="/ProjectsQuery.groovy" changelist="668d8361-cfb8-48b8-a595-0c8e92c78829" time="1369346407234" ignored="false" />
+    <file path="/RepositoryEditorImpl.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1370294725828" ignored="false" />
+    <file path="/a.dummy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1370099893609" ignored="false" />
+    <file path="/ProjectsQuery.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1370293784718" ignored="false" />
     <file path="/fragment.java" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369519774890" ignored="false" />
-    <file path="/Project.groovy" changelist="668d8361-cfb8-48b8-a595-0c8e92c78829" time="1369345272031" ignored="false" />
+    <file path="/Project.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1370293658843" ignored="false" />
     <file path="/a.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369774878875" ignored="false" />
     <file path="/RepositoryEditorSpec.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369484832312" ignored="false" />
-    <file path="/RallyRepository.java" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369693203093" ignored="false" />
+    <file path="/RallyRepository.java" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1373090543953" ignored="false" />
     <file path="/FilterBy.java" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369485751640" ignored="false" />
     <file path="/TestConnectionButtonListener.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369520902218" ignored="false" />
-    <file path="/RepositoryEditor.java" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369691852250" ignored="false" />
+    <file path="/RepositoryEditor.java" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369776506031" ignored="false" />
     <file path="/TestConnectionButtonListenerSpec.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369521045843" ignored="false" />
     <file path="/RallyConfigFormSpec.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369519510250" ignored="false" />
-    <file path="/TasksFilteredQuery.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369693183343" ignored="false" />
-    <file path="/QueryBuilder.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369694331703" ignored="false" />
+    <file path="/TasksFilteredQuery.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369779877328" ignored="false" />
+    <file path="/QueryBuilder.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369778502656" ignored="false" />
+    <file path="/RallyClient.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369898930140" ignored="false" />
+    <file path="/RallyTaskFactory.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1369946375890" ignored="false" />
+    <file path="/TasksFilteredQuery.java" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1370293935109" ignored="false" />
+    <file path="/WorkspacesQuery.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1370100903781" ignored="false" />
+    <file path="/WorkspacesQuery.java" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1370102479671" ignored="false" />
+    <file path="/temp" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1370102304218" ignored="false" />
+    <file path="/Workspace.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1370293642937" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/html5/xhtml5.xsd" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1371108761750" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xslt-2_0.xsd" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1371108761750" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xinclude.xsd" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1371108761750" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xslt-1_0.xsd" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1371108761750" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/XMLSchema.xsd" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1371108761750" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xhtml1-strict.xsd" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1371108761750" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xhtml1-frameset.xsd" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1371108761750" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/XMLSchema-instance.xsd" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1371108761750" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xhtml1-transitional.xsd" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1371108761750" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xml.xsd" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1371108761750" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/relaxng.rng" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1371108761750" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/catalog.xsd" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1371108761750" ignored="false" />
+    <file path="/ConnectionTest.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1371110574406" ignored="false" />
+    <file path="/RallyRepositorySpeck.groovy" changelist="492f6825-ee8d-491f-9d37-cf166c616ccb" time="1373092876968" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +97,38 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/RallyTaskFactory.groovy" line="19" class="com.rallydev.intellij.taskold.RallyTaskFactory" package="com.rallydev.intellij.taskold">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/TasksFilteredQuery.java" line="29" class="com.rallydev.intellij.wsapi.queries.TasksFilteredQuery" package="com.rallydev.intellij.wsapi.queries">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -80,6 +165,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -89,29 +175,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RallyRepositorySpec.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/task/RallyRepositorySpec.groovy">
+      <file leaf-file-name="RallyRepositorySpeck.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/task/RallyRepositorySpeck.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="25" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
+            <state line="43" column="0" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#36#83#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RallyRepositorySpec.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/taskold/RallyRepositorySpec.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="6" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="RallyRepository.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/RallyRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="25" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FilterBy.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/FilterBy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="12" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="75" column="42" selection-start="2404" selection-end="2404" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#992#1019#0" expanded="true" />
+                <element signature="e#2277#2309#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,19 +210,26 @@
       <file leaf-file-name="RallyConfig.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/config/RallyConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="26" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0">
+            <state line="16" column="13" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueryBuilder.groovy" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/QueryBuilder.groovy">
+      <file leaf-file-name="RallyClient.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/RallyClient.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="43" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.5377129">
-              <folding>
-                <element signature="e#37#109#0" expanded="true" />
-              </folding>
+            <state line="30" column="0" selection-start="1076" selection-end="1076" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConnectionTest.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/ConnectionTest.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="0" selection-start="36" selection-end="36" vertical-scroll-proportion="0.049707603">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -155,30 +253,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/FilterBy.java" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RepositoryEditorImpl.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RepositoryEditor.form" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/TestConnectionButtonListener.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/config/RallyConfigFormSpec.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/task/ui/RallyConfigFormSpec.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/task/ui/RepositoryEditorSpec.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/TestConnectionButtonListener.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/task/ui/TestConnectionButtonListenerSpec.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/RepositoryEditor.java" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/RepositoryEditor.form" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/RepositoryEditorImpl.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/TasksFilteredQuery.groovy" />
+        <option value="$PROJECT_DIR$/META-INF/plugin.xml" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/RallyClient.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/WorkspacesQuery.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/temp" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyTaskFactory.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/typedefs/Workspace.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/typedefs/Project.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/WorkspacesQuery.java" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/ProjectsQuery.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/config/RallyConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/QueryBuilder.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/TasksFilteredQuery.java" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/RepositoryEditorImpl.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/ConnectionTest.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/RallyRepository.java" />
+        <option value="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/task/RallyRepositorySpeck.groovy" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="y" value="-4" />
-    <option name="width" value="1288" />
-    <option name="height" value="778" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1278" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -196,6 +294,8 @@
   <component name="ProjectStructureProblems">
     <ignored-problems>
       <problem id="unused-library(library:project:com.google.code.gson:gson:2.2.2)" />
+      <problem id="unused-library(library:project:org.apache.httpcomponents:httpcore:4.2.4)" />
+      <problem id="unused-library(library:project:org.spockframework:spock-core:0.7-groovy-2.0)" />
     </ignored-problems>
   </component>
   <component name="ProjectView">
@@ -211,17 +311,12 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="rallydev" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -308,7 +403,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="task" />
+              <option name="myItemId" value="taskold" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -339,40 +434,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rallydev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rallydev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="intellij" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -391,10 +452,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -454,7 +511,135 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="task" />
+              <option name="myItemId" value="wsapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="typedefs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rallydev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rallydev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groovy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intellij" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wsapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="queries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rallydev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rallydev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groovy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intellij" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rallydev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rallydev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groovy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intellij" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taskold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rallydev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rallydev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groovy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intellij" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taskold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -498,29 +683,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="49" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="50" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="50" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="true" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="50" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="50" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/plugins/tasks/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="49" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="445" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="438" />
@@ -533,10 +719,10 @@
     <property name="FullScreen" value="false" />
     <property name="Repository.Attach.Sources" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\lib" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="Downloaded.Files.Path" value="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\lib" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -544,8 +730,8 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -562,48 +748,13 @@
       <recent name="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\main\groovy\com\rallydev\intellij\task\ui" />
     </key>
   </component>
-  <component name="RunManager" selected="Plugin.rallydev">
-    <configuration default="false" name="build" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="rallydev" />
-      <setting name="path" value="file://$PROJECT_DIR$/build.gradle" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method>
-        <option name="Make" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="false" name="RallyRepositorySpec" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="rallydev" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.rallydev.intellij.task" />
-      <option name="MAIN_CLASS_NAME" value="com.rallydev.intellij.task.RallyRepositorySpec" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.RallyRepositorySpeck.Workspace list retrieved correctly">
     <configuration default="false" name="RepositoryEditorSpec" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="rallydev" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.rallydev.intellij.task" />
-      <option name="MAIN_CLASS_NAME" value="com.rallydev.intellij.task.RepositoryEditorSpec" />
+      <option name="PACKAGE_NAME" value="com.rallydev.intellij.taskold" />
+      <option name="MAIN_CLASS_NAME" value="com.rallydev.intellij.taskold.RepositoryEditorSpec" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -624,8 +775,8 @@
       <module name="rallydev" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.rallydev.intellij.task.ui" />
-      <option name="MAIN_CLASS_NAME" value="com.rallydev.intellij.task.ui.TestConnectionButtonListenerSpec" />
+      <option name="PACKAGE_NAME" value="com.rallydev.intellij.taskold.ui" />
+      <option name="MAIN_CLASS_NAME" value="com.rallydev.intellij.taskold.ui.TestConnectionButtonListenerSpec" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -648,10 +799,76 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="false" name="All in rallydev" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="rallydev" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="RallyRepositorySpeck" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="rallydev" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.rallydev.intellij.task" />
+      <option name="MAIN_CLASS_NAME" value="com.rallydev.intellij.task.RallyRepositorySpeck" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="RallyRepositorySpeck.Workspace list retrieved correctly" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="rallydev" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.rallydev.intellij.task" />
+      <option name="MAIN_CLASS_NAME" value="com.rallydev.intellij.task.RallyRepositorySpeck" />
+      <option name="METHOD_NAME" value="Workspace list retrieved correctly" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
@@ -661,6 +878,12 @@
       <setting name="params" value="" />
       <setting name="workDir" value="file://$PROJECT_DIR$" />
       <setting name="debug" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="rallydev" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -693,19 +916,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -731,6 +941,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -771,23 +994,31 @@
       <module name="rallydev" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" value="" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Plugin.rallydev" />
-      <item index="1" class="java.lang.String" itemvalue="Groovy.build" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.RallyRepositorySpec" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.RepositoryEditorSpec" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TestConnectionButtonListenerSpec" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.RepositoryEditorSpec" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestConnectionButtonListenerSpec" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.All in rallydev" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RallyRepositorySpeck" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.RallyRepositorySpeck.Workspace list retrieved correctly" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestConnectionButtonListenerSpec" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.RepositoryEditorSpec" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.RallyRepositorySpec" />
-        <item index="3" class="java.lang.String" itemvalue="Groovy.build" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RallyRepositorySpeck.Workspace list retrieved correctly" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RallyRepositorySpeck" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.All in rallydev" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestConnectionButtonListenerSpec" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.RepositoryEditorSpec" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -855,28 +1086,28 @@
     </servers>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="778" extended-state="6" />
-    <editor active="true" />
+    <frame x="1" y="1" width="1278" height="768" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26904377" sideWeight="0.71608835" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26948053" sideWeight="0.7151899" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3451613" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28481013" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36612904" sideWeight="0.68903434" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28870967" sideWeight="0.19067103" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2278481" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21935484" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2849026" sideWeight="0.7151899" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28481013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32658023" sideWeight="0.71608835" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28641573" sideWeight="0.63387096" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32096773" sideWeight="0.809329" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262987" sideWeight="0.7151899" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22310127" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -948,109 +1179,118 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/task/ui/TestConnectionButtonListenerSpec.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/ProjectsQuery.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#39#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/TestConnectionButtonListener.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="38" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
+        <state line="41" column="23" selection-start="1432" selection-end="1435" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/tasks/lib/tasks-api.jar!/com/intellij/tasks/config/TaskRepositoryEditor.class">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/TasksFilteredQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="177" selection-end="177" vertical-scroll-proportion="-3.4" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/RepositoryEditor.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/RepositoryEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="13" selection-start="939" selection-end="939" vertical-scroll-proportion="0.0">
+        <state line="36" column="0" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/RepositoryEditorImpl.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/RallyTaskFactory.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="23" selection-start="4323" selection-end="4323" vertical-scroll-proportion="0.0">
+        <state line="20" column="0" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/multiple_requirements.json">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/groovy-all-2.0.6.jar!/org/codehaus/groovy/runtime/DefaultGroovyMethods.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/single_requirement.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/workspace_typedef.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="607" column="38" selection-start="30716" selection-end="30721" vertical-scroll-proportion="-9.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/TasksFilteredQuery.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="29" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
+        <state line="1325" column="0" selection-start="74272" selection-end="74272" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/tasks/lib/tasks-api.jar!/com/intellij/tasks/impl/BaseRepositoryImpl.class">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/ui/RepositoryEditorImpl.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="175" selection-end="175" vertical-scroll-proportion="0.088541664">
+        <state line="102" column="67" selection-start="3680" selection-end="3748" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/task/RallyRepositorySpec.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/RallyRepositoryType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="25" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
+        <state line="13" column="6" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/taskold/ui/TestConnectionButtonListenerSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="23" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/rally-rest-api-1.0.7.jar!/com/rallydev/rest/request/QueryRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="168" selection-end="168" vertical-scroll-proportion="-2.2807016" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/queries/temp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="160" selection-start="146" selection-end="160" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/BaseContainerSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="15" selection-start="435" selection-end="435" vertical-scroll-proportion="-0.7632653">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/taskold/RallyRepositorySpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="6" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/config/RallyConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="26" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0">
+        <state line="16" column="13" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/RallyRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="25" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/FilterBy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="12" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/QueryBuilder.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="43" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.5377129">
+        <state line="75" column="42" selection-start="2404" selection-end="2404" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#37#109#0" expanded="true" />
+            <element signature="e#992#1019#0" expanded="true" />
+            <element signature="e#2277#2309#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/RallyClient.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="1076" selection-end="1076" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/task/RallyRepositorySpeck.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="0" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#36#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/wsapi/ConnectionTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="36" selection-end="36" vertical-scroll-proportion="0.049707603">
+          <folding />
         </state>
       </provider>
     </entry>

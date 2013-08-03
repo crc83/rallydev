@@ -1,7 +1,7 @@
-package com.rallydev.intellij.task
+package com.rallydev.intellij.taskold
 
-import com.rallydev.intellij.task.ui.RepositoryEditor
-import com.rallydev.intellij.task.ui.RepositoryEditorImpl
+import com.rallydev.intellij.taskold.ui.RepositoryEditor
+import com.rallydev.intellij.taskold.ui.RepositoryEditorImpl
 import spock.lang.Specification
 
 /**

@@ -1,4 +1,4 @@
-package com.rallydev.intellij.task.ui
+package com.rallydev.intellij.taskold.ui
 
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.editor.Document
@@ -7,8 +7,7 @@ import com.intellij.openapi.project.Project
 import com.intellij.ui.DocumentAdapter
 import com.intellij.util.Consumer
 import com.rallydev.intellij.config.RallyConfig
-import com.rallydev.intellij.task.RallyRepository
-import com.rallydev.intellij.task.ui.RepositoryEditor
+import com.rallydev.intellij.taskold.RallyRepository
 import com.rallydev.intellij.wsapi.queries.ProjectsQuery
 import com.rallydev.intellij.wsapi.queries.WorkspacesQuery
 import com.rallydev.intellij.wsapi.typedefs.Workspace
@@ -53,9 +52,10 @@ class RepositoryEditorImpl extends RepositoryEditor {
         selectProjectFromConfig()
 
         installListener(workspaces)
-        installListener(testField)
-
-        testField.visible = false
+        installListener(projects)
+        installListener(serverURLTextField)
+        installListener(loginTextField)
+        installListener(passwordPasswordField)
 
         testConnectionButton.addActionListener(new TestConnectionButtonListener(this));
     }

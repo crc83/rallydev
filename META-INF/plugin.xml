@@ -22,11 +22,10 @@
     </actions>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationConfigurable instance="com.rallydev.intellij.config.RallyConfigForm"/>
         <applicationService serviceInterface="com.rallydev.intellij.config.RallyConfig"
                             serviceImplementation="com.rallydev.intellij.config.RallyConfig"/>
 
-        <tasks.repositoryType implementation="com.rallydev.intellij.task.RallyRepositoryType"/>
+        <tasks.repositoryType implementation="com.rallydev.intellij.taskold.RallyRepositoryType"/>
     </extensions>
 
 </idea-plugin>

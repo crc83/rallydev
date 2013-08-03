@@ -1,5 +1,7 @@
 package com.rallydev.intellij.wsapi
 
+import com.rallydev.intellij.config.RallyConfig
+
 import static com.rallydev.intellij.wsapi.QueryBuilder.Operator.contains
 import static com.rallydev.intellij.wsapi.QueryBuilder.Operator.eq
 
@@ -30,9 +32,9 @@ class QueryBuilder {
     }
 
     QueryBuilder withProjectId(String projectId) {
-        //withConjunction('ProjectId',eq, projectId)
-        withConjunction('State',Operator.noteq,'Compleated')
-        //withConjunction('Owner.Name',eq,'')
+        withConjunction('ProjectId',eq, projectId)
+        //withConjunction('State',Operator.noteq,'Compleated')
+//        withConjunction('Owner.Name',eq,RallyConfig.getInstance().userName)
         return this
     }
 

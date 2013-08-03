@@ -1,6 +1,6 @@
 package com.rallydev.intellij.wsapi.queries
 
-import com.rallydev.intellij.task.RallyTaskFactory
+import com.rallydev.intellij.taskold.RallyTaskFactory
 import com.rallydev.intellij.wsapi.ApiResponse
 
 class FilteredTasksQuerySpec extends BaseQuerySpec {

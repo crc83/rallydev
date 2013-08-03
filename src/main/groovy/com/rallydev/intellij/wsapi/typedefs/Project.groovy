@@ -9,6 +9,7 @@ class Project {
 
     String name
     String objectId
+    String ref
 
     @Override
     String toString() {

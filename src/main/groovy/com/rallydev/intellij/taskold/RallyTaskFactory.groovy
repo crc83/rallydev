@@ -1,8 +1,9 @@
-package com.rallydev.intellij.task
+package com.rallydev.intellij.taskold
 
 import com.google.gson.JsonElement
 import com.intellij.tasks.TaskType
 import com.rallydev.intellij.wsapi.ApiResponse
+import com.rallydev.rest.response.QueryResponse
 
 import java.text.SimpleDateFormat
 
@@ -16,7 +17,7 @@ class RallyTaskFactory {
         }
     }
 
-    static Collection<RallyTask> tasksFromResponse(ApiResponse response) {
+    static Collection<RallyTask> tasksFromResponse(QueryResponse response) {
         Collection<RallyTask> tasks = []
         response.results.each { result ->
             RallyTask task = fromJsonRequirement(result)

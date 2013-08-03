@@ -11,6 +11,8 @@ repositories {
 dependencies {
     groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.5'
     compile 'com.google.code.gson:gson:2.2.2'
+	compile 'org.apache.httpcomponents:httpclient:4.2.4'
+	compile 'org.apache.httpcomponents:httpcore:4.2.4'
     compile 'org.jetbrains.idea:tasks-api:11.1.4'
     compile 'org.jetbrains.idea:openapi:11.1.4'
     compile 'org.jetbrains.idea:testFramework:11.1.4'
@@ -29,7 +31,7 @@ sourceSets {
     test {
         groovy {
             srcDir 'src/test/groovy'
-            //IntelliJ provides an ant task for the form designer, which I haven't integrated yet
+            //IntelliJ provides an ant taskold for the form designer, which I haven't integrated yet
             exclude '**/*FormSpec.groovy'
 
         }

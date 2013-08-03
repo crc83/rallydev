@@ -9,6 +9,7 @@ class Workspace {
 
     String name
     String objectId
+    String ref
 
     @Override
     String toString() {

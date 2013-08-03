@@ -25,6 +25,7 @@ public class RallyConfig implements PersistentStateComponent<RallyConfig> {
 
     //Used when no XML file on disk yet
     public RallyConfig() {
+        url = "https://rally1.rallydev.com";
         workspaces = new LinkedList<String>();
     }
 

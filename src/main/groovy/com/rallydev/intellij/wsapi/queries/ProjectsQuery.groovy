@@ -6,6 +6,9 @@ import com.rallydev.intellij.wsapi.GetRequest
 import com.rallydev.intellij.wsapi.RallyClient
 import com.rallydev.intellij.wsapi.typedefs.Project
 import com.rallydev.intellij.wsapi.typedefs.Workspace
+import com.rallydev.rest.RallyRestApi
+import com.rallydev.rest.request.QueryRequest
+import com.rallydev.rest.response.QueryResponse
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,18 +26,20 @@ class ProjectsQuery {
     }
 
     Collection<Project> findAllProjects() {
-        GetRequest request = new GetRequest(ApiObject.PROJECT)
-                .withFetch()
-                .withMaxPageSize()
-        return projectsFromResponse(client.makeRequest(request))
+        QueryRequest request = new QueryRequest(ApiObject.PROJECT.name())
+        RallyRestApi restApi = new RallyRestApi(new URI("https://rally1.rallydev.com"), "sbelei@softserveinc.com", "S123b9876");
+        QueryResponse responce = restApi.query(request);
+
+        return projectsFromResponse(responce)
     }
 
-    private Collection<Project> projectsFromResponse(ApiResponse response) {
+    private Collection<Project> projectsFromResponse(QueryResponse response) {
         List<Project> projects = []
         response.results.each { result ->
             projects << new Project(
                     objectId: result.ObjectID?.getAsString(),
-                    name: result.Name?.getAsString()
+                    name: result.Name?.getAsString(),
+                    ref: result._ref?.getAsString()
             )
         }
         return projects

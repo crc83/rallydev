@@ -1,8 +1,7 @@
-package com.rallydev.intellij.task.ui
+package com.rallydev.intellij.taskold.ui
 
 import com.google.gson.JsonSyntaxException
 import com.google.gson.stream.MalformedJsonException
-import com.intellij.openapi.ui.Messages
 import com.rallydev.intellij.wsapi.ConnectionTest
 import org.apache.commons.httpclient.auth.InvalidCredentialsException
 
