@@ -6,6 +6,8 @@ import com.intellij.tasks.TaskType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.sbelei.rally.domain.BasicEntity;
+import org.sbelei.rally.domain.Defect;
+import org.sbelei.rally.domain.Story;
 
 import javax.swing.*;
 import java.util.Date;
@@ -19,13 +21,28 @@ public class RallyTask extends Task {
     Date created;
     boolean closed;
     String issueUrl;
-    TaskType type = TaskType.OTHER;
+    TaskType type;
+    Icon icon;
 
     public RallyTask(BasicEntity entity) {
         super();
-        id = entity.id;
+        if (entity instanceof Defect) {
+            Defect defect = (Defect) entity;
+            id = defect.formattedId;
+            summary = defect.name;
+            String iconName = "rally_defect_P3.png"; // default name
+            icon =  new ImageIcon(this.getClass().getClassLoader().getResource("rally_defect_"+defect.getPriorityShort()+".png"), "Rally Defect Icon");
+            type = TaskType.BUG;
+        }
+        if (entity instanceof Story) {
+            Story story = (Story) entity;
+            id = story.formattedId;
+            summary = story.name;
+            icon =  new ImageIcon(this.getClass().getClassLoader().getResource("rally_feature.png"), "Rally Feature Icon");
+            type = TaskType.FEATURE;
+        }
+
         description = entity.toString();
-        summary = entity.name;
         issueUrl = entity.ref;
     }
 
@@ -56,7 +73,7 @@ public class RallyTask extends Task {
     @NotNull
     @Override
     public Icon getIcon() {
-        return new ImageIcon(this.getClass().getClassLoader().getResource("rally.png"), "Rally Icon");
+        return icon;
     }
 
     @NotNull
