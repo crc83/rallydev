@@ -1,7 +1,6 @@
 package com.rallydev.intellij.taskold.ui;
 
 import com.intellij.tasks.config.TaskRepositoryEditor;
-import com.rallydev.intellij.wsapi.RallyClient;
 
 import javax.swing.*;
 import java.net.MalformedURLException;
@@ -40,7 +39,7 @@ public abstract class RepositoryEditor extends TaskRepositoryEditor {
         errorPanel.setVisible(false);
     }
 
-    RallyClient getClient() throws MalformedURLException {
-        return new RallyClient(new URL(serverURLTextField.getText()), loginTextField.getText(), new String(passwordPasswordField.getPassword()));
-    }
+//    RallyClient getClient() throws MalformedURLException {
+//        return new RallyClient(new URL(serverURLTextField.getText()), loginTextField.getText(), new String(passwordPasswordField.getPassword()));
+//    }
 }

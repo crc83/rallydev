@@ -1,56 +1,64 @@
 package com.rallydev.intellij.taskold;
 
+import com.intellij.tasks.Comment;
 import com.intellij.tasks.Task;
+import com.intellij.tasks.TaskType;
 import com.intellij.tasks.impl.BaseRepository;
 import com.intellij.tasks.impl.BaseRepositoryImpl;
 import com.intellij.util.xmlb.annotations.Tag;
 import com.rallydev.intellij.config.RallyConfig;
-import com.rallydev.intellij.wsapi.ConnectionTest;
-import com.rallydev.intellij.wsapi.RallyClient;
-import com.rallydev.intellij.wsapi.queries.TaskFromIdQuery;
-import com.rallydev.intellij.wsapi.queries.TasksFilteredQuery;
+import com.rallydev.rest.RallyRestApi;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.sbelei.rally.domain.BasicEntity;
+import org.sbelei.rally.provider.ProviderFasade;
 
+import javax.swing.*;
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Collection;
+import java.util.Date;
 
 @Tag("Rally")
 public class RallyRepository extends BaseRepositoryImpl {
 
 
-    public String workspaceId;
-    public String workspaceName;
-    public String projectId;
-    public String projectName;
-    public String projectRef;
-    public String testField;
-    private boolean filterByProject;
-    private boolean filterByWorkspace;
+    public String workspaceId = "41593629";
+    public String projectId = "9216950819";
+//    public String iterationId;
+//    private boolean filterByProject;
+//    private boolean filterByWorkspace;
 
-    public RallyClient client;
+    public RallyRestApi client;
+    ProviderFasade provider;
 
     @SuppressWarnings("unused")
     public RallyRepository() {
-//        client = new RallyClient(
-//                new URL(RallyConfig.getInstance().url),
-//                RallyConfig.getInstance().userName,
-//                RallyConfig.getInstance().password
-//        );
+        URI uri = null;
+        try {
+            uri = new URI("https://rally1.rallydev.com");
+        } catch (URISyntaxException uie) {
+            uie.printStackTrace();
+        }
+        client = new RallyRestApi(
+            uri,//                new URI(RallyConfig.getInstance().url),
+            "sbelei@softserveinc.com",//                RallyConfig.getInstance().userName,
+            "S123b9876"//                RallyConfig.getInstance().password
+        );
+        provider = new ProviderFasade(client);
+        provider.setProjectId(projectId);
+        provider.setWorkspaceId(workspaceId);
+        provider.setUserLogin(RallyConfig.getInstance().userName);
+        provider.setUseCurrentIteration(true);
+        provider.setOnlyMine(true);
     }
 
     public RallyRepository(RallyRepository other) {
         super(other);
-        this.testField = other.testField;
         this.workspaceId = other.workspaceId;
-        this.workspaceName = other.workspaceName;
         this.projectId = other.projectId;
-        this.projectName = other.projectName;
-        this.projectRef = other.projectRef;
-    }
-
-    public RallyRepository(RallyRepositoryType type) {
-        super(type);
     }
 
     @Override
@@ -60,30 +68,55 @@ public class RallyRepository extends BaseRepositoryImpl {
 
     @Override
     public Task[] getIssues(@Nullable String query, int max, long since) throws Exception {
-        Collection<RallyTask> rallyTasks = new TasksFilteredQuery(getClient()).findTasks(projectRef,query, max, since);
-        return rallyTasks.toArray(new RallyTask[rallyTasks.size()]);
+        URI uri = null;
+        try {
+            uri = new URI("https://rally1.rallydev.com");
+        } catch (URISyntaxException uie) {
+            uie.printStackTrace();
+        }
+        client = new RallyRestApi(
+                uri,//                new URI(RallyConfig.getInstance().url),
+                "sbelei@softserveinc.com",//                RallyConfig.getInstance().userName,
+                "S123b9876"//                RallyConfig.getInstance().password
+        );
+        provider = new ProviderFasade(client);
+        provider.setProjectId(projectId);
+        provider.setWorkspaceId(workspaceId);
+        provider.setUserLogin(RallyConfig.getInstance().userName);
+        provider.setUseCurrentIteration(true);
+        provider.setOnlyMine(true);
+
+        Collection<BasicEntity> rallyTasks = provider.fetchStoriesAndDefects();
+        Task[] result = new Task[rallyTasks.size()];
+        int i = 0;
+        for (BasicEntity entity : rallyTasks) {
+            Task task = new RallyTask(entity);
+            result[i] = task;
+            i++;
+        }
+        return result;
     }
 
     @Nullable
     @Override
     public Task findTask(String id) throws Exception {
-        return new TaskFromIdQuery(getClient()).findTask(id);
+        return null;
     }
 
     @Override
     @SuppressWarnings("deprecation")
     public void testConnection() throws Exception {
-        new ConnectionTest(getClient()).doTest();
+//        new ConnectionTest(getClient()).doTest();
     }
 
-    public RallyClient getClient() throws MalformedURLException {
+    public RallyRestApi getClient() throws MalformedURLException {
         return client;
     }
 
     //Url is used in the server list, overriding to return a display name instead.
     @Override
     public String getUrl() {
-        return RallyConfig.getInstance().url + " (" + workspaceId + ":"+workspaceName+")";
+        return RallyConfig.getInstance().url + " (" + workspaceId +")";
     }
 
 }

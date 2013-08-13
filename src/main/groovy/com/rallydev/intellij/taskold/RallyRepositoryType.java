@@ -10,7 +10,11 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
+import java.net.URISyntaxException;
 
+/**
+ * This is description of Rally task repository for Itellij idea.
+ */
 class RallyRepositoryType extends BaseRepositoryType<RallyRepository> {
 
     @Override
@@ -29,7 +33,7 @@ class RallyRepositoryType extends BaseRepositoryType<RallyRepository> {
     @Override
     @NotNull
     public TaskRepository createRepository() {
-        return new RallyRepository(this);
+        return new RallyRepository();
     }
 
     @Override

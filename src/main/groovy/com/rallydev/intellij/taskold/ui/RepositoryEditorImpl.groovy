@@ -8,9 +8,6 @@ import com.intellij.ui.DocumentAdapter
 import com.intellij.util.Consumer
 import com.rallydev.intellij.config.RallyConfig
 import com.rallydev.intellij.taskold.RallyRepository
-import com.rallydev.intellij.wsapi.queries.ProjectsQuery
-import com.rallydev.intellij.wsapi.queries.WorkspacesQuery
-import com.rallydev.intellij.wsapi.typedefs.Workspace
 
 import javax.swing.*
 import javax.swing.event.DocumentEvent
@@ -57,34 +54,34 @@ class RepositoryEditorImpl extends RepositoryEditor {
         installListener(loginTextField)
         installListener(passwordPasswordField)
 
-        testConnectionButton.addActionListener(new TestConnectionButtonListener(this));
+//        testConnectionButton.addActionListener(new TestConnectionButtonListener(this));
     }
 
     private loadProjects(RallyRepository repository) {
         projects.clear()
-        projects.addItem(new com.rallydev.intellij.wsapi.typedefs.Project(name: "Select project", objectId: ""))
-        try {
-            new ProjectsQuery(repository.getClient()).findAllProjects().each {
-                projects.addItem(it)
-            }
-        } catch (Exception e) {
-            e.printStackTrace()
-            displayError()
-        }
+//        projects.addItem(new com.rallydev.intellij.wsapi.typedefs.Project(name: "Select project", objectId: ""))
+//        try {
+//            new ProjectsQuery(repository.getClient()).findAllProjects().each {
+//                projects.addItem(it)
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace()
+//            displayError()
+//        }
 
     }
 
     private void loadWorkspaces(RallyRepository repository) {
         workspaces.clear()
-        workspaces.addItem(new Workspace(name: "Select Workspace", objectId: ""))
-        try {
-            new WorkspacesQuery(repository.getClient()).findAllWorkspaces().each {
-                workspaces.addItem(it)
-            }
-        } catch (Exception e) {
-            e.printStackTrace()
-            displayError()
-        }
+//        workspaces.addItem(new Workspace(name: "Select Workspace", objectId: ""))
+//        try {
+//            new WorkspacesQuery(repository.getClient()).findAllWorkspaces().each {
+//                workspaces.addItem(it)
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace()
+//            displayError()
+//        }
     }
 
     private void selectWorkspaceFromConfig() {
@@ -130,27 +127,27 @@ class RepositoryEditorImpl extends RepositoryEditor {
     }
 
     //from BaseRepositoryEditor
-    protected void installListener(JComboBox comboBox) {
-        comboBox.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                doApply()
-            }
-        })
-    }
+//    protected void installListener(JComboBox comboBox) {
+//        comboBox.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent e) {
+//                doApply()
+//            }
+//        })
+//    }
 
     //from BaseRepositoryEditor
-    protected void installListener(JTextField textField) {
-        textField.document.addDocumentListener(new DocumentAdapter() {
-            @Override
-            protected void textChanged(DocumentEvent e) {
-                ApplicationManager.application.invokeLater(new Runnable() {
-                    public void run() {
-                        doApply()
-                    }
-                })
-            }
-        })
-    }
+//    protected void installListener(JTextField textField) {
+//        textField.document.addDocumentListener(new DocumentAdapter() {
+//            @Override
+//            protected void textChanged(DocumentEvent e) {
+//                ApplicationManager.application.invokeLater(new Runnable() {
+//                    public void run() {
+//                        doApply()
+//                    }
+//                })
+//            }
+//        })
+//    }
 
     //from BaseRepositoryEditor
     private void doApply() {

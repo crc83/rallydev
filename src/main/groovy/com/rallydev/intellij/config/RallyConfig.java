@@ -12,7 +12,8 @@ import java.util.List;
 
 @State(
         name = "Rally",
-        storages = @Storage(file = "$APP_CONFIG$/rally.xml")
+//        storages = @Storage(file = "$APP_CONFIG$/rally.xml")
+        storages = @Storage(file = "C:/rally.xml")
 )
 public class RallyConfig implements PersistentStateComponent<RallyConfig> {
 
