@@ -56,7 +56,7 @@ public class RallyTask extends Task {
     @NotNull
     @Override
     public Icon getIcon() {
-        return null;
+        return new ImageIcon(this.getClass().getClassLoader().getResource("rally.png"), "Rally Icon");
     }
 
     @NotNull

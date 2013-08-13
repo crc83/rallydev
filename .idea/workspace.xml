@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list id="668d8361-cfb8-48b8-a595-0c8e92c78829" name="Default" comment="" />
     <list default="true" id="492f6825-ee8d-491f-9d37-cf166c616ccb" name="rallydev-1 Make configuration saveable" comment="gui ready&#10;rallydev-1 Make configuration saveable">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/RepositoryEditorImpl.java" />
-      <change type="DELETED" beforePath="E:\PROJECTS\rallydev\src\main\groovy\com\rallydev\intellij\taskold\RallyTask.groovy" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/config/RallyConfig.java" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/config/RallyConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/META-INF/plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyTask.java" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyTask.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\PROJECTS\rallydev\src\main\groovy\com\rallydev\intellij\taskold\RallyRepository.java" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyRepository.java" />
-      <change type="MOVED" beforePath="E:\PROJECTS\rallydev\src\main\groovy\com\rallydev\intellij\taskold\RallyRepositoryType.java" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyRepositoryType.java" />
-      <change type="MOVED" beforePath="E:\PROJECTS\rallydev\src\main\groovy\com\rallydev\intellij\taskold\ui\RepositoryEditor.form" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/RepositoryEditor.form" />
-      <change type="MOVED" beforePath="E:\PROJECTS\rallydev\src\main\groovy\com\rallydev\intellij\taskold\ui\RepositoryEditor.java" afterPath="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/RepositoryEditor.java" />
     </list>
     <ignored path="rallydev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -129,10 +120,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RallyTask.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="RallyTask.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="22" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0">
+            <state line="58" column="101" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.24409449">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,10 +151,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ColoredListCellRenderer.class" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ColoredListCellRenderer.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/ui/ColoredListCellRenderer.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.72282606">
+            <state line="21" column="0" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RallyRepositoryType.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyRepositoryType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="107" selection-start="744" selection-end="831" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -234,10 +234,10 @@
         <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/RallyRepository.java" />
         <option value="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/task/RallyRepositorySpeck.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyTask.java" />
         <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/RepositoryEditorImpl.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/RepositoryEditorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/config/RallyConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyTask.java" />
       </list>
     </option>
   </component>
@@ -980,15 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/RepositoryEditor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="22" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
@@ -1026,8 +1017,24 @@
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/ui/ColoredListCellRenderer.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.72282606">
+        <state line="21" column="0" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyRepositoryType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="107" selection-start="744" selection-end="831" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="101" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.24409449">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
