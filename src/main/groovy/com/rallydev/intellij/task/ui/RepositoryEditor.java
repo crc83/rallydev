@@ -1,10 +1,8 @@
-package com.rallydev.intellij.taskold.ui;
+package com.rallydev.intellij.task.ui;
 
 import com.intellij.tasks.config.TaskRepositoryEditor;
 
 import javax.swing.*;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 public abstract class RepositoryEditor extends TaskRepositoryEditor {
 

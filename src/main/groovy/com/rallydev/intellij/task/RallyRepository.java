@@ -1,4 +1,4 @@
-package com.rallydev.intellij.taskold;
+package com.rallydev.intellij.task;
 
 import com.intellij.tasks.Comment;
 import com.intellij.tasks.Task;
@@ -8,18 +8,14 @@ import com.intellij.tasks.impl.BaseRepositoryImpl;
 import com.intellij.util.xmlb.annotations.Tag;
 import com.rallydev.intellij.config.RallyConfig;
 import com.rallydev.rest.RallyRestApi;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.sbelei.rally.domain.BasicEntity;
 import org.sbelei.rally.provider.ProviderFasade;
 
-import javax.swing.*;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.Collection;
-import java.util.Date;
 
 @Tag("Rally")
 public class RallyRepository extends BaseRepositoryImpl {
