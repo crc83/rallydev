@@ -8,6 +8,8 @@ import com.rallydev.intellij.config.RallyConfig;
 import com.rallydev.intellij.task.RallyRepository;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class RepositoryEditorImpl extends RepositoryEditor {
 
@@ -19,14 +21,14 @@ public class RepositoryEditorImpl extends RepositoryEditor {
     private boolean applying;
     private final Document document;
 
-    public RepositoryEditorImpl(Project project, RallyRepository repository, Consumer<RallyRepository> changeListener) {
-        this.rallyConfig  = RallyConfig.getInstance();
+    public RepositoryEditorImpl(RallyConfig config, Project project, RallyRepository repository, Consumer<RallyRepository> changeListener) {
+        this.rallyConfig  = config;
         this.project = project;
         this.repository = repository;
         this.changeListener = changeListener;
-        this.serverURLTextField.setText(rallyConfig.url);
-        this.loginTextField.setText(rallyConfig.userName);
-        this.passwordPasswordField.setText(rallyConfig.password);
+        this.serverURLTextField.setText(rallyConfig.getUrl());
+        this.loginTextField.setText(rallyConfig.getUserName());
+        this.passwordPasswordField.setText(rallyConfig.getPassword());
 
         document = EditorFactory.getInstance().createDocument(repository.getCommitMessageFormat());
         document.addDocumentListener(new com.intellij.openapi.editor.event.DocumentAdapter() {
@@ -51,21 +53,6 @@ public class RepositoryEditorImpl extends RepositoryEditor {
 
 //        testConnectionButton.addActionListener(new TestConnectionButtonListener(this));
     }
-
-//    private RepositoryEditorImpl(RallyRepository repository, Document document) {
-////        projects.clear();
-////        projects.addItem(new com.rallydev.intellij.wsapi.typedefs.Project(name: "Select project", objectId: ""))
-////        try {
-////            new ProjectsQuery(repository.getClient()).findAllProjects().each {
-////                projects.addItem(it)
-////            }
-////        } catch (Exception e) {
-////            e.printStackTrace()
-////            displayError()
-////        }
-//
-//        this.document = document;
-//    }
 
     private void loadWorkspaces(RallyRepository repository) {
 //        workspaces.clear()
@@ -116,33 +103,34 @@ public class RepositoryEditorImpl extends RepositoryEditor {
 //        repository.filterByProject = projectCheckBox.selected
 //        repository.filterByWorkspace = workspaceCheckBox.selected
 //
-        rallyConfig.url = serverURLTextField.getText();
-        rallyConfig.userName = loginTextField.getText();
-        rallyConfig.password = passwordPasswordField.getText();
+        rallyConfig.setUrl(serverURLTextField.getText());
+        rallyConfig.setUserName(loginTextField.getText());
+        rallyConfig.setPassword(passwordPasswordField.getText());
+        rallyConfig.getState();
         changeListener.consume(repository);
     }
 
     //from BaseRepositoryEditor
-//    protected void installListener(JComboBox comboBox) {
-//        comboBox.addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent e) {
-//                doApply()
-//            }
-//        })
-//    }
+    protected void installListener(JComboBox comboBox) {
+        comboBox.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                doApply();
+            }
+        });
+    }
 
     //from BaseRepositoryEditor
 //    protected void installListener(JTextField textField) {
-//        textField.document.addDocumentListener(new DocumentAdapter() {
+//        textField.getDocument().addDocumentListener(new DocumentAdapter() {
 //            @Override
 //            protected void textChanged(DocumentEvent e) {
-//                ApplicationManager.application.invokeLater(new Runnable() {
+//                ApplicationManager.getApplication().invokeLater(new Runnable() {
 //                    public void run() {
-//                        doApply()
+//                        doApply();
 //                    }
-//                })
+//                });
 //            }
-//        })
+//        });
 //    }
 
     //from BaseRepositoryEditor

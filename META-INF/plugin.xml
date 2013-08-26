@@ -23,7 +23,13 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceInterface="com.rallydev.intellij.config.RallyConfig"
-                            serviceImplementation="com.rallydev.intellij.config.RallyConfig"/>
+                            serviceImplementation="com.rallydev.intellij.config.RallyConfigImpl"/>
+
+        <applicationService serviceInterface="com.rallydev.intellij.task.RallyRepository"
+                            serviceImplementation="com.rallydev.intellij.task.RallyRepository"/>
+
+        <applicationConfigurable serviceInterface="com.rallydev.intellij.task.ui.RepositoryEditor"
+                            serviceImplementation="com.rallydev.intellij.task.ui.RepositoryEditorImpl"/>
 
         <tasks.repositoryType implementation="com.rallydev.intellij.task.RallyRepositoryType"/>
     </extensions>
