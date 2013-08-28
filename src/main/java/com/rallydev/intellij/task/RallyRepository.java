@@ -1,5 +1,6 @@
 package com.rallydev.intellij.task;
 
+import com.intellij.openapi.util.PasswordUtil;
 import com.intellij.tasks.Task;
 import com.intellij.tasks.TaskRepositoryType;
 import com.intellij.tasks.impl.BaseRepository;
@@ -91,7 +92,25 @@ public class RallyRepository extends BaseRepositoryImpl {
     //Url is used in the server list, overriding to return a display name instead.
     @Override
     public String getUrl() {
-        return config.getUrl() + " (" + workspaceId +")";
+        return config.getUrl();
+    }
+
+    @Override
+    public void setUsername(String username) {
+        super.setUsername(username);
+        config.setUserName(username);
+    }
+
+    @Override
+    public void setUrl(String url) {
+        super.setUrl(url);
+        config.setUrl(url);
+    }
+
+    @Override
+    public void setPassword(String password) {
+        super.setPassword(password);
+        config.setPassword(password);
     }
 
     @Override

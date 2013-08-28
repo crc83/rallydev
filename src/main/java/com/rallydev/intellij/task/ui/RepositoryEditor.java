@@ -1,43 +1,31 @@
 package com.rallydev.intellij.task.ui;
 
+import com.intellij.openapi.project.Project;
+import com.intellij.tasks.config.BaseRepositoryEditor;
 import com.intellij.tasks.config.TaskRepositoryEditor;
+import com.intellij.util.Consumer;
+import com.rallydev.intellij.task.RallyRepository;
+import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 
-public abstract class RepositoryEditor extends TaskRepositoryEditor {
+public abstract class RepositoryEditor extends BaseRepositoryEditor<RallyRepository> {
 
-    protected JPanel errorPanel;
-    protected JLabel errorLabel;
-
-    protected JPanel successPanel;
     protected JTabbedPane editorPanel;
     protected JComboBox workspaces;
 
-    protected JTextField serverURLTextField;
-    protected JTextField loginTextField;
-    protected JPasswordField passwordPasswordField;
-
     protected JComboBox projects;
-    protected JButton testConnectionButton;
-    private JCheckBox useCommitMessageCheckBox;
-    protected JTextArea document;
     protected JCheckBox workspaceCheckBox;
     protected JCheckBox projectCheckBox;
+    private JPanel filterPanel;
 
-    public RepositoryEditor() {
-
+    public RepositoryEditor(Project project, RallyRepository repository, Consumer<RallyRepository> changeListener) {
+        super(project, repository, changeListener);
     }
 
-    public void showErrorDialog(String message, String title) {
-        errorLabel.setText(title+":"+message);
-        errorPanel.setVisible(true);
+    @Nullable
+    @Override
+    protected JComponent createCustomPanel() {
+        return filterPanel;
     }
-
-    public void showMessageDialog(String message, String title) {
-        errorPanel.setVisible(false);
-    }
-
-//    RallyClient getClient() throws MalformedURLException {
-//        return new RallyClient(new URL(serverURLTextField.getText()), loginTextField.getText(), new String(passwordPasswordField.getPassword()));
-//    }
 }

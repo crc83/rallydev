@@ -49,8 +49,14 @@ class RallyRepositoryType extends BaseRepositoryType<RallyRepository> {
 
 
     @Override
-    public RepositoryEditor createEditor(RallyRepository repository, Project project, Consumer<RallyRepository> changeListener) {
-        return new RepositoryEditorImpl(config, project, repository, changeListener);
+    public RepositoryEditor createEditor(RallyRepository repository, Project project, final Consumer<RallyRepository> changeListener) {
+        Consumer<RallyRepository> consumer = new Consumer<RallyRepository>() {
+
+            public void consume(RallyRepository repo) {
+                changeListener.consume(repo);
+            }
+        };
+        return new RepositoryEditorImpl(project, repository, consumer);
     }
 
 }

@@ -28,9 +28,6 @@
         <applicationService serviceInterface="com.rallydev.intellij.task.RallyRepository"
                             serviceImplementation="com.rallydev.intellij.task.RallyRepository"/>
 
-        <applicationConfigurable serviceInterface="com.rallydev.intellij.task.ui.RepositoryEditor"
-                            serviceImplementation="com.rallydev.intellij.task.ui.RepositoryEditorImpl"/>
-
         <tasks.repositoryType implementation="com.rallydev.intellij.task.RallyRepositoryType"/>
     </extensions>
 

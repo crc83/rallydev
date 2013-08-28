@@ -31,7 +31,4 @@ public interface RallyConfig extends ApplicationComponent{
 
     void setPassword(String password);
 
-    List<String> getWorkspaces();
-
-    void setWorkspaces(List<String> workspaces);
 }

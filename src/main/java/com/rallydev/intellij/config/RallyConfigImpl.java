@@ -1,6 +1,7 @@
 package com.rallydev.intellij.config;
 
 import com.intellij.openapi.components.*;
+import com.intellij.openapi.util.PasswordUtil;
 import com.intellij.util.xmlb.XmlSerializerUtil;
 import com.intellij.util.xmlb.annotations.AbstractCollection;
 import com.intellij.util.xmlb.annotations.Property;
@@ -13,7 +14,7 @@ import java.util.List;
 @State(
         name = "Rally",
         storages = {
-                @Storage(id="other", file = "C:/rally.xml" )
+                @Storage(id="other", file = StoragePathMacros.APP_CONFIG + "/rally.xml" )
         }
 )
 public class RallyConfigImpl implements PersistentStateComponent<RallyConfig>, RallyConfig {
@@ -27,19 +28,11 @@ public class RallyConfigImpl implements PersistentStateComponent<RallyConfig>, R
     @Property
     private boolean rememberPassword;
 
-    @Property(surroundWithTag = false)
-    @AbstractCollection(surroundWithTag = false, elementTag = "workspace")
-    public List<String> workspaces;
 
     //Used when no XML file on disk yet
     public RallyConfigImpl() {
         System.out.println("constructor");
         System.out.println(this);
-        setUrl("https://rally1.rallydev.com");
-        setRememberPassword(true);
-        setUserName("sbelei@softserveinc.com");
-        setWorkspaces(new LinkedList<String>());
-        getState();
     }
 
     @Nullable
@@ -70,7 +63,11 @@ public class RallyConfigImpl implements PersistentStateComponent<RallyConfig>, R
 
     @Override
     public String getUrl() {
-        return url;
+        if (url != null) {
+            return url;
+        } else {
+            return "https://rally1.rallydev.com";
+        }
     }
 
     @Override
@@ -106,16 +103,6 @@ public class RallyConfigImpl implements PersistentStateComponent<RallyConfig>, R
     public void setPassword(String password) {
         System.out.println("modified password");
         this.password = password;
-    }
-
-    @Override
-    public List<String> getWorkspaces() {
-        return workspaces;
-    }
-
-    @Override
-    public void setWorkspaces(List<String> workspaces) {
-        this.workspaces = workspaces;
     }
 
     @Override
