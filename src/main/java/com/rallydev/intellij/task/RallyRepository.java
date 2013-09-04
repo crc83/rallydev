@@ -1,6 +1,7 @@
 package com.rallydev.intellij.task;
 
 import com.intellij.openapi.components.PersistentStateComponent;
+import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.util.PasswordUtil;
 import com.intellij.tasks.Task;
 import com.intellij.tasks.TaskRepositoryType;
@@ -21,7 +22,8 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 
 @Tag("Rally")
-public class RallyRepository extends BaseRepositoryImpl implements PersistentStateComponent<RallyRepository> {
+public class RallyRepository extends BaseRepositoryImpl {
+    private static final Logger LOG = Logger.getInstance("#com.intellij.tasks.rally.RallyRepository");
 
 
     public String workspaceId = "41593629";
@@ -31,13 +33,16 @@ public class RallyRepository extends BaseRepositoryImpl implements PersistentSta
 //    private boolean filterByWorkspace;
 
     public RallyRestApi client;
-    private RallyConfig config;
     ProviderFasade provider;
+    private final String myUrl = "https://rally1.rallydev.com";
 
     @SuppressWarnings("unused")
-    public RallyRepository(RallyConfig config) {
-        this.config = config;
-        loadSettingsFromConfig();
+    public RallyRepository() {
+        super();
+    }
+
+    public RallyRepository(RallyRepository rallyRepository) {
+        super(rallyRepository);
     }
 
     @Override
@@ -58,19 +63,19 @@ public class RallyRepository extends BaseRepositoryImpl implements PersistentSta
     private void loadSettingsFromConfig() {
         URI uri = null;
         try {
-            uri = new URI( config.getUrl() );
+            uri = new URI( myUrl );
         } catch (URISyntaxException uie) {
             uie.printStackTrace();
         }
         client = new RallyRestApi(
                 uri,
-                config.getUserName(),
-                config.getPassword()
+                myUsername,
+                myPassword
         );
         provider = new ProviderFasade(client);
         provider.setProjectId(projectId);
         provider.setWorkspaceId(workspaceId);
-        provider.setUserLogin(config.getUserName());
+        provider.setUserLogin(myUsername);
         provider.setUseCurrentIteration(true);
         provider.setOnlyMine(true);
     }
@@ -91,50 +96,13 @@ public class RallyRepository extends BaseRepositoryImpl implements PersistentSta
         return client;
     }
 
-    //Url is used in the server list, overriding to return a display name instead.
-    @Override
-    public String getUrl() {
-        return config.getUrl();
-    }
-
-    @Override
-    public void setUsername(String username) {
-        super.setUsername(username);
-        config.setUserName(username);
-    }
-
-    @Override
-    public void setUrl(String url) {
-        super.setUrl(url);
-        config.setUrl(url);
-    }
-
-    @Override
-    public void setPassword(String password) {
-        super.setPassword(password);
-        config.setPassword(password);
-    }
-
     @Override
     public BaseRepository clone() {
-        return new RallyRepository(config);
+        return new RallyRepository(this);
     }
 
     @Override
     public TaskRepositoryType getRepositoryType() {
         return new RallyRepositoryType(config);
-    }
-
-    @Nullable
-    @Override
-    public RallyRepository getState() {
-        System.out.println("## save state");
-        return this;
-    }
-
-    @Override
-    public void loadState(RallyRepository rallyRepository) {
-        System.out.println("read state");
-
     }
 }
