@@ -1,4 +1,4 @@
-package com.rallydev.intellij.task.ui;
+package com.rallydev.intellij.task.rally;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.tasks.config.BaseRepositoryEditor;
@@ -9,7 +9,7 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 
-public abstract class RepositoryEditor extends BaseRepositoryEditor<RallyRepository> {
+public class RallyRepositoryEditor extends BaseRepositoryEditor<RallyRepository> {
 
     protected JTabbedPane editorPanel;
     protected JComboBox workspaces;
@@ -19,7 +19,7 @@ public abstract class RepositoryEditor extends BaseRepositoryEditor<RallyReposit
     protected JCheckBox projectCheckBox;
     private JPanel filterPanel;
 
-    public RepositoryEditor(Project project, RallyRepository repository, Consumer<RallyRepository> changeListener) {
+    public RallyRepositoryEditor(Project project, RallyRepository repository, Consumer<RallyRepository> changeListener) {
         super(project, repository, changeListener);
     }
 
@@ -27,5 +27,10 @@ public abstract class RepositoryEditor extends BaseRepositoryEditor<RallyReposit
     @Override
     protected JComponent createCustomPanel() {
         return filterPanel;
+    }
+
+    @Override
+    public void apply() {
+        super.apply();
     }
 }

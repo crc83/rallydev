@@ -5,8 +5,8 @@ import com.intellij.tasks.TaskRepository;
 import com.intellij.tasks.impl.BaseRepositoryType;
 import com.intellij.util.Consumer;
 import com.rallydev.intellij.config.RallyConfig;
-import com.rallydev.intellij.task.ui.RepositoryEditor;
-import com.rallydev.intellij.task.ui.RepositoryEditorImpl;
+import com.rallydev.intellij.task.rally.RallyRepositoryEditor;
+import com.rallydev.intellij.task.rally.RepositoryEditorImpl;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -49,7 +49,7 @@ class RallyRepositoryType extends BaseRepositoryType<RallyRepository> {
 
 
     @Override
-    public RepositoryEditor createEditor(RallyRepository repository, Project project, final Consumer<RallyRepository> changeListener) {
+    public RallyRepositoryEditor createEditor(RallyRepository repository, Project project, final Consumer<RallyRepository> changeListener) {
         Consumer<RallyRepository> consumer = new Consumer<RallyRepository>() {
 
             public void consume(RallyRepository repo) {

@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list id="668d8361-cfb8-48b8-a595-0c8e92c78829" name="Default" comment="" />
     <list default="true" id="492f6825-ee8d-491f-9d37-cf166c616ccb" name="rallydev-1 Make configuration saveable" comment="gui ready&#10;rallydev-1 Make configuration saveable">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/config/RallyConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/config/RallyConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/config/RallyConfigImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/config/RallyConfigImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/rally/RallyRepositoryEditor.form" />
+      <change type="DELETED" beforePath="C:\projects\rallydev\src\main\java\com\rallydev\intellij\task\ui\RepositoryEditor.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\projects\rallydev\src\main\java\com\rallydev\intellij\task\ui\RepositoryEditorImpl.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\projects\rallydev\src\main\java\com\rallydev\intellij\task\ui\RepositoryEditor.java" afterPath="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/rally/RallyRepositoryEditor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/RallyRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/RallyRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/RallyRepositoryType.java" afterPath="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/RallyRepositoryType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/ui/RepositoryEditor.form" afterPath="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/ui/RepositoryEditor.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/ui/RepositoryEditor.java" afterPath="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/ui/RepositoryEditor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/ui/RepositoryEditorImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/ui/RepositoryEditorImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/META-INF/plugin.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rallydev.iws" />
@@ -65,7 +63,38 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-api/src/com/intellij/tasks/config/BaseRepositoryEditor.java" line="144" class="com.intellij.tasks.config.BaseRepositoryEditor" package="com.intellij.tasks.config">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-api/src/com/intellij/tasks/config/BaseRepositoryEditor.java" line="256" class="com.intellij.tasks.config.BaseRepositoryEditor" package="com.intellij.tasks.config">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -76,31 +105,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RepositoryEditorImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/ui/RepositoryEditorImpl.java">
+      <file leaf-file-name="RallyRepository.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/RallyRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="16" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+            <state line="127" column="0" selection-start="3667" selection-end="3667" vertical-scroll-proportion="0.0" vertical-offset="2142" max-vertical-offset="2482">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RallyRepository.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/RallyRepository.java">
+      <file leaf-file-name="RallyRepositoryType.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/RallyRepositoryType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="0" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.33246753" vertical-offset="348" max-vertical-offset="1955">
-              <folding>
-                <element signature="e#1085#1112#0" expanded="true" />
-                <element signature="e#2473#2505#0" expanded="true" />
-              </folding>
+            <state line="55" column="45" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="901">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RepositoryEditor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/ui/RepositoryEditor.java">
+      <file leaf-file-name="RallyRepositoryEditor.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/rally/RallyRepositoryEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="61" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0" vertical-offset="61" max-vertical-offset="510">
+            <state line="11" column="7" selection-start="358" selection-end="358" vertical-scroll-proportion="0.122522525" vertical-offset="0" max-vertical-offset="595">
               <folding />
             </state>
           </provider>
@@ -109,7 +135,34 @@
       <file leaf-file-name="BaseRepositoryEditor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-api/src/com/intellij/tasks/config/BaseRepositoryEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="259" column="22" selection-start="8298" selection-end="8298" vertical-scroll-proportion="0.0" vertical-offset="3083" max-vertical-offset="3808">
+            <state line="73" column="20" selection-start="2607" selection-end="2607" vertical-scroll-proportion="0.0" vertical-offset="386" max-vertical-offset="4284">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RedmineRepositoryEditor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-core/src/com/intellij/tasks/redmine/RedmineRepositoryEditor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="76" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="884">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RedmineRepository.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-core/src/com/intellij/tasks/redmine/RedmineRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="0" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4981">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SynchronizedCollectConsumer.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/lib/util.jar!/com/intellij/util/SynchronizedCollectConsumer.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="29" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="357">
               <folding />
             </state>
           </provider>
@@ -118,7 +171,7 @@
       <file leaf-file-name="BaseRepository.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-api/src/com/intellij/tasks/impl/BaseRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="14" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.0" vertical-offset="563" max-vertical-offset="2057">
+            <state line="78" column="22" selection-start="2229" selection-end="2229" vertical-scroll-proportion="0.0" vertical-offset="1309" max-vertical-offset="2448">
               <folding />
             </state>
           </provider>
@@ -127,43 +180,7 @@
       <file leaf-file-name="RallyConfigImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/config/RallyConfigImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="33" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.0" vertical-offset="1334" max-vertical-offset="2210">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProviderFasade.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/rally-api-helper-1.0.0.jar!/org/sbelei/rally/provider/ProviderFasade.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="1554" selection-end="1554" vertical-scroll-proportion="-11.32" vertical-offset="363" max-vertical-offset="748">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskRepository.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-api/src/com/intellij/tasks/TaskRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="0" selection-start="3295" selection-end="3295" vertical-scroll-proportion="0.0" vertical-offset="1233" max-vertical-offset="4250">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PasswordUtil.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/util/PasswordUtil.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0" vertical-offset="8" max-vertical-offset="391">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RallyConfig.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/config/RallyConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="11" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0" vertical-offset="246" max-vertical-offset="629">
+            <state line="50" column="0" selection-start="1269" selection-end="1360" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="2363">
               <folding />
             </state>
           </provider>
@@ -188,9 +205,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/taskold/RallyRepository.java" />
-        <option value="$PROJECT_DIR$/src/test/groovy/com/rallydev/intellij/task/RallyRepositorySpeck.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyRepository.java" />
         <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/RepositoryEditorImpl.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/ui/RepositoryEditorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/task/RallyTask.java" />
@@ -198,12 +212,15 @@
         <option value="$PROJECT_DIR$/src/main/groovy/com/rallydev/intellij/config/RallyConfigImpl.java" />
         <option value="$PROJECT_DIR$/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/RallyRepositoryType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/ui/RepositoryEditorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/config/RallyConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/ui/RepositoryEditor.form" />
         <option value="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/ui/RepositoryEditor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/RallyRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/config/RallyConfigImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/ui/RepositoryEditorImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/RallyRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/rally/RepositoryEditorImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/rally/RepositoryEditor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/rally/RallyRepositoryEditor.java" />
       </list>
     </option>
   </component>
@@ -270,7 +287,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -367,46 +383,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
+              <option name="myItemId" value="rally" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RepositoryEditor" />
+              <option name="myItemId" value="RallyRepositoryEditor" />
               <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rallydev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rallydev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="intellij" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -469,20 +451,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="49" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="50" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="true" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="50" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../idea" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="49" />
@@ -495,14 +478,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="FullScreen" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Repository.Attach.Sources" value="true" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="Downloaded.Files.Path" value="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\lib" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -510,8 +493,8 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -523,12 +506,13 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.rallydev.intellij.task" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\rallydev\src\main\java\com\rallydev\intellij\task\rally" />
+      <recent name="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\main\groovy\com\rallydev\intellij\task\ui" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.rallydev.intellij.task.ui" />
       <recent name="com.rallydev.intellij.task" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Documents and Settings\sbelei\IdeaProjects\rallydev\src\main\groovy\com\rallydev\intellij\task\ui" />
     </key>
   </component>
   <component name="RunManager" selected="Plugin.rallydev">
@@ -659,6 +643,12 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
+      <module name="rallydev" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
       <module name="" />
       <setting name="path" value="" />
@@ -666,12 +656,6 @@
       <setting name="params" value="" />
       <setting name="workDir" value="file://$PROJECT_DIR$" />
       <setting name="debug" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
-      <module name="rallydev" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -707,6 +691,19 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -733,19 +730,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -854,7 +838,12 @@
       <workItem from="1377283505899" duration="4686000" />
       <workItem from="1377372554534" duration="5877000" />
       <workItem from="1377495351914" duration="5060000" />
-      <workItem from="1377548773949" duration="9383000" />
+      <workItem from="1377548773949" duration="9439000" />
+      <workItem from="1377768760988" duration="1593000" />
+      <workItem from="1377793060291" duration="1659000" />
+      <workItem from="1378239439994" duration="1356000" />
+      <workItem from="1378285895729" duration="32000" />
+      <workItem from="1378311787548" duration="1137000" />
     </task>
     <task id="LOCAL-00001" summary="project cleanup&#10;rallydev-1 Make configuration saveable">
       <created>1369482405906</created>
@@ -886,19 +875,17 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27827000" />
+    <option name="totallyTimeSpent" value="33660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1288" height="780" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3249595" sideWeight="0.6666667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26904377" sideWeight="0.6666667" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26904377" sideWeight="0.6666667" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34335443" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36708862" sideWeight="0.68903434" order="3" side_tool="false" content_ui="tabs" />
@@ -907,18 +894,20 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21293375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.67823344" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28606158" sideWeight="0.6666667" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3207547" sideWeight="0.809329" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28606158" sideWeight="0.6666667" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3207547" sideWeight="0.809329" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3249595" sideWeight="0.6666667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34335443" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21293375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -941,58 +930,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="663">
-          <folding>
-            <marker date="1377552515931" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-core/src/com/intellij/tasks/impl/TaskManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="951" column="0" selection-start="32353" selection-end="32462" vertical-scroll-proportion="0.0" vertical-offset="14104" max-vertical-offset="15249">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-api/src/com/intellij/tasks/config/TaskRepositoryEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="22" selection-start="799" selection-end="799" vertical-scroll-proportion="0.30088496" vertical-offset="0" max-vertical-offset="452">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/RallyRepositoryType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="45" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0" vertical-offset="497" max-vertical-offset="986">
-          <folding>
-            <element signature="e#1475#1635#0" expanded="true" />
-            <element signature="e#1624#1625#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/ui/RepositoryEditor.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/openapi/components/impl/stores/ComponentStoreImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="2557" selection-end="2557" vertical-scroll-proportion="0.045945946" vertical-offset="714" max-vertical-offset="1938">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/util/PasswordUtil.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0" vertical-offset="8" max-vertical-offset="391">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/config/RallyConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="11" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0" vertical-offset="246" max-vertical-offset="629">
@@ -1000,62 +937,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/ui/RepositoryEditorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="16" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-api/src/com/intellij/tasks/TaskRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="0" selection-start="3295" selection-end="3295" vertical-scroll-proportion="0.0" vertical-offset="1233" max-vertical-offset="4250">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/ui/RepositoryEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="61" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0" vertical-offset="61" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-api/src/com/intellij/tasks/config/BaseRepositoryEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="259" column="22" selection-start="8298" selection-end="8298" vertical-scroll-proportion="0.0" vertical-offset="3083" max-vertical-offset="3808">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-api/src/com/intellij/tasks/impl/BaseRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="14" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.0" vertical-offset="563" max-vertical-offset="2057">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/config/RallyConfigImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="33" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.0" vertical-offset="1334" max-vertical-offset="2210">
-          <folding />
-        </state>
+        <state line="103" column="0" selection-start="3196" selection-end="3196" vertical-scroll-proportion="0.0" vertical-offset="1734" max-vertical-offset="4641" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/rally-api-helper-1.0.0.jar!/org/sbelei/rally/provider/ProviderFasade.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1554" selection-end="1554" vertical-scroll-proportion="-11.32" vertical-offset="363" max-vertical-offset="748">
+        <state line="39" column="0" selection-start="1554" selection-end="1554" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="765" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-api/src/com/intellij/tasks/impl/BaseRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="57" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="1853" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/config/RallyConfigImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="0" selection-start="1269" selection-end="1360" vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="2210">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/RallyRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.33246753" vertical-offset="348" max-vertical-offset="1955">
-          <folding>
-            <element signature="e#1085#1112#0" expanded="true" />
-            <element signature="e#2473#2505#0" expanded="true" />
-          </folding>
+        <state line="127" column="0" selection-start="3667" selection-end="3667" vertical-scroll-proportion="0.0" vertical-offset="1519" max-vertical-offset="2176">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-api/src/com/intellij/tasks/impl/BaseRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="22" selection-start="2229" selection-end="2229" vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="2057">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/util.jar!/com/intellij/util/SynchronizedCollectConsumer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="29" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/util.jar!/com/intellij/util/CollectConsumer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="16" selection-start="466" selection-end="466" vertical-scroll-proportion="0.35416666" vertical-offset="0" max-vertical-offset="576" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/util.jar!/com/intellij/util/Consumer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="241" selection-end="241" vertical-scroll-proportion="0.23089983" vertical-offset="0" max-vertical-offset="589" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-api/src/com/intellij/tasks/config/BaseRepositoryEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="20" selection-start="2607" selection-end="2607" vertical-scroll-proportion="0.0" vertical-offset="386" max-vertical-offset="4284">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/RallyRepositoryType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="45" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-core/src/com/intellij/tasks/redmine/RedmineRepositoryEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="76" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../idea/plugins/tasks/tasks-core/src/com/intellij/tasks/redmine/RedmineRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4981">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rallydev/intellij/task/rally/RallyRepositoryEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="7" selection-start="358" selection-end="358" vertical-scroll-proportion="0.122522525" vertical-offset="0" max-vertical-offset="595">
+          <folding />
         </state>
       </provider>
     </entry>

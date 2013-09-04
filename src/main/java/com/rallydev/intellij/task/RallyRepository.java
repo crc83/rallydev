@@ -1,10 +1,12 @@
 package com.rallydev.intellij.task;
 
+import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.util.PasswordUtil;
 import com.intellij.tasks.Task;
 import com.intellij.tasks.TaskRepositoryType;
 import com.intellij.tasks.impl.BaseRepository;
 import com.intellij.tasks.impl.BaseRepositoryImpl;
+import com.intellij.util.xmlb.XmlSerializerUtil;
 import com.intellij.util.xmlb.annotations.Tag;
 import com.rallydev.intellij.config.RallyConfig;
 import com.rallydev.intellij.config.RallyConfigImpl;
@@ -19,7 +21,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 
 @Tag("Rally")
-public class RallyRepository extends BaseRepositoryImpl {
+public class RallyRepository extends BaseRepositoryImpl implements PersistentStateComponent<RallyRepository> {
 
 
     public String workspaceId = "41593629";
@@ -121,5 +123,18 @@ public class RallyRepository extends BaseRepositoryImpl {
     @Override
     public TaskRepositoryType getRepositoryType() {
         return new RallyRepositoryType(config);
+    }
+
+    @Nullable
+    @Override
+    public RallyRepository getState() {
+        System.out.println("## save state");
+        return this;
+    }
+
+    @Override
+    public void loadState(RallyRepository rallyRepository) {
+        System.out.println("read state");
+
     }
 }
