@@ -12,7 +12,7 @@ import javax.swing.*;
 /**
  * This is description of Rally task repository for Itellij idea.
  */
-class RallyRepositoryType extends BaseRepositoryType<RallyRepository> {
+public class RallyRepositoryType extends BaseRepositoryType<RallyRepository> {
 
     @Override
     @NotNull

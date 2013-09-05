@@ -2,26 +2,30 @@ package com.intellij.task.rally;
 
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.tasks.Task;
-import com.intellij.tasks.TaskRepositoryType;
 import com.intellij.tasks.impl.BaseRepository;
 import com.intellij.tasks.impl.BaseRepositoryImpl;
 import com.intellij.util.xmlb.annotations.Tag;
 import com.rallydev.rest.RallyRestApi;
 import org.jetbrains.annotations.Nullable;
 import org.sbelei.rally.domain.BasicEntity;
+import org.sbelei.rally.domain.Project;
+import org.sbelei.rally.domain.Workspace;
 import org.sbelei.rally.provider.ProviderFasade;
 
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Collection;
+import java.util.List;
 
 @Tag("Rally")
 public class RallyRepository extends BaseRepositoryImpl {
     private static final Logger LOG = Logger.getInstance("#com.intellij.tasks.rally.RallyRepository");
 
 
-    public String workspaceId = "41593629";
-    public String projectId = "9216950819";
+    public String workspaceId;
+    public String projectId;
+//    public String workspaceId = "41593629";
+//    public String projectId = "9216950819";
 //    public String iterationId;
 //    private boolean filterByProject;
 //    private boolean filterByWorkspace;
@@ -56,7 +60,7 @@ public class RallyRepository extends BaseRepositoryImpl {
     @Override
     public Task[] getIssues(@Nullable String query, int max, long since) throws Exception {
         if (provider == null) {
-            loadSettingsFromConfig();
+            refreshProvider();
         }
 
         Task[] result = null;
@@ -76,24 +80,31 @@ public class RallyRepository extends BaseRepositoryImpl {
         return result;
     }
 
-    private void loadSettingsFromConfig() {
-        URI uri = null;
-        try {
-            uri = new URI(getUrl());
-        } catch (URISyntaxException uie) {
-            uie.printStackTrace();
+    private void refreshProvider() {
+        if (provider == null) {
+            try {
+                URI uri = new URI(getUrl());
+                client = new RallyRestApi(
+                        uri,
+                        myUsername,
+                        myPassword
+                );
+                provider = new ProviderFasade(client);
+                provider.setUserLogin(myUsername);
+
+            } catch (URISyntaxException uie) {
+                LOG.error("Wrong URL", uie);
+            }
         }
-        client = new RallyRestApi(
-                uri,
-                myUsername,
-                myPassword
-        );
-        provider = new ProviderFasade(client);
-        provider.setProjectId(projectId);
-        provider.setWorkspaceId(workspaceId);
-        provider.setUserLogin(myUsername);
-        provider.setUseCurrentIteration(true);
-        provider.setOnlyMine(true);
+        if (provider != null) {
+            provider.setUseCurrentIteration(true);
+            provider.setOnlyMine(true);
+
+            provider.setWorkspaceId(workspaceId);
+            provider.setProjectId(projectId);
+        } else {
+            LOG.error("Provider is not initialized properly");
+        }
     }
 
     @Nullable
@@ -103,9 +114,9 @@ public class RallyRepository extends BaseRepositoryImpl {
     }
 
     @Override
-    @SuppressWarnings("deprecation")
     public void testConnection() throws Exception {
-//        new ConnectionTest(getClient()).doTest();
+        refreshProvider();
+        provider.fetchWorkspaces().toArray();
     }
 
     @Override
@@ -113,12 +124,37 @@ public class RallyRepository extends BaseRepositoryImpl {
         return new RallyRepository(this);
     }
 
-    @Override
-    public TaskRepositoryType getRepositoryType() {
-        return new RallyRepositoryType();
-    }
-
     public void setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
+    }
+
+    public Object[] getWorkspaces() {
+        refreshProvider();
+        List<Workspace> ws = provider.fetchWorkspaces();
+        if (ws == null) {
+            return null;
+        } else {
+            return ws.toArray();
+        }
+    }
+
+    public void setWorkspace(Object selectedItem) {
+        Workspace ws = (Workspace) selectedItem;
+        workspaceId = ws.id;
+    }
+
+    public Object[] getProjects() {
+        refreshProvider();
+        List<Project> projects = provider.fetchProjects();
+        if (projects == null) {
+            return null;
+        } else {
+            return projects.toArray();
+        }
+    }
+
+    public void setProject(Object selectedItem) {
+        Project project = (Project) selectedItem;
+        projectId = project.id;
     }
 }
