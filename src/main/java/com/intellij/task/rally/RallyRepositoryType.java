@@ -1,12 +1,9 @@
-package com.rallydev.intellij.task;
+package com.intellij.task.rally;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.tasks.TaskRepository;
 import com.intellij.tasks.impl.BaseRepositoryType;
 import com.intellij.util.Consumer;
-import com.rallydev.intellij.config.RallyConfig;
-import com.rallydev.intellij.task.rally.RallyRepositoryEditor;
-import com.rallydev.intellij.task.rally.RepositoryEditorImpl;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -17,16 +14,10 @@ import javax.swing.*;
  */
 class RallyRepositoryType extends BaseRepositoryType<RallyRepository> {
 
-    private final RallyConfig config;
-
     @Override
     @NotNull
     public String getName() {
         return "Rally";
-    }
-
-    public RallyRepositoryType(RallyConfig config) {
-        this.config = config;
     }
 
     @Override
@@ -39,7 +30,7 @@ class RallyRepositoryType extends BaseRepositoryType<RallyRepository> {
     @Override
     @NotNull
     public TaskRepository createRepository() {
-        return new RallyRepository(config);
+        return new RallyRepository(this);
     }
 
     @Override
@@ -50,13 +41,7 @@ class RallyRepositoryType extends BaseRepositoryType<RallyRepository> {
 
     @Override
     public RallyRepositoryEditor createEditor(RallyRepository repository, Project project, final Consumer<RallyRepository> changeListener) {
-        Consumer<RallyRepository> consumer = new Consumer<RallyRepository>() {
-
-            public void consume(RallyRepository repo) {
-                changeListener.consume(repo);
-            }
-        };
-        return new RepositoryEditorImpl(project, repository, consumer);
+        return new RallyRepositoryEditor(project, repository, changeListener);
     }
 
 }

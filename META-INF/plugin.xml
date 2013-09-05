@@ -9,26 +9,12 @@
     <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
     <idea-version since-build="107.105"/>
 
-    <application-components>
-        <!-- Add your application components here -->
-    </application-components>
-
-    <project-components>
-        <!-- Add your project components here -->
-    </project-components>
-
-    <actions>
-        <!-- Add your actions here -->
-    </actions>
-
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceInterface="com.rallydev.intellij.config.RallyConfig"
-                            serviceImplementation="com.rallydev.intellij.config.RallyConfigImpl"/>
+        <projectConfigurable instance="com.intellij.tasks.config.TaskConfigurable" id="tasks" displayName="Tasks" nonDefaultProject="true">
+            <configurable instance="com.intellij.tasks.config.TaskRepositoriesConfigurable" displayName="Servers" id="tasks.servers"/>
+        </projectConfigurable>
 
-        <applicationService serviceInterface="com.rallydev.intellij.task.RallyRepository"
-                            serviceImplementation="com.rallydev.intellij.task.RallyRepository"/>
-
-        <tasks.repositoryType implementation="com.rallydev.intellij.task.RallyRepositoryType"/>
+        <tasks.repositoryType implementation="com.intellij.task.rally.RallyRepositoryType"/>
     </extensions>
 
 </idea-plugin>

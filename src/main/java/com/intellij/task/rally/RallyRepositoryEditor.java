@@ -1,10 +1,8 @@
-package com.rallydev.intellij.task.rally;
+package com.intellij.task.rally;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.tasks.config.BaseRepositoryEditor;
-import com.intellij.tasks.config.TaskRepositoryEditor;
 import com.intellij.util.Consumer;
-import com.rallydev.intellij.task.RallyRepository;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
@@ -31,6 +29,7 @@ public class RallyRepositoryEditor extends BaseRepositoryEditor<RallyRepository>
 
     @Override
     public void apply() {
+        myRepository.setWorkspaceId("42");
         super.apply();
     }
 }

@@ -1,4 +1,4 @@
-package com.rallydev.intellij.task;
+package com.intellij.task.rally;
 
 import com.intellij.tasks.Comment;
 import com.intellij.tasks.Task;
