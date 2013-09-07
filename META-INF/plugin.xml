@@ -1,8 +1,8 @@
 <idea-plugin version="2">
     <name>Rally ALM Tasks Integration</name>
-    <description>short description of the plugin</description>
+    <description>Rally ALM Tasks Integration</description>
     <version>1.0</version>
-    <vendor>Rally Software</vendor>
+    <vendor>sergiy.beley@gmail.com</vendor>
 
     <depends>com.intellij.tasks</depends>
 

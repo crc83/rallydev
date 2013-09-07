@@ -1,66 +1,25 @@
-apply plugin: 'idea'
-apply plugin: 'java'
-apply plugin: 'groovy'
+apply plugin : 'java'
+apply plugin: 'maven-publish'
 
-repositories {
-    mavenCentral()
-    //mavenRepo url: 'file:///Users/mcholick/Dropbox/repository'
-    mavenRepo url: 'https://raw.github.com/cholick/mvn-repo/master/'
-}
+sourceCompatibility = 1.6
 
 dependencies {
-    groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.5'
-    compile 'com.google.code.gson:gson:2.2.2'
-	compile 'org.apache.httpcomponents:httpclient:4.2.4'
-	compile 'org.apache.httpcomponents:httpcore:4.2.4'
-    compile 'org.jetbrains.idea:tasks-api:11.1.4'
-    compile 'org.jetbrains.idea:openapi:11.1.4'
-    compile 'org.jetbrains.idea:testFramework:11.1.4'
-    testCompile 'org.spockframework:spock-core:0.7-groovy-1.8'
+	compile (
+		fileTree(dir: 'lib', include: '*.jar')
+	)
 }
+
+buildDir = 'bin'
 
 sourceSets {
     main {
-        groovy {
-            srcDir 'src/main/groovy'
+        java {
+            srcDir 'src'
         }
         resources {
-            srcDir 'src/main/resources'
+            srcDir 'resources'
         }
-    }
-    test {
-        groovy {
-            srcDir 'src/test/groovy'
-            //IntelliJ provides an ant task for the form designer, which I haven't integrated yet
-            exclude '**/*FormSpec.groovy'
 
-        }
-        resources {
-            srcDir 'src/test/resources'
-        }
     }
 }
 
-idea.project.ipr {
-    withXml { provider ->
-        provider.node.component.find { it.@name == 'ProjectRootManager' }.each {
-            it.parent().@'project-jdk-name' = "IDEA IC-11.1"
-            it.parent().@'project-jdk-type' = "IDEA JDK"
-        }
-    }
-}
-
-idea.module.iml {
-    whenMerged { module ->
-        module.dependencies.each { dependency ->
-            //todo: fix gson bundling, should stay compile
-            //Gradle needs org.jetbrains.idea for compile, but shouldn't duplicate in project (part of SDK)
-            if (dependency.scope == 'COMPILE') {
-                dependency.scope = 'PROVIDED'
-            }
-        }
-    }
-    withXml { provider ->
-        provider.asNode().@type = 'PLUGIN_MODULE'
-    }
-}

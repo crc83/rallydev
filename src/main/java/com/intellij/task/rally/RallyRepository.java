@@ -5,6 +5,7 @@ import com.intellij.tasks.Task;
 import com.intellij.tasks.impl.BaseRepository;
 import com.intellij.tasks.impl.BaseRepositoryImpl;
 import com.intellij.util.xmlb.annotations.Tag;
+import com.intellij.util.xmlb.annotations.Transient;
 import com.rallydev.rest.RallyRestApi;
 import org.jetbrains.annotations.Nullable;
 import org.sbelei.rally.domain.BasicEntity;
@@ -22,17 +23,18 @@ public class RallyRepository extends BaseRepositoryImpl {
     private static final Logger LOG = Logger.getInstance("#com.intellij.tasks.rally.RallyRepository");
 
 
-    public String workspaceId;
-    public String projectId;
-//    public String workspaceId = "41593629";
-//    public String projectId = "9216950819";
+//    public String workspaceId;
+//    public String projectId;
 //    public String iterationId;
-//    private boolean filterByProject;
-//    private boolean filterByWorkspace;
-
+//    public boolean useCurrentIteration;
+    public String workspaceId = "41593629";
+    public String projectId = "9216950819";
 
     private RallyRestApi client;
     private ProviderFasade provider;
+//    private List<Workspace> workspaces;
+//    private List<Project> projects;
+//    private List<BasicEntity> iterations;
 
 
     @SuppressWarnings("unused")
@@ -130,31 +132,33 @@ public class RallyRepository extends BaseRepositoryImpl {
 
     public Object[] getWorkspaces() {
         refreshProvider();
-        List<Workspace> ws = provider.fetchWorkspaces();
-        if (ws == null) {
-            return null;
-        } else {
-            return ws.toArray();
-        }
+        return provider.fetchWorkspaces().toArray();
     }
 
     public void setWorkspace(Object selectedItem) {
-        Workspace ws = (Workspace) selectedItem;
-        workspaceId = ws.id;
-    }
-
-    public Object[] getProjects() {
-        refreshProvider();
-        List<Project> projects = provider.fetchProjects();
-        if (projects == null) {
-            return null;
-        } else {
-            return projects.toArray();
+        if (selectedItem != null) {
+            Workspace ws = (Workspace) selectedItem;
+            workspaceId = ws.id;
         }
     }
 
-    public void setProject(Object selectedItem) {
-        Project project = (Project) selectedItem;
-        projectId = project.id;
+    public Object[] getRallyProjects() {
+        refreshProvider();
+        return provider.fetchProjects().toArray();
     }
+
+    public void setRallyProject(Object selectedItem) {
+        if (selectedItem != null) {
+            Project project = (Project) selectedItem;
+            projectId = project.id;
+        }
+    }
+
+    public Object getWorkspace() {
+        Workspace ws = new Workspace();
+        ws.id = workspaceId;
+        return ws;
+    }
+
+
 }
