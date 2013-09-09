@@ -126,39 +126,4 @@ public class RallyRepository extends BaseRepositoryImpl {
         return new RallyRepository(this);
     }
 
-    public void setWorkspaceId(String workspaceId) {
-        this.workspaceId = workspaceId;
-    }
-
-    public Object[] getWorkspaces() {
-        refreshProvider();
-        return provider.fetchWorkspaces().toArray();
-    }
-
-    public void setWorkspace(Object selectedItem) {
-        if (selectedItem != null) {
-            Workspace ws = (Workspace) selectedItem;
-            workspaceId = ws.id;
-        }
-    }
-
-    public Object[] getRallyProjects() {
-        refreshProvider();
-        return provider.fetchProjects().toArray();
-    }
-
-    public void setRallyProject(Object selectedItem) {
-        if (selectedItem != null) {
-            Project project = (Project) selectedItem;
-            projectId = project.id;
-        }
-    }
-
-    public Object getWorkspace() {
-        Workspace ws = new Workspace();
-        ws.id = workspaceId;
-        return ws;
-    }
-
-
 }
