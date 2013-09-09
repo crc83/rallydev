@@ -23,12 +23,12 @@ public class RallyRepository extends BaseRepositoryImpl {
     private static final Logger LOG = Logger.getInstance("#com.intellij.tasks.rally.RallyRepository");
 
 
-//    public String workspaceId;
-//    public String projectId;
+    public String workspaceId;
+    public String projectId;
 //    public String iterationId;
 //    public boolean useCurrentIteration;
-    public String workspaceId = "41593629";
-    public String projectId = "9216950819";
+//    public String workspaceId = "41593629";
+//    public String projectId = "9216950819";
 
     private RallyRestApi client;
     private ProviderFasade provider;
@@ -124,6 +124,24 @@ public class RallyRepository extends BaseRepositoryImpl {
     @Override
     public BaseRepository clone() {
         return new RallyRepository(this);
+    }
+
+    /*
+    Helper methods to work with filters
+     */
+
+    public Object[] fetchWorkspaces() {
+        refreshProvider();
+        try {
+            return provider.fetchWorkspaces().toArray();
+        } catch (Exception e) {
+            LOG.warn("Error while fetching workspaces",e);
+            return null;
+        }
+    }
+
+    public void applyWorkspace(Object selectedItem) {
+        workspaceId = ((Workspace) selectedItem).id;
     }
 
 }

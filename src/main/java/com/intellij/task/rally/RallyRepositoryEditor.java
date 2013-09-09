@@ -18,35 +18,36 @@ import java.util.Arrays;
 public class RallyRepositoryEditor extends BaseRepositoryEditor<RallyRepository> {
 
     private JBLabel myWorkspaceLabel;
-    private  JComboBox myWorkspaces;
+    private ComboBox myWorkspaces;
 
     private JBLabel myProjectLabel;
-    private  JComboBox myProjects;
+    private ComboBox myProjects;
 
     private JBLabel myIterationLabel;
-    private  JComboBox myIterations;
+    private ComboBox myIterations;
     private JCheckBox myIterationsCheckbox;
 
     public RallyRepositoryEditor(Project project, RallyRepository repository, Consumer<RallyRepository> changeListener) {
         super(project, repository, changeListener);
     }
 
+    @Override
     @Nullable
-    protected JComponent createCustosmPanel() {
+    protected JComponent createCustomPanel() {
         FormBuilder fb = FormBuilder.createFormBuilder();
 
-        myWorkspaces = new ComboBox(myRepository.getWorkspaces(),640);
+        myWorkspaces = new ComboBox(myRepository.fetchWorkspaces(),440);
         selectByEntityId(myWorkspaces, myRepository.workspaceId);
         installListener(myWorkspaces);
         myWorkspaceLabel = new JBLabel("Workspace:", SwingConstants.RIGHT);
         fb.addLabeledComponent(myWorkspaceLabel, myWorkspaces);
 
-        myProjects = new ComboBox(myRepository.getRallyProjects(), 640);
-        selectByEntityId(myProjects, myRepository.projectId);
-
-        installListener(myProjects);
-        myProjectLabel = new JBLabel("Project:", SwingConstants.RIGHT);
-        fb.addLabeledComponent(myProjectLabel, myProjects);
+//        myProjects = new ComboBox(myRepository.getRallyProjects(), 640);
+//        selectByEntityId(myProjects, myRepository.projectId);
+//
+//        installListener(myProjects);
+//        myProjectLabel = new JBLabel("Project:", SwingConstants.RIGHT);
+//        fb.addLabeledComponent(myProjectLabel, myProjects);
 
 //        myIterations = new JComboBox(myRepository.getIterations());
 //
@@ -61,7 +62,7 @@ public class RallyRepositoryEditor extends BaseRepositoryEditor<RallyRepository>
         return fb.getPanel();
     }
 
-    private void selectByEntityId(JComboBox combo, String id) {
+    private void selectByEntityId(ComboBox combo, String id) {
         for (int i=0; i< combo.getItemCount(); i++) {
             BasicEntity enity = (BasicEntity) combo.getItemAt(i);
             if (enity.id.equals(id)) {
@@ -73,7 +74,7 @@ public class RallyRepositoryEditor extends BaseRepositoryEditor<RallyRepository>
 
     @Override
     public void apply() {
-//        myRepository.setWorkspace(myWorkspaces.getSelectedItem());
+        myRepository.applyWorkspace(myWorkspaces.getSelectedItem());
         super.apply();
     }
 

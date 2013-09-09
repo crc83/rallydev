@@ -83,19 +83,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RallyRepository.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="RallyRepository.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="0" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="2023">
+            <state line="138" column="24" selection-start="4041" selection-end="4041" vertical-scroll-proportion="0.619403" vertical-offset="1825" max-vertical-offset="2329">
+              <folding>
+                <element signature="e#1284#1311#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProviderFasade.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/provider/ProviderFasade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="27" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="1785">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RallyRepositoryType.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="EntityProvider.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/provider/EntityProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="127" column="19" selection-start="3645" selection-end="3645" vertical-scroll-proportion="0.0" vertical-offset="1685" max-vertical-offset="2669">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RallyRepositoryType.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepositoryType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.93573266" vertical-offset="316" max-vertical-offset="782">
+            <state line="47" column="0" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
               <folding />
             </state>
           </provider>
@@ -110,19 +130,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicEntity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/domain/BasicEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="4" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="867">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RallyRepositoryEditor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepositoryEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="25" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+            <state line="27" column="12" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
               <folding />
             </state>
           </provider>
@@ -150,15 +161,6 @@
         <entry file="jar://$PROJECT_DIR$/lib/rally-rest-api-2.0.3-SNAPSHOT.jar!/com/rallydev/rest/RallyRestApi.class">
           <provider selected="true" editor-type-id="text-editor">
             <state line="92" column="0" selection-start="5487" selection-end="5487" vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="1666">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComboBox.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/ui/ComboBox.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="64" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1292">
               <folding />
             </state>
           </provider>
@@ -211,8 +213,8 @@
         <option value="$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/domain/Workspace.java" />
         <option value="$PROJECT_DIR$/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/domain/BasicEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepositoryEditor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepository.java" />
       </list>
     </option>
   </component>
@@ -818,7 +820,7 @@
       <workItem from="1378365763790" duration="16377000" />
       <workItem from="1378584570734" duration="451000" />
       <workItem from="1378585672087" duration="2680000" />
-      <workItem from="1378760338625" duration="2634000" />
+      <workItem from="1378760338625" duration="4054000" />
     </task>
     <task id="LOCAL-00004" summary="rallydev-5 allign style with intellij idea code style&#10;removed rally config">
       <created>1378322328283</created>
@@ -846,11 +848,11 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66833000" />
+    <option name="totallyTimeSpent" value="68253000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="780" extended-state="7" />
-    <editor active="false" />
+    <frame x="-4" y="-4" width="1288" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -872,7 +874,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.67823344" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28606158" sideWeight="0.6745283" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3254717" sideWeight="0.8079417" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3254717" sideWeight="0.8079417" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28768232" sideWeight="0.6693811" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.6792453" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -903,18 +905,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/provider/ProviderFasade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="27" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1785">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/provider/EntityProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1248" selection-end="1248" vertical-scroll-proportion="0.0" vertical-offset="1734" max-vertical-offset="2669" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/domain/Defect.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="39" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.0" vertical-offset="409" max-vertical-offset="986">
@@ -978,23 +968,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepositoryEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="25" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="13" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.0" vertical-offset="1373" max-vertical-offset="1836">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="2023">
           <folding />
         </state>
       </provider>
@@ -1008,8 +984,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepositoryType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.93573266" vertical-offset="316" max-vertical-offset="782">
+        <state line="47" column="0" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/provider/ProviderFasade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="27" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/provider/EntityProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="19" selection-start="3645" selection-end="3645" vertical-scroll-proportion="0.0" vertical-offset="1685" max-vertical-offset="2669">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepositoryEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="12" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="138" column="24" selection-start="4041" selection-end="4041" vertical-scroll-proportion="0.619403" vertical-offset="1825" max-vertical-offset="2329">
+          <folding>
+            <element signature="e#1284#1311#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
