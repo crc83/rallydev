@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="668d8361-cfb8-48b8-a595-0c8e92c78829" name="Default" comment="" />
-    <list default="true" id="d1313796-4d25-462b-95ed-61f7ffbd3fad" name="rallydev-5 allign style with intellij idea code style" comment="rallydev-5 allign style with intellij idea code style&#10;project corrected. settings saved and restored">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../rally-api-helper/rally-api-helper.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/domain/BasicEntity.java" afterPath="$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/domain/BasicEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/domain/Defect.java" afterPath="$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/domain/Defect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/provider/EntityProvider.java" afterPath="$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/provider/EntityProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/domain/Project.java" afterPath="$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/domain/Project.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepositoryEditor.java" afterPath="$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepositoryEditor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/domain/Story.java" afterPath="$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/domain/Story.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/domain/Workspace.java" afterPath="$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/domain/Workspace.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../rally-api-helper/build.gradle" afterPath="$PROJECT_DIR$/../rally-api-helper/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="d1313796-4d25-462b-95ed-61f7ffbd3fad" name="rallydev-5 allign style with intellij idea code style" comment="rallydev-5 allign style with intellij idea code style&#10;project corrected. settings saved and restored" />
     <ignored path="rallydev.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,7 +74,7 @@
       <file leaf-file-name="RallyRepository.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="24" selection-start="4041" selection-end="4041" vertical-scroll-proportion="0.619403" vertical-offset="1825" max-vertical-offset="2329">
+            <state line="127" column="0" selection-start="3731" selection-end="3731" vertical-scroll-proportion="0.15422885" vertical-offset="1825" max-vertical-offset="2329">
               <folding>
                 <element signature="e#1284#1311#0" expanded="true" />
               </folding>
@@ -772,34 +760,6 @@
       <created>1368992437687</created>
       <updated>1369482269953</updated>
     </task>
-    <task id="rallydev-1" summary="Make configuration saveable">
-      <created>1369471339000</created>
-      <option name="issue" value="true" />
-      <option name="type" value="BUG" />
-      <updated>1378313245782</updated>
-      <workItem from="1377164052870" duration="2821000" />
-      <workItem from="1377283505899" duration="4686000" />
-      <workItem from="1377372554534" duration="5877000" />
-      <workItem from="1377495351914" duration="5060000" />
-      <workItem from="1377548773949" duration="9439000" />
-      <workItem from="1377768760988" duration="1593000" />
-      <workItem from="1377793060291" duration="1659000" />
-      <workItem from="1378239439994" duration="1356000" />
-      <workItem from="1378285895729" duration="32000" />
-      <workItem from="1378311787548" duration="1453000" />
-    </task>
-    <task id="LOCAL-00001" summary="project cleanup&#10;rallydev-1 Make configuration saveable">
-      <created>1369482405906</created>
-      <updated>1369482405906</updated>
-    </task>
-    <task id="LOCAL-00002" summary="gui ready&#10;rallydev-1 Make configuration saveable">
-      <created>1369509163906</created>
-      <updated>1369509163906</updated>
-    </task>
-    <task id="LOCAL-00003" summary="gui ready&#10;rallydev-1 Make configuration saveable">
-      <created>1369775207015</created>
-      <updated>1369775207015</updated>
-    </task>
     <task active="true" id="rallydev-5" summary="allign style with intellij idea code style">
       <branch name="integrate_api" repository="C:\projects\rallydev" />
       <branch name="integrate_api" repository="C:\projects\rallydev" original="true" />
@@ -820,17 +780,10 @@
       <workItem from="1378365763790" duration="16377000" />
       <workItem from="1378584570734" duration="451000" />
       <workItem from="1378585672087" duration="2680000" />
-      <workItem from="1378760338625" duration="4054000" />
-    </task>
-    <task id="LOCAL-00004" summary="rallydev-5 allign style with intellij idea code style&#10;removed rally config">
-      <created>1378322328283</created>
-      <updated>1378322328283</updated>
-    </task>
-    <task id="LOCAL-00005" summary="rallydev-5 allign style with intellij idea code style&#10;project corrected. settings saved and restored">
-      <created>1378415781853</created>
-      <updated>1378415781853</updated>
+      <workItem from="1378760338625" duration="4316000" />
     </task>
     <option name="localTasksCounter" value="6" />
+    <option name="closeIssue" value="false" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -848,7 +801,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68253000" />
+    <option name="totallyTimeSpent" value="68515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1288" height="780" extended-state="6" />
@@ -1012,7 +965,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="24" selection-start="4041" selection-end="4041" vertical-scroll-proportion="0.619403" vertical-offset="1825" max-vertical-offset="2329">
+        <state line="127" column="0" selection-start="3731" selection-end="3731" vertical-scroll-proportion="0.15422885" vertical-offset="1825" max-vertical-offset="2329">
           <folding>
             <element signature="e#1284#1311#0" expanded="true" />
           </folding>
