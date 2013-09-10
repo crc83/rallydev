@@ -52,15 +52,18 @@ public class RallyRepositoryEditor extends BaseRepositoryEditor<RallyRepository>
         myProjectLabel = new JBLabel("Project:", SwingConstants.RIGHT);
         fb.addLabeledComponent(myProjectLabel, myProjects);
 
-//        myIterations = new JComboBox(myRepository.getIterations());
-//
-//        myIterationLabel = new JBLabel("Iteration:", SwingConstants.RIGHT);
-//        myIterationsCheckbox = new JCheckBox("use current iteration",myRepository.useCurrentIteration);
-//        fb.addLabeledComponent(myIterationLabel, myIterations);
-//        fb.addComponent(myIterationsCheckbox);
+        myIterations = new ComboBox(myRepository.fetchIterations(), 440);
+        if (!myRepository.isUseCurrentIteration()) {
+            selectByEntityId(myIterations, myRepository.getIterationId());
+        }
+        installListener(myIterations);
+        myIterationLabel = new JBLabel("Iteration:", SwingConstants.RIGHT);
+        myIterationsCheckbox = new JCheckBox("use current iteration");
+        myIterationsCheckbox.setSelected(myRepository.isUseCurrentIteration());
+        fb.addLabeledComponent(myIterationLabel, myIterations);
+        fb.addComponent(myIterationsCheckbox);
+        installListener(myIterationsCheckbox);
 
-//        installListener(myIterations);
-//        installListener(myIterationsCheckbox);
 
         return fb.getPanel();
     }
@@ -80,9 +83,13 @@ public class RallyRepositoryEditor extends BaseRepositoryEditor<RallyRepository>
 
     @Override
     public void apply() {
+        super.apply();
         myRepository.applyWorkspace(myWorkspaces.getSelectedItem());
         myRepository.applyProject(myProjects.getSelectedItem());
-        super.apply();
+        myRepository.setUseCurrentIteration(myIterationsCheckbox.isSelected());
+        if (!myRepository.isUseCurrentIteration()) {
+            myRepository.applyIteration(myIterations.getSelectedItem());
+        }
     }
 
 }

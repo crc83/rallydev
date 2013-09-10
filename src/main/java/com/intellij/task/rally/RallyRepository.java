@@ -9,10 +9,12 @@ import com.intellij.util.xmlb.annotations.Transient;
 import com.rallydev.rest.RallyRestApi;
 import org.jetbrains.annotations.Nullable;
 import org.sbelei.rally.domain.BasicEntity;
+import org.sbelei.rally.domain.Iteration;
 import org.sbelei.rally.domain.Project;
 import org.sbelei.rally.domain.Workspace;
 import org.sbelei.rally.provider.ProviderFasade;
 
+import javax.swing.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Collection;
@@ -25,33 +27,30 @@ public class RallyRepository extends BaseRepositoryImpl {
 
     private String workspaceId;
     private String projectId;
-//    public String iterationId;
-//    public boolean useCurrentIteration;
-//    public String workspaceId = "41593629";
-//    public String projectId = "9216950819";
+    private String iterationId;
+    private boolean useCurrentIteration;
+    private boolean showCompleatedTasks = false;
 
     private RallyRestApi client;
     private ProviderFasade provider;
-//    private List<Workspace> workspaces;
-//    private List<Project> projects;
-//    private List<BasicEntity> iterations;
+
 
 
     @SuppressWarnings("unused")
     public RallyRepository() {
         super();
-        LOG.info("created RallyRepository()");
     }
 
     public RallyRepository(RallyRepositoryType type) {
         super(type);
-        setUrl("https://rally1.rallydev.com");
     }
 
     public RallyRepository(RallyRepository rallyRepository) {
         super(rallyRepository);
         workspaceId = rallyRepository.getWorkspaceId();
         projectId = rallyRepository.getProjectId();
+        iterationId = rallyRepository.getIterationId();
+        useCurrentIteration = rallyRepository.isUseCurrentIteration();
     }
 
     @Override
@@ -62,6 +61,8 @@ public class RallyRepository extends BaseRepositoryImpl {
 
         RallyRepository that = (RallyRepository) o;
 
+        if (useCurrentIteration != that.useCurrentIteration) return false;
+        if (iterationId != null ? !iterationId.equals(that.iterationId) : that.iterationId != null) return false;
         if (projectId != null ? !projectId.equals(that.projectId) : that.projectId != null) return false;
         if (workspaceId != null ? !workspaceId.equals(that.workspaceId) : that.workspaceId != null) return false;
 
@@ -72,6 +73,8 @@ public class RallyRepository extends BaseRepositoryImpl {
     public int hashCode() {
         int result = workspaceId != null ? workspaceId.hashCode() : 0;
         result = 31 * result + (projectId != null ? projectId.hashCode() : 0);
+        result = 31 * result + (useCurrentIteration ? 1 : 0);
+        result = 31 * result + (iterationId != null ? iterationId.hashCode() : 0);
         return result;
     }
 
@@ -120,7 +123,8 @@ public class RallyRepository extends BaseRepositoryImpl {
             }
         }
         if (provider != null) {
-            provider.setUseCurrentIteration(true);
+            provider.setUseCurrentIteration(useCurrentIteration);
+            provider.showAll(showCompleatedTasks);
             provider.setOnlyMine(true);
 
             provider.setWorkspaceId(workspaceId);
@@ -192,7 +196,7 @@ public class RallyRepository extends BaseRepositoryImpl {
         try {
             return provider.fetchProjects().toArray();
         } catch (Exception e) {
-            LOG.warn("Error while fetching workspaces",e);
+            LOG.warn("Error while fetching projects",e);
             return null;
         }
     }
@@ -207,4 +211,40 @@ public class RallyRepository extends BaseRepositoryImpl {
         }
     }
 
+    public Object[] fetchIterations() {
+        refreshProvider();
+        try {
+            return provider.fetchIterations().toArray();
+        } catch (Exception e) {
+            LOG.warn("Error while fetching iterations",e);
+            return null;
+        }
+    }
+
+    public boolean isUseCurrentIteration() {
+        return useCurrentIteration;
+    }
+
+    public void setUseCurrentIteration(boolean useCurrentIteration) {
+        this.useCurrentIteration = useCurrentIteration;
+    }
+
+    public String getIterationId() {
+        return iterationId;
+    }
+
+    public void setIterationId(String iterationId) {
+        this.iterationId = iterationId;
+    }
+
+    public void applyIteration(Object selectedItem) {
+        String backupedId = iterationId;
+        try {
+            iterationId = ((Iteration) selectedItem).id;
+        } catch (Exception e) {
+            LOG.warn("Error while saving iteration number, restored previous value.",e);
+            iterationId = backupedId;
+            useCurrentIteration = true;
+        }
+    }
 }
