@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="668d8361-cfb8-48b8-a595-0c8e92c78829" name="Default" comment="" />
-    <list default="true" id="8dbe4bb6-0a13-4e02-9696-1330d62dd79d" name="rallydev-3 Make &quot;Filter by project&quot; option" comment="rallydev-3 Make &quot;Filter by project&quot; option: Project can be selected and saved">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepositoryEditor.java" afterPath="$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepositoryEditor.java" />
+    <list default="true" id="8dbe4bb6-0a13-4e02-9696-1330d62dd79d" name="rallydev-3 Make &quot;Filter by project&quot; option" comment="rallydev-3 Make &quot;Filter by project&quot; option: Project can be selected and saved : Changed to combobox">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rallydev.iws" />
@@ -27,7 +26,8 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -63,6 +63,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -730,13 +731,17 @@
       <option name="type" value="BUG" />
       <updated>1378765169872</updated>
       <workItem from="1378765170073" duration="4467000" />
-      <workItem from="1378788772741" duration="31000" />
+      <workItem from="1378788772741" duration="270000" />
     </task>
     <task id="LOCAL-00006" summary="rallydev-3 Make &quot;Filter by project&quot; option: Project can be selected and saved">
       <created>1378769431101</created>
       <updated>1378769431101</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="rallydev-3 Make &quot;Filter by project&quot; option: Project can be selected and saved : Changed to combobox">
+      <created>1378788856199</created>
+      <updated>1378788856199</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <option name="closeIssue" value="false" />
     <option name="commitChanges" value="false" />
     <option name="mergeBranch" value="false" />
@@ -757,7 +762,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73083000" />
+    <option name="totallyTimeSpent" value="73322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1288" height="780" extended-state="6" />
@@ -766,6 +771,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26904377" sideWeight="0.6693811" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -775,21 +781,20 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20347004" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.40032414" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.67823344" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28606158" sideWeight="0.6792453" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3207547" sideWeight="0.8079417" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28768232" sideWeight="0.6693811" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.6792453" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26904377" sideWeight="0.6693811" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3438486" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20347004" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -805,7 +810,8 @@
     <MESSAGE value="rallydev-5 allign style with intellij idea code style&#10;removed rally config" />
     <MESSAGE value="rallydev-5 allign style with intellij idea code style&#10;project corrected. settings saved and restored" />
     <MESSAGE value="rallydev-3 Make &quot;Filter by project&quot; option: Project can be selected and saved" />
-    <option name="LAST_COMMIT_MESSAGE" value="rallydev-3 Make &quot;Filter by project&quot; option: Project can be selected and saved" />
+    <MESSAGE value="rallydev-3 Make &quot;Filter by project&quot; option: Project can be selected and saved : Changed to combobox" />
+    <option name="LAST_COMMIT_MESSAGE" value="rallydev-3 Make &quot;Filter by project&quot; option: Project can be selected and saved : Changed to combobox" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -817,12 +823,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="44" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425" />
+        <state line="2" column="44" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../rally-api-helper/src/org/sbelei/rally/domain/BasicEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="4" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="867" />
+        <state line="43" column="4" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="867">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/rally-rest-api-2.0.3-SNAPSHOT.jar!/com/rallydev/rest/RallyRestApi.class">
