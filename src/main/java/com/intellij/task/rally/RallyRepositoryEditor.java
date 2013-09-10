@@ -22,10 +22,10 @@ import java.util.Arrays;
 public class RallyRepositoryEditor extends BaseRepositoryEditor<RallyRepository> {
 
     private JBLabel myWorkspaceLabel;
-    private JComboBox myWorkspaces;
+    private ComboBox myWorkspaces;
 
     private JBLabel myProjectLabel;
-    private JComboBox myProjects;
+    private ComboBox myProjects;
 
     private JBLabel myIterationLabel;
     private ComboBox myIterations;
@@ -40,13 +40,13 @@ public class RallyRepositoryEditor extends BaseRepositoryEditor<RallyRepository>
     protected JComponent createCustomPanel() {
         FormBuilder fb = FormBuilder.createFormBuilder();
 
-        myWorkspaces = new JComboBox(myRepository.fetchWorkspaces());
+        myWorkspaces = new ComboBox(myRepository.fetchWorkspaces(), 440);
         selectByEntityId(myWorkspaces, myRepository.getWorkspaceId());
         installListener(myWorkspaces);
         myWorkspaceLabel = new JBLabel("Workspace:", SwingConstants.RIGHT);
         fb.addLabeledComponent(myWorkspaceLabel, myWorkspaces);
 
-        myProjects = new JComboBox(myRepository.fetchProjects());
+        myProjects = new ComboBox(myRepository.fetchProjects(), 440);
         selectByEntityId(myProjects, myRepository.getProjectId());
         installListener(myProjects);
         myProjectLabel = new JBLabel("Project:", SwingConstants.RIGHT);
