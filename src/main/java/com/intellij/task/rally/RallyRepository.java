@@ -46,14 +46,12 @@ public class RallyRepository extends BaseRepositoryImpl {
     public RallyRepository(RallyRepositoryType type) {
         super(type);
         setUrl("https://rally1.rallydev.com");
-        LOG.info("created from type RallyRepository()");
     }
 
     public RallyRepository(RallyRepository rallyRepository) {
         super(rallyRepository);
         workspaceId = rallyRepository.getWorkspaceId();
         projectId = rallyRepository.getProjectId();
-        LOG.info("created copy of RallyRepository(repository)");
     }
 
     @Override
