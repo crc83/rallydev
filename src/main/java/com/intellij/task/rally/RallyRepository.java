@@ -29,7 +29,7 @@ public class RallyRepository extends BaseRepositoryImpl {
     private String projectId;
     private String iterationId;
     private boolean useCurrentIteration;
-    private boolean showCompleatedTasks = false;
+    private boolean showCompleatedTasks;
 
     private RallyRestApi client;
     private ProviderFasade provider;
@@ -51,6 +51,7 @@ public class RallyRepository extends BaseRepositoryImpl {
         projectId = rallyRepository.getProjectId();
         iterationId = rallyRepository.getIterationId();
         useCurrentIteration = rallyRepository.isUseCurrentIteration();
+        showCompleatedTasks = rallyRepository.isShowCompleatedTasks();
     }
 
     @Override
@@ -62,6 +63,7 @@ public class RallyRepository extends BaseRepositoryImpl {
         RallyRepository that = (RallyRepository) o;
 
         if (useCurrentIteration != that.useCurrentIteration) return false;
+        if (showCompleatedTasks != that.showCompleatedTasks) return false;
         if (iterationId != null ? !iterationId.equals(that.iterationId) : that.iterationId != null) return false;
         if (projectId != null ? !projectId.equals(that.projectId) : that.projectId != null) return false;
         if (workspaceId != null ? !workspaceId.equals(that.workspaceId) : that.workspaceId != null) return false;
@@ -246,5 +248,13 @@ public class RallyRepository extends BaseRepositoryImpl {
             iterationId = backupedId;
             useCurrentIteration = true;
         }
+    }
+
+    public boolean isShowCompleatedTasks() {
+        return showCompleatedTasks;
+    }
+
+    public void setShowCompleatedTasks(boolean showCompleatedTasks) {
+        this.showCompleatedTasks = showCompleatedTasks;
     }
 }

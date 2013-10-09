@@ -30,6 +30,7 @@ public class RallyRepositoryEditor extends BaseRepositoryEditor<RallyRepository>
     private JBLabel myIterationLabel;
     private ComboBox myIterations;
     private JCheckBox myIterationsCheckbox;
+    private JCheckBox myShowCompleatedCheckbox;
 
     public RallyRepositoryEditor(Project project, RallyRepository repository, Consumer<RallyRepository> changeListener) {
         super(project, repository, changeListener);
@@ -64,12 +65,12 @@ public class RallyRepositoryEditor extends BaseRepositoryEditor<RallyRepository>
         fb.addComponent(myIterationsCheckbox);
         installListener(myIterationsCheckbox);
 
+        myShowCompleatedCheckbox = new JCheckBox("show compleated tasks");
+        myShowCompleatedCheckbox.setSelected(myRepository.isShowCompleatedTasks());
+        installListener(myShowCompleatedCheckbox);
 
         return fb.getPanel();
     }
-
-//    private void installListenerComboBox(ComboBox comboBox) {
-//    }
 
     private void selectByEntityId(JComboBox combo, String id) {
         for (int i=0; i< combo.getItemCount(); i++) {
@@ -90,6 +91,7 @@ public class RallyRepositoryEditor extends BaseRepositoryEditor<RallyRepository>
         if (!myRepository.isUseCurrentIteration()) {
             myRepository.applyIteration(myIterations.getSelectedItem());
         }
+        myRepository.setShowCompleatedTasks(myShowCompleatedCheckbox.isSelected());
     }
 
 }
