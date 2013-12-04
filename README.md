@@ -1,6 +1,7 @@
 # Rally plugin for Intellij
 
 Implements Intellij's Agile ALM integration.
+
 1. Forked from: https://github.com/RallySoftware/intellij-plugin
 2. Ported from groovy on java. Heavily reworked.
 3. To work with Rally I used original Rally java api from: https://github.com/RallyTools/RallyRestToolkitForJava
