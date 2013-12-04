@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="668d8361-cfb8-48b8-a595-0c8e92c78829" name="Default" comment="" />
-    <list id="8dbe4bb6-0a13-4e02-9696-1330d62dd79d" name="rallydev-3 Make &quot;Filter by project&quot; option" comment="rallydev-3 Make &quot;Filter by project&quot; option: Project can be selected and saved : Changed to combobox">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
-    <list default="true" id="7c70b7c7-c0ed-4a5a-8c06-a1120f48c35f" name="rallydev-8 filter by status compleated or not" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepositoryEditor.java" afterPath="$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepositoryEditor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../rally-api-helper/build.properties" afterPath="$PROJECT_DIR$/../rally-api-helper/build.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rallydev.iml" afterPath="$PROJECT_DIR$/rallydev.iml" />
-    </list>
+    <list id="8dbe4bb6-0a13-4e02-9696-1330d62dd79d" name="rallydev-3 Make &quot;Filter by project&quot; option" comment="rallydev-3 Make &quot;Filter by project&quot; option: Project can be selected and saved : Changed to combobox" />
+    <list default="true" id="7c70b7c7-c0ed-4a5a-8c06-a1120f48c35f" name="rallydev-8 filter by status compleated or not" comment="" />
     <ignored path="rallydev.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +25,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+    <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -71,7 +61,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -138,7 +127,7 @@
       <file leaf-file-name="build.properties" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../rally-api-helper/build.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="9" selection-start="62" selection-end="62" vertical-scroll-proportion="0.07024793" vertical-offset="0" max-vertical-offset="484">
+            <state line="2" column="9" selection-start="62" selection-end="62" vertical-scroll-proportion="0.06732673" vertical-offset="0" max-vertical-offset="505">
               <folding />
             </state>
           </provider>
@@ -632,6 +621,7 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" output_log_level="null" package_name="" scope="Class">
@@ -677,6 +667,7 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="false" name="rallydev" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -834,6 +825,7 @@
       <workItem from="1378846590927" duration="491000" />
       <workItem from="1378878744676" duration="2018000" />
       <workItem from="1379022812714" duration="4684000" />
+      <workItem from="1381914536234" duration="38000" />
     </task>
     <option name="localTasksCounter" value="10" />
     <option name="closeIssue" value="false" />
@@ -848,13 +840,13 @@
         <option name="shouldFormatCommitMessage" value="false" />
         <option name="useHttpAuthentication" value="true" />
         <option name="useProxy" value="false" />
-        <option name="user" value="crc83" />
+        <option name="user" value="" />
         <username>crc83</username>
       </GitHub>
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86479000" />
+    <option name="totallyTimeSpent" value="86517000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1288" height="780" extended-state="6" />
@@ -863,30 +855,30 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26904377" sideWeight="0.6693811" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36750787" sideWeight="0.68881685" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19654088" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19637462" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19654088" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.40032414" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.6792453" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29659644" sideWeight="0.8034591" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29659644" sideWeight="0.8034591" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3191824" sideWeight="0.8079417" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28768232" sideWeight="0.6693811" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.6792453" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26904377" sideWeight="0.6693811" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3438486" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19654088" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -917,16 +909,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyRepositoryType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="390" selection-end="468" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="390" selection-end="468" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/intellij/task/rally/RallyTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="1" selection-start="2450" selection-end="2450" vertical-scroll-proportion="0.9132653" vertical-offset="1376" max-vertical-offset="1836">
-          <folding />
-        </state>
+        <state line="112" column="1" selection-start="2450" selection-end="2450" vertical-scroll-proportion="0.9132653" vertical-offset="1376" max-vertical-offset="1836" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
@@ -958,9 +946,7 @@
     </entry>
     <entry file="jar://C:/Java/jdk1.7.0_25/src.zip!/javax/swing/AbstractButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="0" selection-start="2088" selection-end="2088" vertical-scroll-proportion="0.30867347" vertical-offset="440" max-vertical-offset="52122">
-          <folding />
-        </state>
+        <state line="74" column="0" selection-start="2088" selection-end="2088" vertical-scroll-proportion="0.30867347" vertical-offset="440" max-vertical-offset="52122" />
       </provider>
     </entry>
     <entry file="jar://C:/Java/jdk1.7.0_25/src.zip!/javax/swing/JComponent.java">
@@ -1012,7 +998,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../rally-api-helper/build.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="9" selection-start="62" selection-end="62" vertical-scroll-proportion="0.07024793" vertical-offset="0" max-vertical-offset="484">
+        <state line="2" column="9" selection-start="62" selection-end="62" vertical-scroll-proportion="0.06732673" vertical-offset="0" max-vertical-offset="505">
           <folding />
         </state>
       </provider>

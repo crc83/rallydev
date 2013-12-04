@@ -1,9 +1,13 @@
 ### Rally plugin for Intellij
 
-Implements Intellij's Agile ALM.
+Implements Intellij's Agile ALM integration.
+Forked from:
+https://github.com/RallySoftware/intellij-plugin
+Ported from groovy on java. Heavily reworked.
+To work with Rally I used original Rally java api from:
+https://github.com/RallyTools/RallyRestToolkitForJava
+Also I created helper library which take hides a lot of boilerplate code:
+https://github.com/crc83/rally-api-helper
 
-### Resources
-* http://www.jetbrains.org/display/IJOS/Source+Repository+Layout
-* http://confluence.jetbrains.net/display/IDEADEV/IntelliJ+IDEA+Plugin+Structure#IntelliJIDEAPluginStructure-PluginExtensions
-* http://git.jetbrains.org/?p=idea/community.git;a=blob;f=platform/platform-resources/src/META-INF/LangExtensionPoints.xml;hb=HEAD
-* http://git.jetbrains.org/?p=idea/community.git;a=blob;f=platform/platform-resources/src/META-INF/PlatformExtensionPoints.xml;hb=HEAD
+This plugin is distributed under MIT licence. You may find it here:
+http://opensource.org/licenses/MIT
