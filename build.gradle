@@ -4,9 +4,9 @@ apply plugin: 'maven-publish'
 sourceCompatibility = 1.6
 
 dependencies {
-	compile (
-		fileTree(dir: 'lib', include: '*.jar')
-	)
+	compile fileTree(dir: 'lib', include: '*.jar')
+	compile fileTree(dir: 'lib-provided', include: '*.jar')
+	compile fileTree(dir: 'lib-idea', include: '*.jar')
 }
 
 buildDir = 'bin'
