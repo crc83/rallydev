@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: tasks-java">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib-provided/tasks-java.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

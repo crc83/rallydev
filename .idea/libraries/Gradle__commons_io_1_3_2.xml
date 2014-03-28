@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: commons-io-1.3.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../rally-api-helper/lib-test/commons-io-1.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
