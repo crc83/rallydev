@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: rally-rest-api-1.0.7">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../rally-api-helper/lib/rally-rest-api-1.0.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

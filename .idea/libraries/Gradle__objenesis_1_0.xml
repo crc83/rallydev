@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: objenesis-1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../rally-api-helper/lib-test/objenesis-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

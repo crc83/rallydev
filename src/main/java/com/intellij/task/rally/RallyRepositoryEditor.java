@@ -116,4 +116,10 @@ public class RallyRepositoryEditor extends BaseRepositoryEditor<RallyRepository>
             selectIteration();
         }
     }
+
+    @Override
+    public void dispose() {
+        super.dispose();
+        myRepository.cleanup();
+    }
 }

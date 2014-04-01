@@ -10,6 +10,7 @@ import org.sbelei.rally.domain.Defect;
 import org.sbelei.rally.domain.Story;
 
 import javax.swing.*;
+import java.net.URL;
 import java.util.Date;
 
 public class RallyTask extends Task {
@@ -30,8 +31,12 @@ public class RallyTask extends Task {
             Defect defect = (Defect) entity;
             id = defect.formattedId;
             summary = defect.name;
-            String iconName = "rally_defect_P3.png"; // default name
-            icon =  new ImageIcon(this.getClass().getClassLoader().getResource("rally_defect_"+defect.getPriorityShort()+".png"), "Rally Defect Icon");
+            String iconName = "rally_defect_.png"; // default name
+            URL resource = this.getClass().getClassLoader().getResource("rally_defect_" + defect.getPriorityShort() + ".png");
+            if (resource == null) {
+                resource = this.getClass().getClassLoader().getResource(iconName);
+            }
+            icon =  new ImageIcon(resource, "Rally Defect Icon");
             type = TaskType.BUG;
         }
         if (entity instanceof Story) {

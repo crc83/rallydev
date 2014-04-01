@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="rally-rest-api-2.0.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../rally-api-helper/lib/rally-rest-api-2.0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../rally-api-helper/lib/rally-rest-api-2.0.4.jar!/doc" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/rally-rest-api-2.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
