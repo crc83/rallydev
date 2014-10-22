@@ -1,7 +1,18 @@
-apply plugin : 'java'
+buildscript {
+    repositories {
+        maven { url 'http://jcenter.bintray.com' }
+    }
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:0.3'
+    }
+}
+
+apply plugin: 'bintray'
+apply plugin: 'java'
 apply plugin: 'maven-publish'
 
 sourceCompatibility = 1.6
+targetCompability = 1.6
 
 dependencies {
 	compile fileTree(dir: 'lib', include: '*.jar')
@@ -23,3 +34,30 @@ sourceSets {
     }
 }
 
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'org.belei'
+            artifactId = 'rallydev'
+            version = '1.1'
+
+            from components.java
+        }
+    }
+}
+
+bintray {
+    user = 'crc83'
+    key = '6d756293cc71c4e6e6ea1120e28254749aee02c8b7c1afbe97087f3984c23d84'
+    publications = ['mavenJava']
+    pkg {
+        repo = 'maven'
+        name = 'RallyTasksAdapter'
+        licenses = ['LGPL']
+    }
+}
+
+task install(dependsOn: 'publishMavenJavaPublicationToMavenLocal') << {
+    logger.info "Installing $project.name"
+}
