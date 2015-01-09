@@ -15,9 +15,14 @@ buildscript {
 apply plugin: 'bintray'
 apply plugin: 'java'
 apply plugin: 'maven-publish'
+apply plugin: 'idea'
+
+configurations {
+    apihelper
+}
 
 dependencies {
-    compile ('org.sbelei:rally-api-helper:1.1')
+    apihelper 'org.sbelei:rally-api-helper:1.1'
 	compile fileTree(dir: 'lib', include: '*.jar')
 	compile fileTree(dir: 'lib-provided', include: '*.jar')
 	compile fileTree(dir: 'lib-idea', include: '*.jar')
@@ -50,6 +55,7 @@ publishing {
     }
 }
 
+def bintrayApiKey ='NA'
 bintray {
     user = 'crc83'
     key = bintrayApiKey
@@ -62,10 +68,24 @@ bintray {
 }
 
 def ideaPath="c:/Program Files (x86)/JetBrains/IntelliJ IDEA 14.0.2"
+
 task copyTasksJars (type: Copy) {
+    description 'Copy Task plugin jars from Intellij Idea distribution'
     from "${ideaPath}/plugins/tasks/lib"
     include 'tasks-*.jar'
     into 'lib-provided'
+}
+
+task copyIdeaJars (type: Copy) {
+    description 'Copy IDEA jars from Intellij Idea distribution'
+    from "${ideaPath}/lib"
+    include 'util.jar','annotations.jar','openapi.jar','idea.jar'
+    into 'lib-idea'
+}
+
+task copyRallyApi(type: Copy) {
+    from configurations.apihelper
+    into "lib"
 }
 
 task install(dependsOn: 'publishMavenJavaPublicationToMavenLocal') << {

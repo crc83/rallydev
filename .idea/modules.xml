@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/../rally-api-helper/rally-api-helper.iml" filepath="$PROJECT_DIR$/../rally-api-helper/rally-api-helper.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rallydev.iml" filepath="$PROJECT_DIR$/rallydev.iml" />
-    </modules>
+    <modules />
   </component>
 </project>
-
