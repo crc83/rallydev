@@ -55,7 +55,10 @@ publishing {
     }
 }
 
-def bintrayApiKey ='NA'
+if (!project.hasProperty("bintrayApiKey")) {
+    ext.bintrayApiKey = "NA"
+}
+
 bintray {
     user = 'crc83'
     key = bintrayApiKey

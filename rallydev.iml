@@ -16,15 +16,6 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.sbelei/rally-api-helper/1.1/9df15d65aa38aa1654893a3127df3c8e919a5772/rally-api-helper-1.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/commons-codec-1.6.jar!/" />
         </CLASSES>
         <JAVADOC />
@@ -62,6 +53,15 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/httpcore-4.2.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/rally-api-helper-1.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
