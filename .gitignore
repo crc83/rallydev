@@ -2,3 +2,5 @@
 /bin
 /out
 /rallydev.zip
+/.gradle/
+/build/
