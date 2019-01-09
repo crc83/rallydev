@@ -130,7 +130,7 @@ public abstract class EntityProvider <T extends BasicEntity>{
         List<T> result = new ArrayList<T>();//to get rid of npe checks in api consumers
         try {
             QueryResponse responce = restApi.query(request);
-            saveResponceToFile(responce.getResults().toString());
+            //saveResponceToFile(responce.getResults().toString());
             result = fetchEntities(responce.getResults());
         } catch (Exception e) {
 			if ("HTTP/1.1 401 Unauthorized".equalsIgnoreCase(e.getMessage())) {

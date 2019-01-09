@@ -40,7 +40,7 @@ public class TestHelper {
 	public static String getResourseAsString(String path){
 		String result = "";
 		try {
-			result = IOUtils.toString(getResource(path));
+			result = IOUtils.toString(getResource(path), "UTF-8");
 		} catch (IOException e) {
 			//TODO SB : Use JULY
 			e.printStackTrace();

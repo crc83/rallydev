@@ -1,0 +1,189 @@
+[
+	{
+		"_rallyAPIMajor":"1",
+		"_rallyAPIMinor":"42",
+		"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/project/9216950819.js",
+		"_objectVersion":"8",
+		"_refObjectName":"AB",
+		"CreationDate":"2012-10-22T18:16:52.391Z",
+		"_CreatedAt":"Oct 22, 2012",
+		"ObjectID":9216950819,
+		"Subscription":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/subscription/29667461.js",
+			"_refObjectName":"Customer account name",
+			"_type":"Subscription"
+		},
+		"Workspace":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/workspace/41593629.js",
+			"_refObjectName":"Meaningfull name of workspace",
+			"_type":"Workspace"
+		},
+		"BuildDefinitions":[
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/builddefinition/9216950824.js",
+				"_refObjectName":"Default Build Definition",
+				"_type":"BuildDefinition"
+			}
+			
+		],
+		"Children":[
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/project/11424661293.js",
+				"_refObjectName":"Some child project",
+				"_type":"Project"
+			}
+			
+		],
+		"Description":"Object description.",
+		"Editors":[
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/user/32518418.js",
+				"_refObjectName":"QA User",
+				"_type":"User"
+			},
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/user/10846118471.js",
+				"_refObjectName":"Dev User",
+				"_type":"User"
+			}
+			
+		],
+		"Iterations":[
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/iteration/11597834390.js",
+				"_refObjectName":"Iteration name A",
+				"_type":"Iteration"
+			},
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/iteration/11597902889.js",
+				"_refObjectName":"Iteration name B",
+				"_type":"Iteration"
+			},
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/iteration/11597905825.js",
+				"_refObjectName":"Iteration name C",
+				"_type":"Iteration"
+			}
+			
+		],
+		"Name":"AB",
+		"Notes":"some project notes",
+		"Owner":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/user/1503733524.js",
+			"_refObjectName":"Owner user",
+			"_type":"User"
+		},
+		"Releases":[
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/release/12631548023.js",
+				"_refObjectName":"rev.42",
+				"_type":"Release"
+			},
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/release/12776033601.js",
+				"_refObjectName":"rev.43",
+				"_type":"Release"
+			}
+			
+		],
+		"State":"Open",
+		"TeamMembers":[
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/user/2968097193.js",
+				"_refObjectName":"Other dev user",
+				"_type":"User"
+			},
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/user/10846118471.js",
+				"_refObjectName":"Dev user",
+				"_type":"User"
+			}
+			
+		],
+		"_type":"Project"
+	},
+	{
+		"_rallyAPIMajor":"1",
+		"_rallyAPIMinor":"42",
+		"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/project/11424661293.js",
+		"_objectVersion":"18",
+		"_refObjectName":"Some child project",
+		"CreationDate":"2013-04-15T23:00:11.306Z",
+		"_CreatedAt":"Apr 15",
+		"ObjectID":11424661293,
+		"Subscription":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/subscription/29667461.js",
+			"_refObjectName":"Customer account name",
+			"_type":"Subscription"
+		},
+		"Workspace":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/workspace/41593629.js",
+			"_refObjectName":"Meaningfull name of workspace",
+			"_type":"Workspace"
+		},
+		"BuildDefinitions":[
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/builddefinition/11424661298.js",
+				"_refObjectName":"Default Build Definition",
+				"_type":"BuildDefinition"
+			}
+			
+		],
+		"Children":[
+			
+		],
+		"Description":"this project contains stories and defects relevant to RM that are owned by the RM team, but are not released with the RM system.",
+		"Editors":[
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/user/32518418.js",
+				"_refObjectName":"QA User",
+				"_type":"User"
+			},
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/user/10846118471.js",
+				"_refObjectName":"Dev user",
+				"_type":"User"
+			}
+			
+		],
+		"_type":"Project"
+	}
+]

@@ -1,0 +1,90 @@
+[
+	{
+		"_rallyAPIMajor":"1",
+		"_rallyAPIMinor":"42",
+		"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/workspace/41593629.js",
+		"_objectVersion":"47",
+		"_refObjectName":"Meaningfull name of workspace",
+		"CreationDate":"2006-11-21T14:12:08.000Z",
+		"_CreatedAt":"Nov 21, 2006",
+		"ObjectID":41593629,
+		"Subscription":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/subscription/29667461.js",
+			"_refObjectName":"Customer account name",
+			"_type":"Subscription"
+		},
+		"Description":"Some description",
+		"Name":"Meaningfull name of workspace",
+		"Notes":"Nota Bene",
+		"Owner":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/user/30368949.js",
+			"_refObjectName":"Some real user",
+			"_type":"User"
+		},
+		"Projects":[
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/project/8035573910.js",
+				"_refObjectName":"The project name one",
+				"_type":"Project"
+			},
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/project/9216950819.js",
+				"_refObjectName":"The project name two",
+				"_type":"Project"
+			},
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/project/11424661293.js",
+				"_refObjectName":"The project name three",
+				"_type":"Project"
+			}
+		],
+		"RevisionHistory":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/revisionhistory/41593631.js",
+			"_type":"RevisionHistory"
+		},
+		"State":"Open",
+		"Style":"UserStory",
+		"TypeDefinitions":[
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/typedefinition/41593815.js",
+				"_refObjectName":"The type definition one",
+				"_type":"TypeDefinition"
+			},
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/typedefinition/46895543.js",
+				"_refObjectName":"The type definition two",
+				"_type":"TypeDefinition"
+			},
+			{
+				"_rallyAPIMajor":"1",
+				"_rallyAPIMinor":"42",
+				"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/typedefinition/58704399.js",
+				"_refObjectName":"The type definition three",
+				"_type":"TypeDefinition"
+			}
+		],
+		"WorkspaceConfiguration":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/workspaceconfiguration/41593632.js",
+			"_type":"WorkspaceConfiguration"
+		},
+		"_type":"Workspace"
+	}
+]
