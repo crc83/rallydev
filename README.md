@@ -1,19 +1,23 @@
 # Rally plugin for Intellij
 Implements Intellij's Agile ALM integration.
 
-##How to use
+## How to use
 
 1. In IDEA open "Tools / Tasks & Contexts / Configure Servers..."
+
 ![](img/ConfigureServers.png)
 2. Press "+" and select "Rally"
 3. Define Server URL: "https://rally1.rallydev.com"
+
 ![](img/ConfigureConnection.png)
 4. Define your Username and Password
 5. Press "Test connection"
 6. Now you may select Workspace, Project and Iteration(It may be required to close this dialog and open it again, or press "Load projects", "Iterations")
 7. Now you may switch task contexts by selection "Tools / Tasks & Contexts /Switch task" or "Tools / Tasks & Contexts /Open task" 
+
 ![](img/OpenTask.png)
 8. On a right corner of your IDE you'll see your task name
+
 ![](img/ActiveTask.png)
 
 ## Implementation details
