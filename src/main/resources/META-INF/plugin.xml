@@ -1,0 +1,19 @@
+<idea-plugin>
+    <name>Rally ALM Tasks Integration</name>
+    <description>Rally ALM Tasks Integration</description>
+    <version>1.2</version>
+    <vendor>sergiy.beley@gmail.com</vendor>
+
+    <depends>com.intellij.tasks</depends>
+
+    <idea-version since-build="107.105"/>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <projectConfigurable instance="com.intellij.tasks.config.TaskConfigurable" id="tasks" displayName="Tasks" nonDefaultProject="true">
+            <configurable instance="com.intellij.tasks.config.TaskRepositoriesConfigurable" displayName="Servers" id="tasks.servers"/>
+        </projectConfigurable>
+
+        <tasks.repositoryType implementation="com.intellij.task.rally.RallyRepositoryType"/>
+    </extensions>
+
+</idea-plugin>

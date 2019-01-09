@@ -1,0 +1,166 @@
+{
+"QueryResult":{ 
+	"Errors" : [],
+	"Warnings": [],
+	"StartIndex": "0", 
+	"PageSize": "100", 
+	"TotalResultCount": "3", 
+	"Results":
+[
+	{
+		"_rallyAPIMajor":"1",
+		"_rallyAPIMinor":"42",
+		"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/iteration/11597834390.js",
+		"_objectVersion":"1",
+		"_refObjectName":"Iteration A",
+		"CreationDate":"2013-04-25T14:15:21.757Z",
+		"_CreatedAt":"Apr 25",
+		"ObjectID":11597834390,
+		"EndDate":"2013-07-10T04:59:59.000Z",
+		"Name":"Iteration A",
+		"Notes":"",
+		"PlannedVelocity":null,
+		"Subscription":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/subscription/29667461.js",
+			"_refObjectName":"Customer account name",
+			"_type":"Subscription"
+		},
+		"Workspace":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/workspace/41593629.js",
+			"_refObjectName":"Meaningfull name of workspace",
+			"_type":"Workspace"
+		},
+		"Project":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/project/9216950819.js",
+			"_refObjectName":"AB",
+			"_type":"Project"
+		},
+		"RevisionHistory":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/revisionhistory/11597905826.js",
+			"_type":"RevisionHistory"
+		},
+		"StartDate":"2013-06-26T05:00:00.000Z",
+		"State":"Planning",
+		"Theme":"",
+		"UserIterationCapacities":[
+		],
+		"_type":"Iteration"
+	},
+	{
+		"_rallyAPIMajor":"1",
+		"_rallyAPIMinor":"42",
+		"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/iteration/11597902889.js",
+		"_objectVersion":"1",
+		"_refObjectName":"Iteration B",
+		"CreationDate":"2013-04-25T14:17:04.580Z",
+		"_CreatedAt":"Apr 25",
+		"ObjectID":11597902889,
+		"EndDate":"2013-07-24T04:59:59.000Z",
+		"Name":"Iteration B",
+		"Notes":"",
+		"PlannedVelocity":null,
+		"Subscription":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/subscription/29667461.js",
+			"_refObjectName":"Customer account name",
+			"_type":"Subscription"
+		},
+		"Workspace":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/workspace/41593629.js",
+			"_refObjectName":"Meaningfull name of workspace",
+			"_type":"Workspace"
+		},
+		"Project":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/project/9216950819.js",
+			"_refObjectName":"AB",
+			"_type":"Project"
+		},
+		"RevisionHistory":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/revisionhistory/11597905826.js",
+			"_type":"RevisionHistory"
+		},
+		"StartDate":"2013-07-10T05:00:00.000Z",
+		"State":"Planning",
+		"Theme":"",
+		"UserIterationCapacities":[
+		],
+		"_type":"Iteration"
+	},
+	{
+		"_rallyAPIMajor":"1",
+		"_rallyAPIMinor":"42",
+		"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/iteration/11597905825.js",
+		"_objectVersion":"1",
+		"_refObjectName":"Iteration C",
+		"CreationDate":"2013-04-25T14:18:16.509Z",
+		"_CreatedAt":"Apr 25",
+		"ObjectID":11597905825,
+		"Subscription":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/subscription/29667461.js",
+			"_refObjectName":"Customer account name",
+			"_type":"Subscription"
+		},
+		"Workspace":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/workspace/41593629.js",
+			"_refObjectName":"Meaningfull name of workspace",
+			"_type":"Workspace"
+		},
+		"Project":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/project/9216950819.js",
+			"_refObjectName":"AB",
+			"_type":"Project"
+		},
+		"RevisionHistory":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/revisionhistory/11597905826.js",
+			"_type":"RevisionHistory"
+		},
+		"EndDate":"2013-08-07T04:59:59.000Z",
+		"Name":"Iteration C",
+		"Notes":"",
+		"PlannedVelocity":null,
+		"Project":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/project/9216950819.js",
+			"_refObjectName":"AB",
+			"_type":"Project"
+		},
+		"RevisionHistory":{
+			"_rallyAPIMajor":"1",
+			"_rallyAPIMinor":"42",
+			"_ref":"https://rally1.rallydev.com/slm/webservice/1.42/revisionhistory/11597905826.js",
+			"_type":"RevisionHistory"
+		},
+		"StartDate":"2013-07-24T05:00:00.000Z",
+		"State":"Planning",
+		"Theme":"",
+		"UserIterationCapacities":[
+			
+		],
+		"_type":"Iteration"
+	}
+]
+}}
