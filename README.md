@@ -43,7 +43,7 @@ This plugin is distributed under MIT licence. You may find it here:
 http://opensource.org/licenses/MIT
 
 # Releases
-## 1.1
+## 1.2
 1. Reworked build process.
 2. Added documentation regarding "How to build"
 3. Added documentation regarding "How to use"
