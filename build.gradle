@@ -34,8 +34,9 @@ intellij {
     pluginName 'rallydev'
     intellij.updateSinceUntilBuild true //Disables updating since-build attribute in plugin.xml
 }
-
+/*
 publishPlugin {
   username intellijPublishUsername
   password intellijPublishPassword
 }
+*/
