@@ -29,8 +29,13 @@ dependencies {
 }
 
 intellij {
-    version 'IC-2018.3'
+    version 'IC-2018.3.2'
     plugins = ['tasks']
     pluginName 'rallydev'
     intellij.updateSinceUntilBuild true //Disables updating since-build attribute in plugin.xml
+}
+
+publishPlugin {
+  username intellijPublishUsername
+  password intellijPublishPassword
 }
