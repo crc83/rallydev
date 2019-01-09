@@ -15,6 +15,7 @@ import com.rallydev.rest.RallyRestApi;
 import com.rallydev.rest.request.QueryRequest;
 import com.rallydev.rest.response.QueryResponse;
 import org.junit.jupiter.api.Assertions;
+import org.sbelei.rally.TestHelper;
 import org.sbelei.rally.domain.Iteration;
 
 import static org.mockito.Mockito.*;
@@ -29,7 +30,7 @@ public class IterationProviderTest {
     
     @Before
     public void setUp() throws IOException {
-    	RallyRestApi restApi = getRestApiWithResponse("/iteration-responce.json");
+    	RallyRestApi restApi = TestHelper.getRestApiWithResponse("/iteration-response.json");
         iterationProvider = new IterationProvider(restApi, STUB_WORKSPACE_ID, STUB_PROJECT_ID);        
 	}
     
@@ -47,17 +48,6 @@ public class IterationProviderTest {
 				() ->assertEquals("Iteration B", iterations.get(1).name),
 				() ->assertEquals("Iteration C", iterations.get(2).name)
 		);
-	}
-
-
-	private static RallyRestApi getRestApiWithResponse(String responsePath)
-			throws IOException {
-		RallyRestApi restApi = mock(RallyRestApi.class);
-		String responseMessage =
-				getResourseAsString(responsePath);
-		QueryResponse stubResponse = new QueryResponse(responseMessage);
-		given(restApi.query(any(QueryRequest.class))).willReturn(stubResponse);
-		return restApi;
 	}
     
     

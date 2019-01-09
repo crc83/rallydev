@@ -1,3 +1,11 @@
+{
+"QueryResult":{ 
+	"Errors" : [],
+	"Warnings": [],
+	"StartIndex": "0", 
+	"PageSize": "100", 
+	"TotalResultCount": "1", 
+	"Results":
 [
 	{
 		"_rallyAPIMajor":"1",
@@ -88,3 +96,4 @@
 		"_type":"Workspace"
 	}
 ]
+}}

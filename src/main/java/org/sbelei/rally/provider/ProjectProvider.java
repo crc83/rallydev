@@ -5,6 +5,8 @@ import org.sbelei.rally.domain.constants.Type;
 
 import com.rallydev.rest.RallyRestApi;
 
+import java.util.List;
+
 public class ProjectProvider extends EntityProvider<Project>{
 
 	public ProjectProvider(RallyRestApi restApi, String workspaceId) {
@@ -20,6 +22,10 @@ public class ProjectProvider extends EntityProvider<Project>{
 	public Project newEntity() {
 		// TODO Auto-generated method stub
 		return new Project();
+	}
+
+	public List<Project> getProjects(){
+		return fetch(null);
 	}
 
 }

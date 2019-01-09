@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="687415a6-1a65-4691-bf87-2edc8344db6c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/sbelei/rally/provider/ProjectProviderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/sbelei/rally/provider/WorkspaceProviderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rallydev.iws" beforeDir="false" afterPath="$PROJECT_DIR$/rallydev.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rallydev_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rallydev_test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/EntityProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/EntityProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/ProjectProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/ProjectProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/WorkspaceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/WorkspaceProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/sbelei/rally/TestHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/sbelei/rally/TestHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/sbelei/rally/provider/IterationProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/sbelei/rally/provider/IterationProviderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/iteration-responce.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/project-responce.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/workspace-responce.json" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -39,25 +44,25 @@
         <counts>
           <entry key="class" value="2" />
           <entry key="gradle" value="1" />
-          <entry key="java" value="19" />
+          <entry key="java" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
           <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="18" />
+          <entry key="JAVA" value="24" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="411" />
+          <entry key="java" value="512" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="325" />
+          <entry key="JAVA" value="426" />
           <entry key="Scratch" value="86" />
         </counts>
       </usages-collector>
@@ -66,35 +71,62 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/EntityProvider.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/sbelei/rally/provider/IterationProviderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="141">
+              <caret line="33" column="103" lean-forward="true" selection-start-line="33" selection-start-column="103" selection-end-line="33" selection-end-column="103" />
               <folding>
-                <element signature="e#4863#4864#0" expanded="true" />
-                <element signature="e#4896#4897#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rallydev.rest/rally-rest-api/2.2.1/3086678fdedf1115807f9736378d6ff4cde07528/rally-rest-api-2.2.1-sources.jar!/com/rallydev/rest/RallyRestApi.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/sbelei/rally/provider/ProjectProviderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="172" column="31" selection-start-line="172" selection-start-column="31" selection-end-line="172" selection-end-column="31" />
+            <state relative-caret-position="204">
+              <caret line="28" column="82" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/sbelei/rally/provider/IterationProviderTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/sbelei/rally/provider/WorkspaceProviderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
+            <state relative-caret-position="287">
+              <caret line="36" column="88" selection-start-line="36" selection-start-column="88" selection-end-line="36" selection-end-column="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sbelei/rally/domain/Workspace.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/WorkspaceProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#492#493#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/sbelei/rally/TestHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -128,35 +160,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a6dc5db8a12928e583bd3f23e72d3ab611ecd58f/gson-2.2.4-sources.jar!/com/google/gson/JsonObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="180" column="53" selection-start-line="180" selection-start-column="43" selection-end-line="180" selection-end-column="53" />
-              <folding>
-                <element signature="e#5943#5944#0" expanded="true" />
-                <element signature="e#5996#5997#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/ProjectProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="289">
+              <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+              <folding>
+                <element signature="e#541#542#0" expanded="true" />
+                <element signature="e#566#567#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,20 +175,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/IterationProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="289">
+              <caret line="26" selection-start-line="26" selection-end-line="28" selection-end-column="5" />
               <folding>
+                <element signature="e#809#810#0" expanded="true" />
                 <element signature="e#834#835#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/sbelei/rally/TestHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="42" column="63" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -710,10 +713,14 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/DefectsProvider.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/test/java/org/sbelei/rally/TestHelper.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/EntityProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/ProjectProvider.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/sbelei/rally/TestHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/sbelei/rally/provider/ProjectProviderTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/sbelei/rally/provider/IterationProviderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/WorkspaceProvider.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/sbelei/rally/provider/WorkspaceProviderTest.java" />
       </list>
     </option>
   </component>
@@ -771,6 +778,15 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="rally" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rallydev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rallydev" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rally" type="462c0819:PsiDirectoryNode" />
               <item name="provider" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -819,8 +835,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547060327902" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547061032782" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.sbelei.rally.provider" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -834,7 +855,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.IterationProviderTest">
+  <component name="RunManager" selected="JUnit.ProjectProviderTest">
     <configuration name="All in rallydev_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rallydev_test" />
       <option name="PACKAGE_NAME" value="" />
@@ -878,6 +899,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProjectProviderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rallydev_test" />
+      <shortenClasspath name="CLASSPATH_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.sbelei.rally.provider.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.sbelei.rally.provider" />
+      <option name="MAIN_CLASS_NAME" value="org.sbelei.rally.provider.ProjectProviderTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scratch" type="Java Scratch" factoryName="Java Scratch" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Scratch" />
       <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
@@ -890,9 +928,11 @@
       <item itemvalue="JUnit.IterationProviderTest.testGetIterations" />
       <item itemvalue="Java Scratch.Scratch" />
       <item itemvalue="JUnit.IterationProviderTest" />
+      <item itemvalue="JUnit.ProjectProviderTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProjectProviderTest" />
         <item itemvalue="JUnit.IterationProviderTest" />
         <item itemvalue="JUnit.IterationProviderTest.testGetIterations" />
         <item itemvalue="Java Scratch.Scratch" />
@@ -938,6 +978,12 @@
     <history-entry file="IterationProviderTest - 2019.01.09 at 20h 56m 59s.xml">
       <configuration name="IterationProviderTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ProjectProviderTest - 2019.01.09 at 21h 05m 37s.xml">
+      <configuration name="ProjectProviderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProjectProviderTest - 2019.01.09 at 21h 05m 57s.xml">
+      <configuration name="ProjectProviderTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -970,7 +1016,7 @@
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.24966443" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1030,27 +1076,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/sbelei/rally/TestHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="42" column="63" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/WorkspaceProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/ProjectProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1072,27 +1097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="172" column="31" selection-start-line="172" selection-start-column="31" selection-end-line="172" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/EntityProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="e#4863#4864#0" expanded="true" />
-            <element signature="e#4896#4897#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/IterationProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#834#835#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1138,13 +1142,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/sbelei/rally/TestHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/sbelei/rally/provider/ProjectProviderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="28" column="82" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/sbelei/rally/provider/IterationProviderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
+        <state relative-caret-position="141">
+          <caret line="33" column="103" lean-forward="true" selection-start-line="33" selection-start-column="103" selection-end-line="33" selection-end-column="103" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/ProjectProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding>
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/EntityProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="634">
+          <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/IterationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" selection-start-line="26" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="e#809#810#0" expanded="true" />
+            <element signature="e#834#835#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sbelei/rally/provider/WorkspaceProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+          <folding>
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sbelei/rally/domain/Workspace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/sbelei/rally/provider/WorkspaceProviderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="36" column="88" selection-start-line="36" selection-start-column="88" selection-end-line="36" selection-end-column="88" />
         </state>
       </provider>
     </entry>

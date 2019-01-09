@@ -1,3 +1,11 @@
+{
+"QueryResult":{ 
+	"Errors" : [],
+	"Warnings": [],
+	"StartIndex": "0", 
+	"PageSize": "100", 
+	"TotalResultCount": "2", 
+	"Results":
 [
 	{
 		"_rallyAPIMajor":"1",
@@ -187,3 +195,4 @@
 		"_type":"Project"
 	}
 ]
+}}

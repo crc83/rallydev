@@ -5,6 +5,8 @@ import org.sbelei.rally.domain.constants.Type;
 
 import com.rallydev.rest.RallyRestApi;
 
+import java.util.List;
+
 public class WorkspaceProvider extends EntityProvider<Workspace> {
 
 	public WorkspaceProvider(RallyRestApi restApi) {
@@ -20,5 +22,8 @@ public class WorkspaceProvider extends EntityProvider<Workspace> {
 	public Workspace newEntity() {
 		return new Workspace();
 	}
-	
+
+	public List<Workspace> getWorkspaces(){
+		return fetch(null);
+	}
 }

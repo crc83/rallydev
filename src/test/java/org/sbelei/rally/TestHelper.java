@@ -9,10 +9,17 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import com.rallydev.rest.RallyRestApi;
+import com.rallydev.rest.request.QueryRequest;
+import com.rallydev.rest.response.QueryResponse;
 import org.apache.commons.io.IOUtils;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
+
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.mock;
 
 public class TestHelper {
 
@@ -48,6 +55,15 @@ public class TestHelper {
 		return result;		
 	}
 
+	public static RallyRestApi getRestApiWithResponse(String responsePath)
+			throws IOException {
+		RallyRestApi restApi = mock(RallyRestApi.class);
+		String responseMessage =
+				getResourseAsString(responsePath);
+		QueryResponse stubResponse = new QueryResponse(responseMessage);
+		given(restApi.query(any(QueryRequest.class))).willReturn(stubResponse);
+		return restApi;
+	}
 	/**
 	 * convert String to date
 	 * 
