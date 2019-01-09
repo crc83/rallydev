@@ -116,4 +116,15 @@ public class RallyRepositoryEditor extends BaseRepositoryEditor<RallyRepository>
             selectIteration();
         }
     }
+	
+	
+	/**
+	 * Contributed by: Peter Oxenham
+ 	 * https://github.com/peterox
+ 	 */
+	@Override
+    public void dispose() {
+        super.dispose();
+        myRepository.cleanup();
+    }
 }

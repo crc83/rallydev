@@ -15,6 +15,7 @@ import org.sbelei.rally.domain.Workspace;
 import org.sbelei.rally.provider.ProviderFasade;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Collection;
@@ -112,7 +113,7 @@ public class RallyRepository extends BaseRepositoryImpl {
         if (provider == null) {
             try {
                 URI uri = new URI(getUrl());
-                client = new RallyRestApi(
+                client = new PooledRallyRestApi(
                         uri,
                         myUsername,
                         myPassword
@@ -256,5 +257,14 @@ public class RallyRepository extends BaseRepositoryImpl {
 
     public void setShowCompleatedTasks(boolean showCompleatedTasks) {
         this.showCompleatedTasks = showCompleatedTasks;
+    }
+
+
+    public void cleanup() {
+        try {
+            client.close();
+        } catch (IOException e) {
+            LOG.warn("Unable to close client", e);
+        }
     }
 }
